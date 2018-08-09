@@ -1,0 +1,6 @@
+framework module Pods_Coma_Certo {
+  umbrella header "Pods-Coma Certo-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,740 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0D9D5467775099C34AD9115D /* Pods_Coma_CertoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F853C3F518710C9C20972EB /* Pods_Coma_CertoUITests.framework */; };
+		59720C04211C8B6B00C0826B /* RegisterMealViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59720C03211C8B6B00C0826B /* RegisterMealViewController.swift */; };
+		59D28816211A80B300CD38B7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59D28815211A80B300CD38B7 /* AppDelegate.swift */; };
+		59D28818211A80B300CD38B7 /* DailyMealsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59D28817211A80B300CD38B7 /* DailyMealsViewController.swift */; };
+		59D2881B211A80B300CD38B7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 59D28819211A80B300CD38B7 /* Main.storyboard */; };
+		59D2881D211A80B400CD38B7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 59D2881C211A80B400CD38B7 /* Assets.xcassets */; };
+		59D28820211A80B400CD38B7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 59D2881E211A80B400CD38B7 /* LaunchScreen.storyboard */; };
+		59D2882B211A80B400CD38B7 /* Coma_CertoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59D2882A211A80B400CD38B7 /* Coma_CertoTests.swift */; };
+		59D28836211A80B400CD38B7 /* Coma_CertoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59D28835211A80B400CD38B7 /* Coma_CertoUITests.swift */; };
+		782E3B17E67DB2D6C920D4F3 /* Pods_Coma_CertoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6DCB1157A44DDF29BE4393E /* Pods_Coma_CertoTests.framework */; };
+		DDDC202D4E6333106AF3B768 /* Pods_Coma_Certo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05C3673518273A41C5D8B498 /* Pods_Coma_Certo.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		59D28827211A80B400CD38B7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 59D2880A211A80B300CD38B7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 59D28811211A80B300CD38B7;
+			remoteInfo = "Coma Certo";
+		};
+		59D28832211A80B400CD38B7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 59D2880A211A80B300CD38B7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 59D28811211A80B300CD38B7;
+			remoteInfo = "Coma Certo";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0368110BC24D296744BBB629 /* Pods-Coma Certo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Coma Certo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Coma Certo/Pods-Coma Certo.debug.xcconfig"; sourceTree = "<group>"; };
+		05C3673518273A41C5D8B498 /* Pods_Coma_Certo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Coma_Certo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0F853C3F518710C9C20972EB /* Pods_Coma_CertoUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Coma_CertoUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		18ECE2BC0CA7C7C6611FAB2A /* Pods-Coma CertoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Coma CertoTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Coma CertoTests/Pods-Coma CertoTests.release.xcconfig"; sourceTree = "<group>"; };
+		59720C03211C8B6B00C0826B /* RegisterMealViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterMealViewController.swift; sourceTree = "<group>"; };
+		59D28812211A80B300CD38B7 /* Coma Certo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Coma Certo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		59D28815211A80B300CD38B7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		59D28817211A80B300CD38B7 /* DailyMealsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyMealsViewController.swift; sourceTree = "<group>"; };
+		59D2881A211A80B300CD38B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		59D2881C211A80B400CD38B7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		59D2881F211A80B400CD38B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		59D28821211A80B400CD38B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		59D28826211A80B400CD38B7 /* Coma CertoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Coma CertoTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		59D2882A211A80B400CD38B7 /* Coma_CertoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coma_CertoTests.swift; sourceTree = "<group>"; };
+		59D2882C211A80B400CD38B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		59D28831211A80B400CD38B7 /* Coma CertoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Coma CertoUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		59D28835211A80B400CD38B7 /* Coma_CertoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coma_CertoUITests.swift; sourceTree = "<group>"; };
+		59D28837211A80B400CD38B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		71107D5B0984A01E6044D8F1 /* Pods-Coma CertoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Coma CertoTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Coma CertoTests/Pods-Coma CertoTests.debug.xcconfig"; sourceTree = "<group>"; };
+		8F0CCA0A452B7980D8B10C1E /* Pods-Coma CertoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Coma CertoUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Coma CertoUITests/Pods-Coma CertoUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		D00B0633BF8963A4FA605337 /* Pods-Coma Certo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Coma Certo.release.xcconfig"; path = "Pods/Target Support Files/Pods-Coma Certo/Pods-Coma Certo.release.xcconfig"; sourceTree = "<group>"; };
+		D6DCB1157A44DDF29BE4393E /* Pods_Coma_CertoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Coma_CertoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF20272C37E46AD3353DE26A /* Pods-Coma CertoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Coma CertoUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Coma CertoUITests/Pods-Coma CertoUITests.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		59D2880F211A80B300CD38B7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DDDC202D4E6333106AF3B768 /* Pods_Coma_Certo.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		59D28823211A80B400CD38B7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				782E3B17E67DB2D6C920D4F3 /* Pods_Coma_CertoTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		59D2882E211A80B400CD38B7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0D9D5467775099C34AD9115D /* Pods_Coma_CertoUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3E7A67C34DFAE68E8AF86BE2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0368110BC24D296744BBB629 /* Pods-Coma Certo.debug.xcconfig */,
+				D00B0633BF8963A4FA605337 /* Pods-Coma Certo.release.xcconfig */,
+				71107D5B0984A01E6044D8F1 /* Pods-Coma CertoTests.debug.xcconfig */,
+				18ECE2BC0CA7C7C6611FAB2A /* Pods-Coma CertoTests.release.xcconfig */,
+				8F0CCA0A452B7980D8B10C1E /* Pods-Coma CertoUITests.debug.xcconfig */,
+				EF20272C37E46AD3353DE26A /* Pods-Coma CertoUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		59720C01211C8B3500C0826B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				59720C02211C8B3B00C0826B /* ViewController */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		59720C02211C8B3B00C0826B /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				59D28817211A80B300CD38B7 /* DailyMealsViewController.swift */,
+				59720C03211C8B6B00C0826B /* RegisterMealViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		59D28809211A80B300CD38B7 = {
+			isa = PBXGroup;
+			children = (
+				59D28814211A80B300CD38B7 /* Coma Certo */,
+				59D28829211A80B400CD38B7 /* Coma CertoTests */,
+				59D28834211A80B400CD38B7 /* Coma CertoUITests */,
+				59D28813211A80B300CD38B7 /* Products */,
+				3E7A67C34DFAE68E8AF86BE2 /* Pods */,
+				6219415686C4E0BBC3DAFD41 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		59D28813211A80B300CD38B7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				59D28812211A80B300CD38B7 /* Coma Certo.app */,
+				59D28826211A80B400CD38B7 /* Coma CertoTests.xctest */,
+				59D28831211A80B400CD38B7 /* Coma CertoUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		59D28814211A80B300CD38B7 /* Coma Certo */ = {
+			isa = PBXGroup;
+			children = (
+				59720C01211C8B3500C0826B /* View */,
+				59D28815211A80B300CD38B7 /* AppDelegate.swift */,
+				59D28819211A80B300CD38B7 /* Main.storyboard */,
+				59D2881C211A80B400CD38B7 /* Assets.xcassets */,
+				59D2881E211A80B400CD38B7 /* LaunchScreen.storyboard */,
+				59D28821211A80B400CD38B7 /* Info.plist */,
+			);
+			path = "Coma Certo";
+			sourceTree = "<group>";
+		};
+		59D28829211A80B400CD38B7 /* Coma CertoTests */ = {
+			isa = PBXGroup;
+			children = (
+				59D2882A211A80B400CD38B7 /* Coma_CertoTests.swift */,
+				59D2882C211A80B400CD38B7 /* Info.plist */,
+			);
+			path = "Coma CertoTests";
+			sourceTree = "<group>";
+		};
+		59D28834211A80B400CD38B7 /* Coma CertoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				59D28835211A80B400CD38B7 /* Coma_CertoUITests.swift */,
+				59D28837211A80B400CD38B7 /* Info.plist */,
+			);
+			path = "Coma CertoUITests";
+			sourceTree = "<group>";
+		};
+		6219415686C4E0BBC3DAFD41 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				05C3673518273A41C5D8B498 /* Pods_Coma_Certo.framework */,
+				D6DCB1157A44DDF29BE4393E /* Pods_Coma_CertoTests.framework */,
+				0F853C3F518710C9C20972EB /* Pods_Coma_CertoUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		59D28811211A80B300CD38B7 /* Coma Certo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 59D2883A211A80B400CD38B7 /* Build configuration list for PBXNativeTarget "Coma Certo" */;
+			buildPhases = (
+				63B01C0673239695344B8ACF /* [CP] Check Pods Manifest.lock */,
+				59D2880E211A80B300CD38B7 /* Sources */,
+				59D2880F211A80B300CD38B7 /* Frameworks */,
+				59D28810211A80B300CD38B7 /* Resources */,
+				60F453C1DEE50BF8BEAC34A6 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Coma Certo";
+			productName = "Coma Certo";
+			productReference = 59D28812211A80B300CD38B7 /* Coma Certo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		59D28825211A80B400CD38B7 /* Coma CertoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 59D2883D211A80B400CD38B7 /* Build configuration list for PBXNativeTarget "Coma CertoTests" */;
+			buildPhases = (
+				E8A1D4A8C34E6F0D2945191D /* [CP] Check Pods Manifest.lock */,
+				59D28822211A80B400CD38B7 /* Sources */,
+				59D28823211A80B400CD38B7 /* Frameworks */,
+				59D28824211A80B400CD38B7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				59D28828211A80B400CD38B7 /* PBXTargetDependency */,
+			);
+			name = "Coma CertoTests";
+			productName = "Coma CertoTests";
+			productReference = 59D28826211A80B400CD38B7 /* Coma CertoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		59D28830211A80B400CD38B7 /* Coma CertoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 59D28840211A80B400CD38B7 /* Build configuration list for PBXNativeTarget "Coma CertoUITests" */;
+			buildPhases = (
+				51F8E150BEF95F95A6D02806 /* [CP] Check Pods Manifest.lock */,
+				59D2882D211A80B400CD38B7 /* Sources */,
+				59D2882E211A80B400CD38B7 /* Frameworks */,
+				59D2882F211A80B400CD38B7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				59D28833211A80B400CD38B7 /* PBXTargetDependency */,
+			);
+			name = "Coma CertoUITests";
+			productName = "Coma CertoUITests";
+			productReference = 59D28831211A80B400CD38B7 /* Coma CertoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		59D2880A211A80B300CD38B7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0940;
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = "Eduardo Soares";
+				TargetAttributes = {
+					59D28811211A80B300CD38B7 = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+					59D28825211A80B400CD38B7 = {
+						CreatedOnToolsVersion = 9.4.1;
+						TestTargetID = 59D28811211A80B300CD38B7;
+					};
+					59D28830211A80B400CD38B7 = {
+						CreatedOnToolsVersion = 9.4.1;
+						TestTargetID = 59D28811211A80B300CD38B7;
+					};
+				};
+			};
+			buildConfigurationList = 59D2880D211A80B300CD38B7 /* Build configuration list for PBXProject "Coma Certo" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 59D28809211A80B300CD38B7;
+			productRefGroup = 59D28813211A80B300CD38B7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				59D28811211A80B300CD38B7 /* Coma Certo */,
+				59D28825211A80B400CD38B7 /* Coma CertoTests */,
+				59D28830211A80B400CD38B7 /* Coma CertoUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		59D28810211A80B300CD38B7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				59D28820211A80B400CD38B7 /* LaunchScreen.storyboard in Resources */,
+				59D2881D211A80B400CD38B7 /* Assets.xcassets in Resources */,
+				59D2881B211A80B300CD38B7 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		59D28824211A80B400CD38B7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		59D2882F211A80B400CD38B7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		51F8E150BEF95F95A6D02806 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Coma CertoUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		60F453C1DEE50BF8BEAC34A6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Coma Certo/Pods-Coma Certo-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Coma Certo/Pods-Coma Certo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		63B01C0673239695344B8ACF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Coma Certo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E8A1D4A8C34E6F0D2945191D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Coma CertoTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		59D2880E211A80B300CD38B7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				59720C04211C8B6B00C0826B /* RegisterMealViewController.swift in Sources */,
+				59D28818211A80B300CD38B7 /* DailyMealsViewController.swift in Sources */,
+				59D28816211A80B300CD38B7 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		59D28822211A80B400CD38B7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				59D2882B211A80B400CD38B7 /* Coma_CertoTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		59D2882D211A80B400CD38B7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				59D28836211A80B400CD38B7 /* Coma_CertoUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		59D28828211A80B400CD38B7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 59D28811211A80B300CD38B7 /* Coma Certo */;
+			targetProxy = 59D28827211A80B400CD38B7 /* PBXContainerItemProxy */;
+		};
+		59D28833211A80B400CD38B7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 59D28811211A80B300CD38B7 /* Coma Certo */;
+			targetProxy = 59D28832211A80B400CD38B7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		59D28819211A80B300CD38B7 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				59D2881A211A80B300CD38B7 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		59D2881E211A80B400CD38B7 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				59D2881F211A80B400CD38B7 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		59D28838211A80B400CD38B7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		59D28839211A80B400CD38B7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		59D2883B211A80B400CD38B7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0368110BC24D296744BBB629 /* Pods-Coma Certo.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = V4NA9Y9BKW;
+				INFOPLIST_FILE = "Coma Certo/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "br.com.apps.esampaio.Coma-Certo";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		59D2883C211A80B400CD38B7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D00B0633BF8963A4FA605337 /* Pods-Coma Certo.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = V4NA9Y9BKW;
+				INFOPLIST_FILE = "Coma Certo/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "br.com.apps.esampaio.Coma-Certo";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		59D2883E211A80B400CD38B7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 71107D5B0984A01E6044D8F1 /* Pods-Coma CertoTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = V4NA9Y9BKW;
+				INFOPLIST_FILE = "Coma CertoTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "br.com.apps.esampaio.Coma-CertoTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Coma Certo.app/Coma Certo";
+			};
+			name = Debug;
+		};
+		59D2883F211A80B400CD38B7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 18ECE2BC0CA7C7C6611FAB2A /* Pods-Coma CertoTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = V4NA9Y9BKW;
+				INFOPLIST_FILE = "Coma CertoTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "br.com.apps.esampaio.Coma-CertoTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Coma Certo.app/Coma Certo";
+			};
+			name = Release;
+		};
+		59D28841211A80B400CD38B7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8F0CCA0A452B7980D8B10C1E /* Pods-Coma CertoUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = V4NA9Y9BKW;
+				INFOPLIST_FILE = "Coma CertoUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "br.com.apps.esampaio.Coma-CertoUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Coma Certo";
+			};
+			name = Debug;
+		};
+		59D28842211A80B400CD38B7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EF20272C37E46AD3353DE26A /* Pods-Coma CertoUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = V4NA9Y9BKW;
+				INFOPLIST_FILE = "Coma CertoUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "br.com.apps.esampaio.Coma-CertoUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Coma Certo";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		59D2880D211A80B300CD38B7 /* Build configuration list for PBXProject "Coma Certo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				59D28838211A80B400CD38B7 /* Debug */,
+				59D28839211A80B400CD38B7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		59D2883A211A80B400CD38B7 /* Build configuration list for PBXNativeTarget "Coma Certo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				59D2883B211A80B400CD38B7 /* Debug */,
+				59D2883C211A80B400CD38B7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		59D2883D211A80B400CD38B7 /* Build configuration list for PBXNativeTarget "Coma CertoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				59D2883E211A80B400CD38B7 /* Debug */,
+				59D2883F211A80B400CD38B7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		59D28840211A80B400CD38B7 /* Build configuration list for PBXNativeTarget "Coma CertoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				59D28841211A80B400CD38B7 /* Debug */,
+				59D28842211A80B400CD38B7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 59D2880A211A80B300CD38B7 /* Project object */;
+}
