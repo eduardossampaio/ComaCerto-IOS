@@ -10,52 +10,33 @@ import Foundation
 import UIKit
 class ReactionsCollectionViewController: UICollectionViewController {
     
-    private struct Reaction{
-        let reactionName:String
-        let reactionImage:String
-        
-        init(_ reactionName:String, _ reactionImage:String) {
-            self.reactionName = reactionName
-            self.reactionImage = reactionImage
-        }
-    }
-    
-    private let reactions = [
-        Reaction("Alegria","emoji-happy"),
-        Reaction("Ansiedade","emoji-anxiety"),
-        Reaction("Frustração","emoji-frustration"),
-        Reaction("Irritação","emoji-irritation"),
-        Reaction("Pressa","emoji-hurry"),
-        Reaction("Raiva","emoji-rage"),
-        Reaction("Tédio","emoji-boredom"),
-        Reaction("Tristeza","emoji-sad")
-    ]
-    
     private var lastSelectedCell = 0
+    
+    typealias OnFeelingSelected = ((Feeling)->Void)
+    var onFeelingSelected :OnFeelingSelected?
     
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return reactions.count
+        return Feeling.allFeelings.count
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "emojiCell", for: indexPath) as! ReactionCollectionCellView
-        let reaction = reactions[indexPath.item]
-        let reactionImage = UIImage(named: reaction.reactionImage)
-        cell.reactionImage.image = reactionImage
-//        cell.reactionImage.image = UIImage(named: cell.reactionImage)
-        cell.reactionName.text = reaction.reactionName
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "emojiCell", for: indexPath) as! FeelingCollectionCellView
+        let feeling = Feeling.allFeelings[indexPath.item]
+        let feelingImage = UIImage(named: feeling.imageName)
+        cell.reactionImage.image = feelingImage
+        cell.reactionName.text = feeling.displayName
         return cell
     }
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let previousSelectedCell = collectionView.cellForItem(at: IndexPath(item: lastSelectedCell, section: 0)) as! ReactionCollectionCellView
+        let previousSelectedCell = collectionView.cellForItem(at: IndexPath(item: lastSelectedCell, section: 0)) as! FeelingCollectionCellView
         previousSelectedCell.isSelected = false;
         let newSelectedCell = collectionView.cellForItem(at: indexPath)
         newSelectedCell?.isSelected = true
         self.lastSelectedCell = indexPath.item
-        print("selecionou item")
+        onFeelingSelected?(Feeling.allFeelings[indexPath.item])
     }
 }

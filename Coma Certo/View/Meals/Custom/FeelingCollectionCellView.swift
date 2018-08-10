@@ -7,7 +7,7 @@
 //
 
 import UIKit
-class ReactionCollectionCellView : UICollectionViewCell{
+class FeelingCollectionCellView : UICollectionViewCell{
     
     @IBOutlet weak var reactionImage: UIImageView!
     @IBOutlet weak var reactionName: UILabel!

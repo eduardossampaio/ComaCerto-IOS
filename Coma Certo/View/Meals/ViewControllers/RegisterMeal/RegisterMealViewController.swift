@@ -16,13 +16,24 @@ class RegisterMealViewController: UITableViewController {
     @IBOutlet weak var hungerBeforeSlider: UISlider!
     @IBOutlet weak var hungerAfterSlider: UISlider!
     
-    var selectedDate = Date()
+    let foods  = ["Arroz","Feijão","Carne","Ovo","Frango","Salada"]
     
+    var selectedDate = Date()
+    let mealController = MealController()
+    var selectedFeeling: Feeling?
     override func viewDidLoad() {
         
     }
     
     @IBAction func onSaveButtonClicked(_ sender: Any) {
+        let hungerBefore = Int(hungerBeforeSlider.value)
+        let hungerAfter = Int(hungerAfterSlider.value)
+        let foods = self.foods
+        let meal = Meal(date: selectedDate, time: selectedDate, foods: foods, hungryBefore: hungerBefore, hungryAfter: hungerAfter, feeling: selectedFeeling)
+        mealController.onNewMeal(meal)
+        dismiss(animated: true, completion: nil)
+    }
+    @IBAction func onCancelButtonClicked(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
     override func viewWillAppear(_ animated: Bool) {
@@ -39,11 +50,13 @@ class RegisterMealViewController: UITableViewController {
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == "listFoodSegue"){
-            let foods  = ["Arroz","Feijão","Carne","Ovo","Frango","Salada"]
             let controller = segue.destination as! ListFoodTableViewController
             controller.foodList = foods
         }else if(segue.identifier == "listReactionsSegue"){
-            
+            let controller = segue.destination as! ReactionsCollectionViewController
+            controller.onFeelingSelected = {(feeling) in
+                self.selectedFeeling = feeling
+            }
         }
     }
 }

@@ -8,13 +8,17 @@
 
 import UIKit
 import Foundation
-class DailyMealsViewController: UIViewController {
-
+class DailyMealsViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
+    
     @IBOutlet weak var dateTextView: UILabel!
     @IBOutlet weak var weekDayTextView: UILabel!
+    @IBOutlet weak var tableView: UITableView!
     
     let calendar = Calendar(identifier: Calendar.Identifier.gregorian)
     var selectedDate = Date()
+    var meals = [Meal]()
+    
+    let mealController = MealController()
     
     @IBAction func onNewMealClicked(_ sender: Any) {
         performSegue(withIdentifier: "NewMealSegue", sender: nil)
@@ -23,11 +27,31 @@ class DailyMealsViewController: UIViewController {
     @IBAction func onPreviousButtonClicked(_ sender: Any) {
         decreaseDate()
         updateDateLabels()
+        refreshTableView()
     }
     
     @IBAction func onNextButtonClicked(_ sender: Any) {
         increaseDate()
         updateDateLabels()
+        refreshTableView()
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return meals.count;
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 64;
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "mealCell") as! ListMealCellView
+        let meal = meals[indexPath.item]
+        cell.descriptionTextField.text = meal.time?.toReadableTime()
+        if let feeling = meal.feeling{
+            cell.feelingImageView.image = UIImage(named: feeling.imageName )
+        }
+        return cell
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -43,11 +67,13 @@ class DailyMealsViewController: UIViewController {
     }
     override func viewWillAppear(_ animated: Bool) {
         updateDateLabels()
+        refreshTableView()
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
+    private func refreshTableView(){
+        self.meals = mealController.listMeals(for: selectedDate)
+        tableView.reloadData()
     }
+   
     private func increaseDate(){
         selectedDate =  calendar.date(byAdding: Calendar.Component.day, value: 1, to: selectedDate)!
     }
