@@ -30,6 +30,9 @@ class ReactionsCollectionViewController: UICollectionViewController {
         Reaction("Tédio","emoji-boredom"),
         Reaction("Tristeza","emoji-sad")
     ]
+    
+    private var lastSelectedCell = 0
+    
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
@@ -48,6 +51,11 @@ class ReactionsCollectionViewController: UICollectionViewController {
     }
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let previousSelectedCell = collectionView.cellForItem(at: IndexPath(item: lastSelectedCell, section: 0)) as! ReactionCollectionCellView
+        previousSelectedCell.isSelected = false;
+        let newSelectedCell = collectionView.cellForItem(at: indexPath)
+        newSelectedCell?.isSelected = true
+        self.lastSelectedCell = indexPath.item
         print("selecionou item")
     }
 }

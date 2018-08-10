@@ -14,5 +14,24 @@ class RegisterMealViewController: UITableViewController {
     @IBOutlet weak var hungerBeforeSlider: UISlider!
     @IBOutlet weak var hungerAfterSlider: UISlider!
     
+    var selectedDate: Date!
     
+    override func viewDidLoad() {
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        dateTextView.text = selectedDate.toReadableDate(style: .short)
+        timeTextView.text = selectedDate.toReadableTime()
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "listFoodSegue"){
+            let foods  = ["Arroz","Feijão","Carne","Ovo","Frango","Salada"]
+            let controller = segue.destination as! ListFoodTableViewController
+            controller.foodList = foods
+        }else if(segue.identifier == "listReactionsSegue"){
+            
+        }
+    }
 }

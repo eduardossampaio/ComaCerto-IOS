@@ -9,7 +9,7 @@
 import UIKit
 class ListFoodTableViewController : UITableViewController{
     
-    let foodList = ["Arroz","Feijão","Carne","Ovo","Frango","Salada"]
+    var foodList = [String]()
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return foodList.count

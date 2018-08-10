@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0D9D5467775099C34AD9115D /* Pods_Coma_CertoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F853C3F518710C9C20972EB /* Pods_Coma_CertoUITests.framework */; };
+		5902B568211DD20100707EB0 /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5902B567211DD20100707EB0 /* Date+Extensions.swift */; };
 		59720C04211C8B6B00C0826B /* RegisterMealViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59720C03211C8B6B00C0826B /* RegisterMealViewController.swift */; };
 		59720C06211CFEE200C0826B /* ReactionsCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59720C05211CFEE200C0826B /* ReactionsCollectionViewController.swift */; };
 		59720C0B211D177C00C0826B /* ReactionCollectionCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59720C0A211D177C00C0826B /* ReactionCollectionCellView.swift */; };
@@ -45,6 +46,7 @@
 		05C3673518273A41C5D8B498 /* Pods_Coma_Certo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Coma_Certo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F853C3F518710C9C20972EB /* Pods_Coma_CertoUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Coma_CertoUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		18ECE2BC0CA7C7C6611FAB2A /* Pods-Coma CertoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Coma CertoTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Coma CertoTests/Pods-Coma CertoTests.release.xcconfig"; sourceTree = "<group>"; };
+		5902B567211DD20100707EB0 /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
 		59720C03211C8B6B00C0826B /* RegisterMealViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterMealViewController.swift; sourceTree = "<group>"; };
 		59720C05211CFEE200C0826B /* ReactionsCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactionsCollectionViewController.swift; sourceTree = "<group>"; };
 		59720C0A211D177C00C0826B /* ReactionCollectionCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactionCollectionCellView.swift; sourceTree = "<group>"; };
@@ -108,6 +110,22 @@
 				EF20272C37E46AD3353DE26A /* Pods-Coma CertoUITests.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		5902B565211DD1E100707EB0 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				5902B566211DD1EE00707EB0 /* Extensions */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		5902B566211DD1EE00707EB0 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				5902B567211DD20100707EB0 /* Date+Extensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		59720C01211C8B3500C0826B /* View */ = {
@@ -179,6 +197,7 @@
 		59D28814211A80B300CD38B7 /* Coma Certo */ = {
 			isa = PBXGroup;
 			children = (
+				5902B565211DD1E100707EB0 /* Core */,
 				59720C01211C8B3500C0826B /* View */,
 				59D28815211A80B300CD38B7 /* AppDelegate.swift */,
 				59D28819211A80B300CD38B7 /* Main.storyboard */,
@@ -431,6 +450,7 @@
 			files = (
 				59720C04211C8B6B00C0826B /* RegisterMealViewController.swift in Sources */,
 				59720C06211CFEE200C0826B /* ReactionsCollectionViewController.swift in Sources */,
+				5902B568211DD20100707EB0 /* Date+Extensions.swift in Sources */,
 				59D28818211A80B300CD38B7 /* DailyMealsViewController.swift in Sources */,
 				59D28816211A80B300CD38B7 /* AppDelegate.swift in Sources */,
 				59720C0B211D177C00C0826B /* ReactionCollectionCellView.swift in Sources */,

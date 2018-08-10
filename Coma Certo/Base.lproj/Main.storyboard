@@ -22,9 +22,12 @@
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="uh8-SG-Vih">
                                 <rect key="frame" x="0.0" y="79" width="375" height="36.5"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gb3-sp-j5P">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gb3-sp-j5P" userLabel="PreviousButton">
                                         <rect key="frame" x="0.0" y="0.0" width="77.5" height="32"/>
                                         <state key="normal" image="arrow-prev"/>
+                                        <connections>
+                                            <action selector="onPreviousButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cDh-99-JOK"/>
+                                        </connections>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="LUx-26-G9o">
                                         <rect key="frame" x="77.5" y="0.0" width="220" height="36.5"/>
@@ -43,9 +46,12 @@
                                             </label>
                                         </subviews>
                                     </stackView>
-                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" verticalHuggingPriority="249" horizontalCompressionResistancePriority="749" verticalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EJy-gd-JgB">
+                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" verticalHuggingPriority="249" horizontalCompressionResistancePriority="749" verticalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EJy-gd-JgB" userLabel="NextButton">
                                         <rect key="frame" x="297.5" y="0.0" width="77.5" height="32"/>
                                         <state key="normal" image="arrow-next"/>
+                                        <connections>
+                                            <action selector="onNextButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6Ky-Te-TMj"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -74,6 +80,8 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="dateTextView" destination="r6F-DY-85d" id="U9J-4T-zNd"/>
+                        <outlet property="weekDayTextView" destination="Pu4-Oa-oll" id="hJU-lq-ISb"/>
                         <segue destination="Wxm-gx-iKF" kind="show" identifier="NewMealSegue" id="GkR-Xw-sBR"/>
                     </connections>
                 </viewController>
@@ -108,7 +116,7 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="28/05/2018" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Agx-h4-eKX">
                                                     <rect key="frame" x="269" y="0.0" width="90" height="44"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
+                                                    <color key="textColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -139,7 +147,7 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="13:30" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xE2-7g-72G">
                                                     <rect key="frame" x="316" y="0.0" width="43" height="44"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
+                                                    <color key="textColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -167,7 +175,7 @@
                                                 <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ueU-7n-jKQ">
                                                     <rect key="frame" x="0.0" y="0.0" width="375" height="144"/>
                                                     <connections>
-                                                        <segue destination="EfC-Vx-cAT" kind="embed" id="3c7-Ex-PBa"/>
+                                                        <segue destination="EfC-Vx-cAT" kind="embed" identifier="listFoodSegue" id="3c7-Ex-PBa"/>
                                                     </connections>
                                                 </containerView>
                                             </subviews>
@@ -199,7 +207,7 @@
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="u9Q-0c-cw2">
+                                                        <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="5" translatesAutoresizingMaskIntoConstraints="NO" id="u9Q-0c-cw2">
                                                             <rect key="frame" x="62.5" y="0.0" width="282.5" height="51"/>
                                                         </slider>
                                                     </subviews>
@@ -255,16 +263,16 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tla-jE-bXt">
-                                                    <rect key="frame" x="16" y="0.0" width="343" height="170"/>
+                                                    <rect key="frame" x="16" y="10" width="343" height="160"/>
                                                     <color key="backgroundColor" red="0.0" green="0.99143940210000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <connections>
-                                                        <segue destination="y02-m8-1bn" kind="embed" id="a8f-U9-U39"/>
+                                                        <segue destination="y02-m8-1bn" kind="embed" identifier="listReactionsSegue" id="a8f-U9-U39"/>
                                                     </connections>
                                                 </containerView>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="trailing" secondItem="tla-jE-bXt" secondAttribute="trailing" constant="16" id="Mmi-YJ-Rod"/>
-                                                <constraint firstItem="tla-jE-bXt" firstAttribute="top" secondItem="7Wv-Cn-wAX" secondAttribute="top" id="Nbr-ch-QG5"/>
+                                                <constraint firstItem="tla-jE-bXt" firstAttribute="top" secondItem="7Wv-Cn-wAX" secondAttribute="top" constant="10" id="Nbr-ch-QG5"/>
                                                 <constraint firstItem="tla-jE-bXt" firstAttribute="leading" secondItem="7Wv-Cn-wAX" secondAttribute="leading" constant="16" id="XeF-93-s6w"/>
                                                 <constraint firstAttribute="bottom" secondItem="tla-jE-bXt" secondAttribute="bottom" id="gpx-e2-pdj"/>
                                             </constraints>
@@ -293,8 +301,8 @@
         <scene sceneID="vj5-d0-2pP">
             <objects>
                 <collectionViewController id="y02-m8-1bn" customClass="ReactionsCollectionViewController" customModule="Coma_Certo" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" dataMode="prototypes" id="Atm-op-0Ap">
-                        <rect key="frame" x="0.0" y="0.0" width="343" height="170"/>
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" indicatorStyle="black" dataMode="prototypes" id="Atm-op-0Ap">
+                        <rect key="frame" x="0.0" y="0.0" width="343" height="160"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="cyv-Yy-qjl">
@@ -338,7 +346,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YTT-NR-qH6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3292" y="-586.50674662668666"/>
+            <point key="canvasLocation" x="3246" y="-585"/>
         </scene>
         <!--List Food Table View Controller-->
         <scene sceneID="2T7-fI-s7k">
@@ -360,7 +368,7 @@
                                             <rect key="frame" x="16" y="0.0" width="343" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
+                                            <color key="textColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
