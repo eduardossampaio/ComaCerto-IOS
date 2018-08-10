@@ -32,7 +32,8 @@ class DailyMealsViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if  segue.identifier == "NewMealSegue" {
-            let controller = segue.destination as! RegisterMealViewController
+            let navigationController = segue.destination as! UINavigationController
+            let controller =  navigationController.viewControllers.first as! RegisterMealViewController
             controller.selectedDate = self.selectedDate
         }
     }

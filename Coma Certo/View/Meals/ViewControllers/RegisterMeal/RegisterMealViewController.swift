@@ -14,12 +14,15 @@ class RegisterMealViewController: UITableViewController {
     @IBOutlet weak var hungerBeforeSlider: UISlider!
     @IBOutlet weak var hungerAfterSlider: UISlider!
     
-    var selectedDate: Date!
+    var selectedDate = Date()
     
     override func viewDidLoad() {
         
     }
     
+    @IBAction func onSaveButtonClicked(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
     override func viewWillAppear(_ animated: Bool) {
         dateTextView.text = selectedDate.toReadableDate(style: .short)
         timeTextView.text = selectedDate.toReadableTime()
