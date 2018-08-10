@@ -9,5 +9,10 @@
 import Foundation
 import UIKit
 class RegisterMealViewController: UITableViewController {
+    @IBOutlet weak var dateTextView: UILabel!
+    @IBOutlet weak var timeTextView: UILabel!
+    @IBOutlet weak var hungerBeforeSlider: UISlider!
+    @IBOutlet weak var hungerAfterSlider: UISlider!
+    
     
 }

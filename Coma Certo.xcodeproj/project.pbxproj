@@ -11,6 +11,7 @@
 		59720C04211C8B6B00C0826B /* RegisterMealViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59720C03211C8B6B00C0826B /* RegisterMealViewController.swift */; };
 		59720C06211CFEE200C0826B /* ReactionsCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59720C05211CFEE200C0826B /* ReactionsCollectionViewController.swift */; };
 		59720C0B211D177C00C0826B /* ReactionCollectionCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59720C0A211D177C00C0826B /* ReactionCollectionCellView.swift */; };
+		59A9E63D211D2E7F009B38A0 /* ListFoodTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A9E63C211D2E7F009B38A0 /* ListFoodTableViewController.swift */; };
 		59D28816211A80B300CD38B7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59D28815211A80B300CD38B7 /* AppDelegate.swift */; };
 		59D28818211A80B300CD38B7 /* DailyMealsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59D28817211A80B300CD38B7 /* DailyMealsViewController.swift */; };
 		59D2881B211A80B300CD38B7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 59D28819211A80B300CD38B7 /* Main.storyboard */; };
@@ -47,6 +48,7 @@
 		59720C03211C8B6B00C0826B /* RegisterMealViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterMealViewController.swift; sourceTree = "<group>"; };
 		59720C05211CFEE200C0826B /* ReactionsCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactionsCollectionViewController.swift; sourceTree = "<group>"; };
 		59720C0A211D177C00C0826B /* ReactionCollectionCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactionCollectionCellView.swift; sourceTree = "<group>"; };
+		59A9E63C211D2E7F009B38A0 /* ListFoodTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListFoodTableViewController.swift; sourceTree = "<group>"; };
 		59D28812211A80B300CD38B7 /* Coma Certo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Coma Certo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		59D28815211A80B300CD38B7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		59D28817211A80B300CD38B7 /* DailyMealsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyMealsViewController.swift; sourceTree = "<group>"; };
@@ -139,6 +141,7 @@
 			children = (
 				59720C03211C8B6B00C0826B /* RegisterMealViewController.swift */,
 				59720C05211CFEE200C0826B /* ReactionsCollectionViewController.swift */,
+				59A9E63C211D2E7F009B38A0 /* ListFoodTableViewController.swift */,
 			);
 			path = RegisterMeal;
 			sourceTree = "<group>";
@@ -431,6 +434,7 @@
 				59D28818211A80B300CD38B7 /* DailyMealsViewController.swift in Sources */,
 				59D28816211A80B300CD38B7 /* AppDelegate.swift in Sources */,
 				59720C0B211D177C00C0826B /* ReactionCollectionCellView.swift in Sources */,
+				59A9E63D211D2E7F009B38A0 /* ListFoodTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
