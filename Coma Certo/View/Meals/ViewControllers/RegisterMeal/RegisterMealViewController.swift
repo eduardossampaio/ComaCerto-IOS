@@ -9,8 +9,10 @@
 import Foundation
 import UIKit
 class RegisterMealViewController: UITableViewController {
-    @IBOutlet weak var dateTextView: UILabel!
-    @IBOutlet weak var timeTextView: UILabel!
+    
+    @IBOutlet weak var dateTextButton: UIButton!
+
+    @IBOutlet weak var timeTextButton: UIButton!
     @IBOutlet weak var hungerBeforeSlider: UISlider!
     @IBOutlet weak var hungerAfterSlider: UISlider!
     
@@ -24,10 +26,17 @@ class RegisterMealViewController: UITableViewController {
         dismiss(animated: true, completion: nil)
     }
     override func viewWillAppear(_ animated: Bool) {
-        dateTextView.text = selectedDate.toReadableDate(style: .short)
-        timeTextView.text = selectedDate.toReadableTime()
+        dateTextButton.setTitle(selectedDate.toReadableDate(style: .short), for:.normal)
+          timeTextButton.setTitle(selectedDate.toReadableTime(), for:.normal)
     }
-    
+    func openDatePicker(){
+       
+    }
+    @IBAction func onSliderValueChanges(_ sender: UISlider) {
+        let step: Float = 1
+        let roundedValue = round(sender.value / step) * step
+        sender.value = roundedValue
+    }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == "listFoodSegue"){
             let foods  = ["Arroz","Feijão","Carne","Ovo","Frango","Salada"]
