@@ -459,7 +459,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Adicionar Alimentos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="OZP-u5-ALd">
-                                            <rect key="frame" x="16" y="0.0" width="343" height="43.5"/>
+                                            <rect key="frame" x="15" y="0.0" width="345" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -631,29 +631,76 @@
             </objects>
             <point key="canvasLocation" x="-31" y="1404"/>
         </scene>
-        <!--View Controller-->
+        <!--Add Foods To Meal View Controller-->
         <scene sceneID="XrK-nZ-mag">
             <objects>
-                <viewController id="CpF-Ru-hsn" sceneMemberID="viewController">
+                <viewController id="CpF-Ru-hsn" customClass="AddFoodsToMealViewController" customModule="Coma_Certo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eg9-Wy-ACd">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lcE-dK-5UR">
-                                <rect key="frame" x="16" y="80" width="343" height="30"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Alimentos" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lcE-dK-5UR" customClass="SearchTextField" customModule="SearchTextField">
+                                <rect key="frame" x="16" y="98.5" width="343" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="CpF-Ru-hsn" id="PsQ-T6-TyC"/>
+                                </connections>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Adicione os alimentos que você comeu" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bg7-nM-V9I">
+                                <rect key="frame" x="16" y="74" width="343" height="19.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ku6-2w-1sz">
+                                <rect key="frame" x="0.0" y="133.5" width="375" height="533.5"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="foodCell" textLabel="3JZ-4K-A3G" style="IBUITableViewCellStyleDefault" id="fgM-wY-7QK">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="fgM-wY-7QK" id="BrX-t4-z7U">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="3JZ-4K-A3G">
+                                                    <rect key="frame" x="15" y="0.0" width="345" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="CpF-Ru-hsn" id="bUd-VT-hei"/>
+                                    <outlet property="delegate" destination="CpF-Ru-hsn" id="9Kr-Re-RAX"/>
+                                </connections>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="lcE-dK-5UR" firstAttribute="leading" secondItem="Ovw-OZ-Z4q" secondAttribute="leading" constant="16" id="BeM-Ti-mhR"/>
-                            <constraint firstItem="lcE-dK-5UR" firstAttribute="top" secondItem="Ovw-OZ-Z4q" secondAttribute="top" constant="16" id="ax4-fZ-4rL"/>
-                            <constraint firstItem="Ovw-OZ-Z4q" firstAttribute="trailing" secondItem="lcE-dK-5UR" secondAttribute="trailing" constant="16" id="yuc-qt-kzg"/>
+                            <constraint firstItem="lcE-dK-5UR" firstAttribute="top" secondItem="bg7-nM-V9I" secondAttribute="bottom" constant="5" id="0AD-t2-wKi"/>
+                            <constraint firstItem="bg7-nM-V9I" firstAttribute="top" secondItem="Ovw-OZ-Z4q" secondAttribute="top" constant="10" id="5Rl-ET-sT8"/>
+                            <constraint firstItem="Ovw-OZ-Z4q" firstAttribute="bottom" secondItem="ku6-2w-1sz" secondAttribute="bottom" id="6Pe-WA-frw"/>
+                            <constraint firstItem="lcE-dK-5UR" firstAttribute="leading" secondItem="Ovw-OZ-Z4q" secondAttribute="leading" constant="16" id="6ei-3D-YZ5"/>
+                            <constraint firstItem="bg7-nM-V9I" firstAttribute="leading" secondItem="Ovw-OZ-Z4q" secondAttribute="leading" constant="16" id="7qN-66-Kre"/>
+                            <constraint firstItem="ku6-2w-1sz" firstAttribute="trailing" secondItem="Ovw-OZ-Z4q" secondAttribute="trailing" id="B5u-Q6-EaH"/>
+                            <constraint firstItem="ku6-2w-1sz" firstAttribute="leading" secondItem="Ovw-OZ-Z4q" secondAttribute="leading" id="CAm-rw-MqU"/>
+                            <constraint firstItem="Ovw-OZ-Z4q" firstAttribute="trailing" secondItem="bg7-nM-V9I" secondAttribute="trailing" constant="16" id="O0L-5j-xzv"/>
+                            <constraint firstItem="ku6-2w-1sz" firstAttribute="top" secondItem="lcE-dK-5UR" secondAttribute="bottom" constant="5" id="fkS-bq-Iw9"/>
+                            <constraint firstItem="Ovw-OZ-Z4q" firstAttribute="trailing" secondItem="lcE-dK-5UR" secondAttribute="trailing" constant="16" id="j0y-WM-RRH"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Ovw-OZ-Z4q"/>
                     </view>
+                    <connections>
+                        <outlet property="addFoodsTextField" destination="lcE-dK-5UR" id="Q4j-1C-egV"/>
+                        <outlet property="foodsTableView" destination="ku6-2w-1sz" id="Q77-dp-QN7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zWD-2M-0zC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

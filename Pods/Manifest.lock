@@ -4,19 +4,23 @@ PODS:
   - Realm/Headers (3.7.5)
   - RealmSwift (3.7.5):
     - Realm (= 3.7.5)
+  - SearchTextField (1.2.1)
 
 DEPENDENCIES:
   - RealmSwift
+  - SearchTextField
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Realm
     - RealmSwift
+    - SearchTextField
 
 SPEC CHECKSUMS:
   Realm: c286caf4dbf346ce24aad49ca76c7ce622d4a082
   RealmSwift: 2a9281e37d6de55f66f76254d49d28aeb1b729e4
+  SearchTextField: 261b0febd49194492f29555fff3c5c0019ca84d2
 
-PODFILE CHECKSUM: ca84dd510737df26e191b4253fbd7417eff73d34
+PODFILE CHECKSUM: a22eb0a6f294076de26432881beba3288d553074
 
 COCOAPODS: 1.5.3

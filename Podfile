@@ -7,6 +7,7 @@ target 'Coma Certo' do
 
   # Pods for Coma Certo
   pod 'RealmSwift'
+  pod "SearchTextField"
 
   target 'Coma CertoTests' do
     inherit! :search_paths

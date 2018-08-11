@@ -165,9 +165,18 @@
 			path = Meal;
 			sourceTree = "<group>";
 		};
+		595A56CC211E925900C76CA4 /* Custom */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Custom;
+			path = "New Group";
+			sourceTree = "<group>";
+		};
 		59720C01211C8B3500C0826B /* View */ = {
 			isa = PBXGroup;
 			children = (
+				595A56CC211E925900C76CA4 /* Custom */,
 				59720C02211C8B3B00C0826B /* Meals */,
 			);
 			path = View;
@@ -433,11 +442,13 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-Coma Certo/Pods-Coma Certo-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SearchTextField/SearchTextField.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SearchTextField.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;

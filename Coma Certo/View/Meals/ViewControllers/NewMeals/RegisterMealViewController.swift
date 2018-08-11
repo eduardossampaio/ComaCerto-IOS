@@ -16,8 +16,10 @@ class RegisterMealViewController: UITableViewController {
     @IBOutlet weak var hungerAfterSlider: UISlider!
     @IBOutlet weak var whatIAteCell: UITableViewCell!
     
-    var foods  = ["Arroz","Feijão","Carne","Ovo","Frango","Salada"]
-    
+    //embeededViewControllers
+    private var listFoodTableViewController: ListFoodTableViewController!
+    private var reactionsCollectionViewController: ReactionsCollectionViewController!
+    var foods = [String]()
     var selectedDate = Date()
     let mealController = MealController()
     var selectedFeeling: Feeling?
@@ -46,6 +48,7 @@ class RegisterMealViewController: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == "listFoodSegue"){
             let controller = segue.destination as! ListFoodTableViewController
+            self.listFoodTableViewController = controller
             controller.foodList = foods
             controller.onFoodListUpdate = { (foodList) in
                 self.foods = foodList;
@@ -56,15 +59,25 @@ class RegisterMealViewController: UITableViewController {
             }
         }else if(segue.identifier == "listReactionsSegue"){
             let controller = segue.destination as! ReactionsCollectionViewController
+            self.reactionsCollectionViewController = controller
             controller.onFeelingSelected = {(feeling) in
                 self.selectedFeeling = feeling
+            }
+        }else if(segue.identifier == "selectFoodsSegue"){
+            let controller = segue.destination as! AddFoodsToMealViewController
+            controller.selectedFoods = self.foods
+            controller.onFoodListUpdate = { (foodList) in
+                self.foods = foodList;
+                self.listFoodTableViewController.foodList = foodList
+                self.listFoodTableViewController.tableView.reloadData()
+                self.tableView.reloadData()
             }
         }
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        if indexPath.section == 1 {
-            return CGFloat(44 * foods.count)
+        if indexPath.section == 1 && foods.count > 0{
+            return CGFloat(44 * (foods.count + 1) )
         }
         return super.tableView(tableView, heightForRowAt: indexPath)
     }
