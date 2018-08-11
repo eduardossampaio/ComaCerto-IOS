@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import CustomizableActionSheet
 //https://github.com/beryu/CustomizableActionSheet
 class RegisterMealViewController: UITableViewController {
     
@@ -33,6 +34,15 @@ class RegisterMealViewController: UITableViewController {
         mealController.onNewMeal(meal)
         dismiss(animated: true, completion: nil)
     }
+    
+    @IBAction func onDateButtonClicked(_ sender: Any) {
+        openDatePickerActionSheet()
+    }
+    
+    @IBAction func onTimeButtonClicked(_ sender: Any) {
+        openTimePickerActionSheet()
+    }
+    
     @IBAction func onCancelButtonClicked(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
@@ -43,6 +53,9 @@ class RegisterMealViewController: UITableViewController {
         sender.value = roundedValue
     }
     override func viewWillAppear(_ animated: Bool) {
+        updateDateTimeLabels()
+    }
+    func updateDateTimeLabels(){
         dateTextButton.setTitle(selectedDate.toReadableDate(style: .short), for:.normal)
         timeTextButton.setTitle(selectedDate.toReadableTime(), for:.normal)
     }
@@ -81,5 +94,33 @@ class RegisterMealViewController: UITableViewController {
             return CGFloat(44 * (foods.count + 1) )
         }
         return super.tableView(tableView, heightForRowAt: indexPath)
+    }
+    
+    private func openDatePickerActionSheet(){
+       openDateActionSheet(.date)
+    }
+    
+    private func openTimePickerActionSheet(){
+       openDateActionSheet(.time)
+    }
+    private func openDateActionSheet(_ mode: UIDatePickerMode){
+        var items = [CustomizableActionSheetItem]()
+        let sampleViewItem = CustomizableActionSheetItem()
+        let datePicker = UIDatePicker()
+        datePicker.addTarget(self, action: #selector(RegisterMealViewController.datePickerValueChanged(_:)), for: .valueChanged)
+        datePicker.setDate(self.selectedDate, animated: true)
+        datePicker.backgroundColor = UIColor.white
+        sampleViewItem.type = .view
+        sampleViewItem.view = datePicker
+        sampleViewItem.height = 250
+        items.append(sampleViewItem)
+        datePicker.datePickerMode = mode
+        let actionSheet = CustomizableActionSheet()
+        actionSheet.showInView(self.view, items: items)
+    }
+    
+    @objc func datePickerValueChanged(_ sender: UIDatePicker){
+        self.selectedDate =  sender.date
+        updateDateTimeLabels()
     }
 }

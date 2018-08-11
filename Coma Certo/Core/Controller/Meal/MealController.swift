@@ -18,7 +18,7 @@ class MealController: NSObject {
     func listMeals(for date:Date) -> [Meal]{
         var result = [Meal]()
         for meal in MealController.cachedMeals{
-            if meal.date == date{
+            if meal.date?.toReadableDate() == date.toReadableDate(){
                 result.append(meal)
             }
         }

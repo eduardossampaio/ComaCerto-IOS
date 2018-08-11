@@ -1,4 +1,5 @@
 PODS:
+  - CustomizableActionSheet (1.2.1)
   - Realm (3.7.5):
     - Realm/Headers (= 3.7.5)
   - Realm/Headers (3.7.5)
@@ -7,20 +8,23 @@ PODS:
   - SearchTextField (1.2.1)
 
 DEPENDENCIES:
+  - CustomizableActionSheet
   - RealmSwift
   - SearchTextField
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - CustomizableActionSheet
     - Realm
     - RealmSwift
     - SearchTextField
 
 SPEC CHECKSUMS:
+  CustomizableActionSheet: 53b259b33e3567f4708cbc080bb4222632b6aa8d
   Realm: c286caf4dbf346ce24aad49ca76c7ce622d4a082
   RealmSwift: 2a9281e37d6de55f66f76254d49d28aeb1b729e4
   SearchTextField: 261b0febd49194492f29555fff3c5c0019ca84d2
 
-PODFILE CHECKSUM: a22eb0a6f294076de26432881beba3288d553074
+PODFILE CHECKSUM: 067ad089ea068ee889ba00e16d6ee027104d37d1
 
 COCOAPODS: 1.5.3

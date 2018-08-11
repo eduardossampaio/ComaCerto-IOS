@@ -1,0 +1,6 @@
+framework module CustomizableActionSheet {
+  umbrella header "CustomizableActionSheet-umbrella.h"
+
+  export *
+  module * { export * }
+}
