@@ -13,6 +13,7 @@
 		5902B56D211E01E900707EB0 /* Feeling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5902B56C211E01E900707EB0 /* Feeling.swift */; };
 		5902B571211E034800707EB0 /* MealController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5902B570211E034800707EB0 /* MealController.swift */; };
 		5902B573211E246500707EB0 /* ListMealCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5902B572211E246500707EB0 /* ListMealCellView.swift */; };
+		59031CE0211E768200AFE685 /* AddFoodsToMealViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59031CDF211E768200AFE685 /* AddFoodsToMealViewController.swift */; };
 		59720C04211C8B6B00C0826B /* RegisterMealViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59720C03211C8B6B00C0826B /* RegisterMealViewController.swift */; };
 		59720C06211CFEE200C0826B /* ReactionsCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59720C05211CFEE200C0826B /* ReactionsCollectionViewController.swift */; };
 		59720C0B211D177C00C0826B /* FeelingCollectionCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59720C0A211D177C00C0826B /* FeelingCollectionCellView.swift */; };
@@ -55,6 +56,7 @@
 		5902B56C211E01E900707EB0 /* Feeling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feeling.swift; sourceTree = "<group>"; };
 		5902B570211E034800707EB0 /* MealController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealController.swift; sourceTree = "<group>"; };
 		5902B572211E246500707EB0 /* ListMealCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListMealCellView.swift; sourceTree = "<group>"; };
+		59031CDF211E768200AFE685 /* AddFoodsToMealViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFoodsToMealViewController.swift; sourceTree = "<group>"; };
 		59720C03211C8B6B00C0826B /* RegisterMealViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterMealViewController.swift; sourceTree = "<group>"; };
 		59720C05211CFEE200C0826B /* ReactionsCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactionsCollectionViewController.swift; sourceTree = "<group>"; };
 		59720C0A211D177C00C0826B /* FeelingCollectionCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeelingCollectionCellView.swift; sourceTree = "<group>"; };
@@ -184,19 +186,20 @@
 			isa = PBXGroup;
 			children = (
 				59D28817211A80B300CD38B7 /* DailyMealsViewController.swift */,
-				59720C08211CFF0700C0826B /* RegisterMeal */,
+				59720C08211CFF0700C0826B /* NewMeals */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
 		};
-		59720C08211CFF0700C0826B /* RegisterMeal */ = {
+		59720C08211CFF0700C0826B /* NewMeals */ = {
 			isa = PBXGroup;
 			children = (
 				59720C03211C8B6B00C0826B /* RegisterMealViewController.swift */,
 				59720C05211CFEE200C0826B /* ReactionsCollectionViewController.swift */,
 				59A9E63C211D2E7F009B38A0 /* ListFoodTableViewController.swift */,
+				59031CDF211E768200AFE685 /* AddFoodsToMealViewController.swift */,
 			);
-			path = RegisterMeal;
+			path = NewMeals;
 			sourceTree = "<group>";
 		};
 		59720C09211D175500C0826B /* Custom */ = {
@@ -494,6 +497,7 @@
 				5902B56A211E013300707EB0 /* Meal.swift in Sources */,
 				59D28816211A80B300CD38B7 /* AppDelegate.swift in Sources */,
 				59720C0B211D177C00C0826B /* FeelingCollectionCellView.swift in Sources */,
+				59031CE0211E768200AFE685 /* AddFoodsToMealViewController.swift in Sources */,
 				59A9E63D211D2E7F009B38A0 /* ListFoodTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

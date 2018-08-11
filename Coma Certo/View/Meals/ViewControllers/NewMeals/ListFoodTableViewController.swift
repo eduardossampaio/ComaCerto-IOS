@@ -9,18 +9,27 @@
 import UIKit
 class ListFoodTableViewController : UITableViewController{
     typealias OnFoodListUpdate = ( ([String])->Void )
+    typealias OnAddNewFoodClicked = ( ()->Void )
 
+    
     var foodList = [String]()
     var onFoodListUpdate:OnFoodListUpdate?
+    var onAddNewFoodClicked:OnAddNewFoodClicked?
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return foodList.count
+        return foodList.count + 1
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "foodCell")
-        cell?.textLabel?.text = foodList[indexPath.item]
-        return cell!
+        if (indexPath.item == 0){
+            let cell = tableView.dequeueReusableCell(withIdentifier: "AddFoodsCell")
+            return cell!
+        }else{
+            let foodIndex = indexPath.item - 1
+            let cell = tableView.dequeueReusableCell(withIdentifier: "foodCell")
+            cell?.textLabel?.text = foodList[foodIndex]
+            return cell!
+        }
     }
     
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
@@ -28,6 +37,19 @@ class ListFoodTableViewController : UITableViewController{
             self.foodList.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
             onFoodListUpdate?(foodList)
+        }
+    }
+    
+    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        if ( indexPath.item == 0){
+            return false
+        }
+        return true
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if ( indexPath.section == 0 && indexPath.item == 0){
+            onAddNewFoodClicked?()
         }
     }
     

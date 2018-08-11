@@ -21,11 +21,7 @@ class RegisterMealViewController: UITableViewController {
     var selectedDate = Date()
     let mealController = MealController()
     var selectedFeeling: Feeling?
-    
-    override func viewDidLoad() {
-        
-    }
-    
+  
     @IBAction func onSaveButtonClicked(_ sender: Any) {
         let hungerBefore = Int(hungerBeforeSlider.value)
         let hungerAfter = Int(hungerAfterSlider.value)
@@ -55,6 +51,9 @@ class RegisterMealViewController: UITableViewController {
                 self.foods = foodList;
                 self.tableView.reloadData()
             }
+            controller.onAddNewFoodClicked = {
+                self.performSegue(withIdentifier: "selectFoodsSegue", sender: nil)
+            }
         }else if(segue.identifier == "listReactionsSegue"){
             let controller = segue.destination as! ReactionsCollectionViewController
             controller.onFeelingSelected = {(feeling) in
@@ -62,8 +61,9 @@ class RegisterMealViewController: UITableViewController {
             }
         }
     }
+    
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        if indexPath.section == 1 && foods.count>0{
+        if indexPath.section == 1 {
             return CGFloat(44 * foods.count)
         }
         return super.tableView(tableView, heightForRowAt: indexPath)
