@@ -8,8 +8,10 @@
 
 import UIKit
 class ListFoodTableViewController : UITableViewController{
-    
+    typealias OnFoodListUpdate = ( ([String])->Void )
+
     var foodList = [String]()
+    var onFoodListUpdate:OnFoodListUpdate?
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return foodList.count
@@ -19,6 +21,14 @@ class ListFoodTableViewController : UITableViewController{
         let cell = tableView.dequeueReusableCell(withIdentifier: "foodCell")
         cell?.textLabel?.text = foodList[indexPath.item]
         return cell!
+    }
+    
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            self.foodList.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .fade)
+            onFoodListUpdate?(foodList)
+        }
     }
     
 }

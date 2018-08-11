@@ -216,15 +216,15 @@
                             </tableViewSection>
                             <tableViewSection headerTitle="O que comi" id="bcI-kj-dfl">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="144" id="rhM-at-6V9">
-                                        <rect key="frame" x="0.0" y="144" width="375" height="144"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="rhM-at-6V9">
+                                        <rect key="frame" x="0.0" y="144" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="rhM-at-6V9" id="Cu8-Em-XpD">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="144"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ueU-7n-jKQ">
-                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="144"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                                     <connections>
                                                         <segue destination="EfC-Vx-cAT" kind="embed" identifier="listFoodSegue" id="3c7-Ex-PBa"/>
                                                     </connections>
@@ -243,7 +243,7 @@
                             <tableViewSection headerTitle="Nível de fome" id="xnK-vt-Kf9">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="50" id="KBx-AK-AAV">
-                                        <rect key="frame" x="0.0" y="316" width="375" height="50"/>
+                                        <rect key="frame" x="0.0" y="216" width="375" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="KBx-AK-AAV" id="uF9-lJ-Ss3">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
@@ -279,7 +279,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="50" id="mEF-KA-h4q">
-                                        <rect key="frame" x="0.0" y="366" width="375" height="50"/>
+                                        <rect key="frame" x="0.0" y="266" width="375" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="mEF-KA-h4q" id="ynS-Bl-bmu">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
@@ -319,7 +319,7 @@
                             <tableViewSection headerTitle="Como me senti" id="olL-P3-B0U">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="170" id="AkK-lT-ZU6">
-                                        <rect key="frame" x="0.0" y="444" width="375" height="170"/>
+                                        <rect key="frame" x="0.0" y="344" width="375" height="170"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="AkK-lT-ZU6" id="7Wv-Cn-wAX">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="170"/>
@@ -366,6 +366,7 @@
                         <outlet property="hungerAfterSlider" destination="UOD-D5-BbM" id="sXJ-NR-u0f"/>
                         <outlet property="hungerBeforeSlider" destination="u9Q-0c-cw2" id="xqZ-eb-Uwg"/>
                         <outlet property="timeTextButton" destination="Ojk-a4-WWb" id="iPC-DN-61o"/>
+                        <outlet property="whatIAteCell" destination="rhM-at-6V9" id="DRC-zl-rmH"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="F5V-vA-m2K" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -428,7 +429,7 @@
             <objects>
                 <tableViewController id="EfC-Vx-cAT" customClass="ListFoodTableViewController" customModule="Coma_Certo" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="jA4-qP-wLA">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="144"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
