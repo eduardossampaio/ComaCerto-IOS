@@ -34,9 +34,11 @@ class ListFoodTableViewController : UITableViewController{
     
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            self.foodList.remove(at: indexPath.row)
-            tableView.deleteRows(at: [indexPath], with: .fade)
-            onFoodListUpdate?(foodList)
+            if ( self.foodList.isEmpty == false){
+                self.foodList.remove(at: indexPath.item - 1)
+                tableView.deleteRows(at: [indexPath], with: .fade)
+                onFoodListUpdate?(foodList)
+            }
         }
     }
     
