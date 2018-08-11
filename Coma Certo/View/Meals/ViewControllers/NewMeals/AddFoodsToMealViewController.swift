@@ -17,16 +17,24 @@ class AddFoodsToMealViewController : UIViewController,UITableViewDelegate,UITabl
     @IBOutlet weak var foodsTableView: UITableView!
     
     var onFoodListUpdate:OnFoodListUpdate? = nil
-    
-    var foods  = ["Arroz","Feijão","Carne","Ovo","Frango","Salada"]
+    var allFoodsList = Food.allFoods
     var selectedFoods = [String]()
+    var itemToAdd = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        addFoodsTextField.autocorrectionType = .default
         addFoodsTextField.theme.bgColor = UIColor (red: 0.95, green: 0.95, blue: 0.95, alpha: 1)
         addFoodsTextField.theme.cellHeight = 50
         addFoodsTextField.theme.font = UIFont.systemFont(ofSize: 17.0)
+        addFoodsTextField.returnKeyType = .next
+        addFoodsTextField.addTarget(self, action: #selector(AddFoodsToMealViewController.textFieldDidChange(_:)), for: UIControlEvents.editingChanged)
+        
         setupPreValues()
+        addFoodsTextField.itemClickedHandler = {item, itemPosition in
+            self.itemToAdd = item[itemPosition].title
+        }
+        
     }
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
@@ -34,8 +42,8 @@ class AddFoodsToMealViewController : UIViewController,UITableViewDelegate,UITabl
     }
     private func setupPreValues(){
         var searchItems = [SearchTextFieldItem]()
-        for food in foods{
-            let item = SearchTextFieldItem(title: food,  subtitle: "Alimentos")
+        for food in allFoodsList{
+            let item = SearchTextFieldItem(title: food.name,  subtitle: "Alimentos")
             searchItems.append(item)
         }
         addFoodsTextField.filterItems(searchItems)
@@ -55,12 +63,19 @@ class AddFoodsToMealViewController : UIViewController,UITableViewDelegate,UITabl
         cell.textLabel?.text = selectedFoods[indexPath.item]
         return cell;
     }
+    
     func textFieldDidEndEditing(_ textField: UITextField) {
-        if let foodName = textField.text{
-            selectedFoods.insert(foodName, at: 0)
-            textField.text = ""
-            foodsTableView.reloadData()
+        selectedFoods.insert(self.itemToAdd, at: 0)
+        textField.text = ""
+        itemToAdd = ""
+        foodsTableView.reloadData()
+    }
+    
+    @objc func textFieldDidChange(_ textField: UITextField) {
+        if let text = textField.text{
+            self.itemToAdd = text
         }
     }
     
 }
+

@@ -77,6 +77,7 @@ open class SearchTextField: UITextField {
     
     /// Closure to handle when the user pick an item
     open var itemSelectionHandler: SearchTextFieldItemHandler?
+    open var itemClickedHandler: SearchTextFieldItemHandler?
     
     /// Closure to handle when the user stops typing
     open var userStoppedTypingHandler: (() -> Void)?
@@ -593,13 +594,14 @@ extension SearchTextField: UITableViewDelegate, UITableViewDataSource {
     }
     
     public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        itemClickedHandler?(filteredResults, indexPath.row)
         if itemSelectionHandler == nil {
             self.text = filteredResults[(indexPath as NSIndexPath).row].title
         } else {
             let index = indexPath.row
             itemSelectionHandler!(filteredResults, index)
+            
         }
-        
         clearResults()
     }
 }

@@ -23,7 +23,6 @@ class MealController: NSObject {
             }
         }
         return result
-//        return MealController.cachedMeals
     }
     
 }
