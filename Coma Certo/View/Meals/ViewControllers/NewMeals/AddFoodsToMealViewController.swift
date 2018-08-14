@@ -28,13 +28,7 @@ class AddFoodsToMealViewController : UIViewController,UITableViewDelegate,UITabl
         addFoodsTextField.theme.cellHeight = 50
         addFoodsTextField.theme.font = UIFont.systemFont(ofSize: 17.0)
         addFoodsTextField.returnKeyType = .next
-        addFoodsTextField.addTarget(self, action: #selector(AddFoodsToMealViewController.textFieldDidChange(_:)), for: UIControlEvents.editingChanged)
-        
         setupPreValues()
-        addFoodsTextField.itemClickedHandler = {item, itemPosition in
-            self.itemToAdd = item[itemPosition].title
-        }
-        
     }
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
@@ -71,9 +65,12 @@ class AddFoodsToMealViewController : UIViewController,UITableViewDelegate,UITabl
         foodsTableView.reloadData()
     }
     
-    @objc func textFieldDidChange(_ textField: UITextField) {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         if let text = textField.text{
             self.itemToAdd = text
+            return text.isEmpty == false
+        }else{
+            return false
         }
     }
     
@@ -84,6 +81,7 @@ class AddFoodsToMealViewController : UIViewController,UITableViewDelegate,UITabl
             }
         }
         return Food(name: foodName, category: "Meus Alimentos")
+        //salvar alimento
     }
     
 }

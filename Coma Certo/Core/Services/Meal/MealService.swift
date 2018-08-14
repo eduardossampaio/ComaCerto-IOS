@@ -10,8 +10,7 @@ import Foundation
 class MealService : MealIteractor {
     let mealPresenter: MealPresenter
     let mealPersistence = MealPersistence()
-    let mealController = MealController()
-    
+
     init(mealPresenter:MealPresenter) {
         self.mealPresenter = mealPresenter
     }
@@ -32,6 +31,4 @@ class MealService : MealIteractor {
     func onDeletePressed(meal: Meal) {
         mealPersistence.deleteMeal(meal: meal)
     }
-    
-    
 }

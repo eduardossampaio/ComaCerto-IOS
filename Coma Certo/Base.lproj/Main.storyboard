@@ -488,18 +488,42 @@
         <!--Minhas Refeições-->
         <scene sceneID="BZG-kJ-Mtx">
             <objects>
-                <viewController id="upA-Go-rcf" sceneMemberID="viewController">
+                <viewController id="upA-Go-rcf" customClass="MyPresetMealsViewController" customModule="Coma_Certo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hXy-04-MSP">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="xCa-V3-Pjv"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Minhas Refeições" id="6Oc-hI-UMI"/>
+                    <navigationItem key="navigationItem" title="Minhas Refeições" id="6Oc-hI-UMI">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Zad-og-ddf">
+                            <connections>
+                                <action selector="onNewPresetMealClicked:" destination="upA-Go-rcf" id="coY-nT-Wvx"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <segue destination="hp2-XT-s2v" kind="show" identifier="addNewPresetMealSegue" id="GKi-fO-ViY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Q30-j3-YoQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="943.20000000000005" y="5.8470764617691158"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="SCr-Rc-t0o">
+            <objects>
+                <viewController id="hp2-XT-s2v" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Bf5-XX-Zsh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="ECr-5n-e3O"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aqn-lf-KqF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1793" y="6"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="fo9-IV-Abk">

@@ -11,7 +11,6 @@
 		5902B568211DD20100707EB0 /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5902B567211DD20100707EB0 /* Date+Extensions.swift */; };
 		5902B56A211E013300707EB0 /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5902B569211E013300707EB0 /* Meal.swift */; };
 		5902B56D211E01E900707EB0 /* Feeling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5902B56C211E01E900707EB0 /* Feeling.swift */; };
-		5902B571211E034800707EB0 /* MealController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5902B570211E034800707EB0 /* MealController.swift */; };
 		5902B573211E246500707EB0 /* ListMealCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5902B572211E246500707EB0 /* ListMealCellView.swift */; };
 		59031CE0211E768200AFE685 /* AddFoodsToMealViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59031CDF211E768200AFE685 /* AddFoodsToMealViewController.swift */; };
 		59538C2B21226CEB0061147B /* MealService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59538C2A21226CEB0061147B /* MealService.swift */; };
@@ -21,6 +20,7 @@
 		59538C3621231F5C0061147B /* MealRealmEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59538C3521231F5C0061147B /* MealRealmEntity.swift */; };
 		59538C382123205C0061147B /* FoodRealmEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59538C372123205C0061147B /* FoodRealmEntity.swift */; };
 		59538C3A212340CB0061147B /* Entities+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59538C39212340CB0061147B /* Entities+Extensions.swift */; };
+		59538C3D2123615C0061147B /* MyMealsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59538C3C2123615C0061147B /* MyMealsViewController.swift */; };
 		596516B0211F5E04005EE71D /* Food.swift in Sources */ = {isa = PBXBuildFile; fileRef = 596516AF211F5E04005EE71D /* Food.swift */; };
 		59720C04211C8B6B00C0826B /* RegisterMealViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59720C03211C8B6B00C0826B /* RegisterMealViewController.swift */; };
 		59720C06211CFEE200C0826B /* ReactionsCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59720C05211CFEE200C0826B /* ReactionsCollectionViewController.swift */; };
@@ -63,7 +63,6 @@
 		5902B567211DD20100707EB0 /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
 		5902B569211E013300707EB0 /* Meal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meal.swift; sourceTree = "<group>"; };
 		5902B56C211E01E900707EB0 /* Feeling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feeling.swift; sourceTree = "<group>"; };
-		5902B570211E034800707EB0 /* MealController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealController.swift; sourceTree = "<group>"; };
 		5902B572211E246500707EB0 /* ListMealCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListMealCellView.swift; sourceTree = "<group>"; };
 		59031CDF211E768200AFE685 /* AddFoodsToMealViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFoodsToMealViewController.swift; sourceTree = "<group>"; };
 		59538C2A21226CEB0061147B /* MealService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealService.swift; sourceTree = "<group>"; };
@@ -73,6 +72,7 @@
 		59538C3521231F5C0061147B /* MealRealmEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealRealmEntity.swift; sourceTree = "<group>"; };
 		59538C372123205C0061147B /* FoodRealmEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodRealmEntity.swift; sourceTree = "<group>"; };
 		59538C39212340CB0061147B /* Entities+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Entities+Extensions.swift"; sourceTree = "<group>"; };
+		59538C3C2123615C0061147B /* MyMealsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyMealsViewController.swift; sourceTree = "<group>"; };
 		596516AF211F5E04005EE71D /* Food.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Food.swift; sourceTree = "<group>"; };
 		59720C03211C8B6B00C0826B /* RegisterMealViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterMealViewController.swift; sourceTree = "<group>"; };
 		59720C05211CFEE200C0826B /* ReactionsCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactionsCollectionViewController.swift; sourceTree = "<group>"; };
@@ -181,7 +181,6 @@
 		5902B56F211E033A00707EB0 /* Meal */ = {
 			isa = PBXGroup;
 			children = (
-				5902B570211E034800707EB0 /* MealController.swift */,
 			);
 			path = Meal;
 			sourceTree = "<group>";
@@ -215,6 +214,14 @@
 			path = Entities;
 			sourceTree = "<group>";
 		};
+		59538C3B2123613D0061147B /* My Meals */ = {
+			isa = PBXGroup;
+			children = (
+				59538C3C2123615C0061147B /* MyMealsViewController.swift */,
+			);
+			path = "My Meals";
+			sourceTree = "<group>";
+		};
 		596516B3211F6FDD005EE71D /* Custom */ = {
 			isa = PBXGroup;
 			children = (
@@ -228,6 +235,7 @@
 			children = (
 				596516B3211F6FDD005EE71D /* Custom */,
 				59720C02211C8B3B00C0826B /* Meals */,
+				59538C3B2123613D0061147B /* My Meals */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -564,11 +572,11 @@
 				59720C04211C8B6B00C0826B /* RegisterMealViewController.swift in Sources */,
 				59720C06211CFEE200C0826B /* ReactionsCollectionViewController.swift in Sources */,
 				5902B573211E246500707EB0 /* ListMealCellView.swift in Sources */,
-				5902B571211E034800707EB0 /* MealController.swift in Sources */,
 				5902B568211DD20100707EB0 /* Date+Extensions.swift in Sources */,
 				59538C2E21226D010061147B /* MealPresenter.swift in Sources */,
 				59538C3A212340CB0061147B /* Entities+Extensions.swift in Sources */,
 				5902B56D211E01E900707EB0 /* Feeling.swift in Sources */,
+				59538C3D2123615C0061147B /* MyMealsViewController.swift in Sources */,
 				59D28818211A80B300CD38B7 /* DailyMealsViewController.swift in Sources */,
 				5902B56A211E013300707EB0 /* Meal.swift in Sources */,
 				59538C3621231F5C0061147B /* MealRealmEntity.swift in Sources */,

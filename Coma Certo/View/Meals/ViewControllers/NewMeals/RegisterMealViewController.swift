@@ -35,7 +35,6 @@ class RegisterMealViewController: UITableViewController {
         let hungerAfter = Int(hungerAfterSlider.value)
         let foods = self.foods
         let meal = Meal(date: selectedDate, foods: foods, hungryBefore: hungerBefore, hungryAfter: hungerAfter, feeling: selectedFeeling!)
-//        mealController.onNewMeal(meal)
         onNewMealSaved?(meal)
         dismiss(animated: true, completion: nil)
     }
@@ -59,6 +58,7 @@ class RegisterMealViewController: UITableViewController {
     }
     override func viewWillAppear(_ animated: Bool) {
         updateDateTimeLabels()
+        
     }
     func updateDateTimeLabels(){
         dateTextButton.setTitle(selectedDate.toReadableDate(style: .short), for:.normal)
