@@ -22,12 +22,15 @@ class MealService : MealIteractor {
     }
     
     func onSavePressed(meal: Meal) {
-//        mealController.onNewMeal(meal)
         mealPersistence.saveMeal(meal)
     }
     
     func onCancelPressed() {
     
+    }
+    
+    func onDeletePressed(meal: Meal) {
+        mealPersistence.deleteMeal(meal: meal)
     }
     
     

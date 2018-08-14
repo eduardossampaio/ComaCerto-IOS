@@ -26,7 +26,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Coma Certo/View/Meals/ViewControllers/NewMeals/RegisterMealViewController.swift"
-            timestampString = "555963340.405795"
+            timestampString = "555965102.9692971"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "67"
@@ -42,7 +42,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Coma Certo/View/Meals/ViewControllers/NewMeals/ListFoodTableViewController.swift"
-            timestampString = "555963340.405864"
+            timestampString = "555965102.969371"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "20"
@@ -58,7 +58,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Coma Certo/View/Meals/ViewControllers/NewMeals/ListFoodTableViewController.swift"
-            timestampString = "555963340.405917"
+            timestampString = "555965102.969424"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "24"
@@ -74,7 +74,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Coma Certo/View/Meals/ViewControllers/NewMeals/ListFoodTableViewController.swift"
-            timestampString = "555963340.4059629"
+            timestampString = "555965102.9694721"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "38"
@@ -90,7 +90,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Coma Certo/View/Meals/ViewControllers/NewMeals/ListFoodTableViewController.swift"
-            timestampString = "555963340.4060071"
+            timestampString = "555965102.969516"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "37"
@@ -106,7 +106,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Coma Certo/View/Meals/ViewControllers/NewMeals/AddFoodsToMealViewController.swift"
-            timestampString = "555963340.406052"
+            timestampString = "555965102.9695621"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "76"
@@ -121,61 +121,13 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Coma Certo/Core/Persistence/Entities/Entities+Extensions.swift"
-            timestampString = "555963340.4062051"
+            filePath = "Coma Certo/Core/Persistence/MealPersistence.swift"
+            timestampString = "555965102.969611"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "27"
-            endingLineNumber = "27"
-            landmarkName = "fromMeal(meal:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Coma_Certo.MealRealmEntity.fromMeal(meal: Coma_Certo.Meal) -&gt; ()"
-                  moduleName = "Coma Certo"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/eduardosoares/Documents/github/Coma%20Certo/Coma%20Certo/Core/Persistence/Entities/Entities+Extensions.swift"
-                  timestampString = "555963340.5218199"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "27"
-                  endingLineNumber = "27"
-                  offsetFromSymbolStart = "24">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Coma_Certo.MealRealmEntity.fromMeal(meal: Coma_Certo.Meal) -&gt; ()"
-                  moduleName = "Coma Certo"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/eduardosoares/Documents/github/Coma%20Certo/Coma%20Certo/Core/Persistence/Entities/Entities+Extensions.swift"
-                  timestampString = "555963340.523653"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "27"
-                  endingLineNumber = "27"
-                  offsetFromSymbolStart = "1056">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Coma Certo/Core/Persistence/Entities/Entities+Extensions.swift"
-            timestampString = "555963381.057409"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "39"
-            endingLineNumber = "39"
-            landmarkName = "fromMeal(meal:)"
+            startingLineNumber = "14"
+            endingLineNumber = "14"
+            landmarkName = "getRealmObject(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

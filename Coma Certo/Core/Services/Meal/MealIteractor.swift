@@ -12,5 +12,7 @@ protocol MealIteractor {
     
     func onSavePressed(meal:Meal)
     
+    func onDeletePressed(meal: Meal)
+    
     func onCancelPressed()
 }

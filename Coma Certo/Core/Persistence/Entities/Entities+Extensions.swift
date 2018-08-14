@@ -28,7 +28,7 @@ extension MealRealmEntity{
         self.feeling = meal.feeling.id
         self.hungryBefore = meal.hungryBefore ?? 0
         self.hungryAfter = meal.hungryAfter ?? 0
-        var allFoods = List<FoodRealmEntity>()
+        let allFoods = List<FoodRealmEntity>()
         if let mealFoods = meal.foods{
             for food in mealFoods{
                 let foodRealmEntity = FoodRealmEntity()

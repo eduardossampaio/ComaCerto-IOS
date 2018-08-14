@@ -9,10 +9,25 @@
 import Foundation
 import RealmSwift
 class MealPersistence {
+    
+    private func getRealmObject(_ meal:Meal) -> MealRealmEntity?{
+        guard let date = meal.date else{
+            return nil
+        }
+        let realm = try! Realm()
+
+        let mealEntities = realm.objects(MealRealmEntity.self).filter("dateAndTime =%@",date );
+        if mealEntities.count > 0{
+            return mealEntities.first
+        }
+        return nil
+    }
+    
     func saveMeal(_ meal: Meal){
+        let realm = try! Realm()
         let mealRealmEntity = MealRealmEntity()
         mealRealmEntity.fromMeal(meal: meal)
-        let realm = try! Realm()
+        
         try! realm.write {
             realm.add(mealRealmEntity)
         }
@@ -27,6 +42,14 @@ class MealPersistence {
             allMeals.append(meal)
         }
         return allMeals
-       
+    }
+    
+    func deleteMeal(meal: Meal){
+        let realm = try! Realm()
+        if let mealRealmEntity = getRealmObject(meal){
+            try! realm.write {
+                realm.delete(mealRealmEntity)
+            }
+        }
     }
 }

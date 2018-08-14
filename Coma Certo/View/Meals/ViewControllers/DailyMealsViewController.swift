@@ -47,6 +47,8 @@ class DailyMealsViewController: UIViewController,UITableViewDelegate,UITableView
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
+            let meal = self.meals[indexPath.row]
+            mealIteractor.onDeletePressed(meal: meal)
             self.meals.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
         }
