@@ -9,15 +9,13 @@
 import Foundation
 struct Meal {
     var date:Date?
-    var time:Date?
-    var foods: [String]?
+    var foods: [Food]?
     var hungryBefore: Int?
     var hungryAfter:Int?
-    var feeling:Feeling?
+    var feeling:Feeling
     
-    init( date:Date? ,time:Date? ,foods: [String]? ,hungryBefore: Int? ,hungryAfter:Int? ,feeling:Feeling?) {
+    init( date:Date? ,foods: [Food]? ,hungryBefore: Int? ,hungryAfter:Int? ,feeling:Feeling) {
         self.date = date
-        self.time = time
         self.foods = foods
         self.hungryBefore = hungryBefore
         self.hungryAfter = hungryAfter

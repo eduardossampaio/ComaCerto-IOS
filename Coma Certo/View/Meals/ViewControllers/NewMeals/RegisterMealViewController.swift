@@ -12,6 +12,8 @@ import CustomizableActionSheet
 //https://github.com/beryu/CustomizableActionSheet
 class RegisterMealViewController: UITableViewController {
     
+    typealias OnNewMealSaved = ((Meal) -> Void)
+    
     @IBOutlet weak var dateTextButton: UIButton!
     @IBOutlet weak var timeTextButton: UIButton!
     @IBOutlet weak var hungerBeforeSlider: UISlider!
@@ -21,17 +23,20 @@ class RegisterMealViewController: UITableViewController {
     //embeededViewControllers
     private var listFoodTableViewController: ListFoodTableViewController!
     private var reactionsCollectionViewController: ReactionsCollectionViewController!
-    var foods = [String]()
+    var foods = [Food]()
     var selectedDate = Date()
-    let mealController = MealController()
     var selectedFeeling: Feeling?
+    
+    var onNewMealSaved: OnNewMealSaved?
+    
   
     @IBAction func onSaveButtonClicked(_ sender: Any) {
         let hungerBefore = Int(hungerBeforeSlider.value)
         let hungerAfter = Int(hungerAfterSlider.value)
         let foods = self.foods
-        let meal = Meal(date: selectedDate, time: selectedDate, foods: foods, hungryBefore: hungerBefore, hungryAfter: hungerAfter, feeling: selectedFeeling)
-        mealController.onNewMeal(meal)
+        let meal = Meal(date: selectedDate, foods: foods, hungryBefore: hungerBefore, hungryAfter: hungerAfter, feeling: selectedFeeling!)
+//        mealController.onNewMeal(meal)
+        onNewMealSaved?(meal)
         dismiss(animated: true, completion: nil)
     }
     

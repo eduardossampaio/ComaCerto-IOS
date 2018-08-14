@@ -14,11 +14,19 @@
 		5902B571211E034800707EB0 /* MealController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5902B570211E034800707EB0 /* MealController.swift */; };
 		5902B573211E246500707EB0 /* ListMealCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5902B572211E246500707EB0 /* ListMealCellView.swift */; };
 		59031CE0211E768200AFE685 /* AddFoodsToMealViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59031CDF211E768200AFE685 /* AddFoodsToMealViewController.swift */; };
+		59538C2B21226CEB0061147B /* MealService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59538C2A21226CEB0061147B /* MealService.swift */; };
+		59538C2E21226D010061147B /* MealPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59538C2D21226D010061147B /* MealPresenter.swift */; };
+		59538C30212274BB0061147B /* MealIteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59538C2F212274BB0061147B /* MealIteractor.swift */; };
+		59538C3221231A800061147B /* MealPersistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59538C3121231A800061147B /* MealPersistence.swift */; };
+		59538C3621231F5C0061147B /* MealRealmEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59538C3521231F5C0061147B /* MealRealmEntity.swift */; };
+		59538C382123205C0061147B /* FoodRealmEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59538C372123205C0061147B /* FoodRealmEntity.swift */; };
+		59538C3A212340CB0061147B /* Entities+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59538C39212340CB0061147B /* Entities+Extensions.swift */; };
 		596516B0211F5E04005EE71D /* Food.swift in Sources */ = {isa = PBXBuildFile; fileRef = 596516AF211F5E04005EE71D /* Food.swift */; };
 		59720C04211C8B6B00C0826B /* RegisterMealViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59720C03211C8B6B00C0826B /* RegisterMealViewController.swift */; };
 		59720C06211CFEE200C0826B /* ReactionsCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59720C05211CFEE200C0826B /* ReactionsCollectionViewController.swift */; };
 		59720C0B211D177C00C0826B /* FeelingCollectionCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59720C0A211D177C00C0826B /* FeelingCollectionCellView.swift */; };
 		59A9E63D211D2E7F009B38A0 /* ListFoodTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A9E63C211D2E7F009B38A0 /* ListFoodTableViewController.swift */; };
+		59C705D8212125C7000423A4 /* FoodHttpService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59C705D7212125C7000423A4 /* FoodHttpService.swift */; };
 		59D28816211A80B300CD38B7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59D28815211A80B300CD38B7 /* AppDelegate.swift */; };
 		59D28818211A80B300CD38B7 /* DailyMealsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59D28817211A80B300CD38B7 /* DailyMealsViewController.swift */; };
 		59D2881B211A80B300CD38B7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 59D28819211A80B300CD38B7 /* Main.storyboard */; };
@@ -58,11 +66,19 @@
 		5902B570211E034800707EB0 /* MealController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealController.swift; sourceTree = "<group>"; };
 		5902B572211E246500707EB0 /* ListMealCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListMealCellView.swift; sourceTree = "<group>"; };
 		59031CDF211E768200AFE685 /* AddFoodsToMealViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFoodsToMealViewController.swift; sourceTree = "<group>"; };
+		59538C2A21226CEB0061147B /* MealService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealService.swift; sourceTree = "<group>"; };
+		59538C2D21226D010061147B /* MealPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealPresenter.swift; sourceTree = "<group>"; };
+		59538C2F212274BB0061147B /* MealIteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealIteractor.swift; sourceTree = "<group>"; };
+		59538C3121231A800061147B /* MealPersistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealPersistence.swift; sourceTree = "<group>"; };
+		59538C3521231F5C0061147B /* MealRealmEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealRealmEntity.swift; sourceTree = "<group>"; };
+		59538C372123205C0061147B /* FoodRealmEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodRealmEntity.swift; sourceTree = "<group>"; };
+		59538C39212340CB0061147B /* Entities+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Entities+Extensions.swift"; sourceTree = "<group>"; };
 		596516AF211F5E04005EE71D /* Food.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Food.swift; sourceTree = "<group>"; };
 		59720C03211C8B6B00C0826B /* RegisterMealViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterMealViewController.swift; sourceTree = "<group>"; };
 		59720C05211CFEE200C0826B /* ReactionsCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactionsCollectionViewController.swift; sourceTree = "<group>"; };
 		59720C0A211D177C00C0826B /* FeelingCollectionCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeelingCollectionCellView.swift; sourceTree = "<group>"; };
 		59A9E63C211D2E7F009B38A0 /* ListFoodTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListFoodTableViewController.swift; sourceTree = "<group>"; };
+		59C705D7212125C7000423A4 /* FoodHttpService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodHttpService.swift; sourceTree = "<group>"; };
 		59D28812211A80B300CD38B7 /* Coma Certo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Coma Certo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		59D28815211A80B300CD38B7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		59D28817211A80B300CD38B7 /* DailyMealsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyMealsViewController.swift; sourceTree = "<group>"; };
@@ -127,6 +143,8 @@
 		5902B565211DD1E100707EB0 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				59538C3321231A860061147B /* Persistence */,
+				59C705D6212125B4000423A4 /* Services */,
 				5902B56E211E033400707EB0 /* Controller */,
 				5902B56B211E014C00707EB0 /* Entities */,
 				5902B566211DD1EE00707EB0 /* Extensions */,
@@ -166,6 +184,35 @@
 				5902B570211E034800707EB0 /* MealController.swift */,
 			);
 			path = Meal;
+			sourceTree = "<group>";
+		};
+		59538C2C21226CF00061147B /* Meal */ = {
+			isa = PBXGroup;
+			children = (
+				59538C2A21226CEB0061147B /* MealService.swift */,
+				59538C2D21226D010061147B /* MealPresenter.swift */,
+				59538C2F212274BB0061147B /* MealIteractor.swift */,
+			);
+			path = Meal;
+			sourceTree = "<group>";
+		};
+		59538C3321231A860061147B /* Persistence */ = {
+			isa = PBXGroup;
+			children = (
+				59538C3421231F4D0061147B /* Entities */,
+				59538C3121231A800061147B /* MealPersistence.swift */,
+			);
+			path = Persistence;
+			sourceTree = "<group>";
+		};
+		59538C3421231F4D0061147B /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				59538C3521231F5C0061147B /* MealRealmEntity.swift */,
+				59538C372123205C0061147B /* FoodRealmEntity.swift */,
+				59538C39212340CB0061147B /* Entities+Extensions.swift */,
+			);
+			path = Entities;
 			sourceTree = "<group>";
 		};
 		596516B3211F6FDD005EE71D /* Custom */ = {
@@ -221,6 +268,15 @@
 				5902B572211E246500707EB0 /* ListMealCellView.swift */,
 			);
 			path = Custom;
+			sourceTree = "<group>";
+		};
+		59C705D6212125B4000423A4 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				59538C2C21226CF00061147B /* Meal */,
+				59C705D7212125C7000423A4 /* FoodHttpService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 		59D28809211A80B300CD38B7 = {
@@ -443,6 +499,7 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Coma Certo/Pods-Coma Certo-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/CustomizableActionSheet/CustomizableActionSheet.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
@@ -450,6 +507,7 @@
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CustomizableActionSheet.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
@@ -508,14 +566,22 @@
 				5902B573211E246500707EB0 /* ListMealCellView.swift in Sources */,
 				5902B571211E034800707EB0 /* MealController.swift in Sources */,
 				5902B568211DD20100707EB0 /* Date+Extensions.swift in Sources */,
+				59538C2E21226D010061147B /* MealPresenter.swift in Sources */,
+				59538C3A212340CB0061147B /* Entities+Extensions.swift in Sources */,
 				5902B56D211E01E900707EB0 /* Feeling.swift in Sources */,
 				59D28818211A80B300CD38B7 /* DailyMealsViewController.swift in Sources */,
 				5902B56A211E013300707EB0 /* Meal.swift in Sources */,
+				59538C3621231F5C0061147B /* MealRealmEntity.swift in Sources */,
+				59538C2B21226CEB0061147B /* MealService.swift in Sources */,
 				59D28816211A80B300CD38B7 /* AppDelegate.swift in Sources */,
 				596516B0211F5E04005EE71D /* Food.swift in Sources */,
+				59538C3221231A800061147B /* MealPersistence.swift in Sources */,
+				59538C382123205C0061147B /* FoodRealmEntity.swift in Sources */,
 				59720C0B211D177C00C0826B /* FeelingCollectionCellView.swift in Sources */,
 				59031CE0211E768200AFE685 /* AddFoodsToMealViewController.swift in Sources */,
 				59A9E63D211D2E7F009B38A0 /* ListFoodTableViewController.swift in Sources */,
+				59C705D8212125C7000423A4 /* FoodHttpService.swift in Sources */,
+				59538C30212274BB0061147B /* MealIteractor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

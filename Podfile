@@ -9,7 +9,7 @@ target 'Coma Certo' do
   pod 'RealmSwift'
   pod "SearchTextField"
   pod 'CustomizableActionSheet'
-
+  pod 'Alamofire', '~> 4.7'
   target 'Coma CertoTests' do
     inherit! :search_paths
     # Pods for testing

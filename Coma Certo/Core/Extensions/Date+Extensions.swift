@@ -23,8 +23,20 @@ extension Date{
     }
     
     func toReadableTime() -> String{
-         let dateFormatter = DateFormatter()
+        let dateFormatter = DateFormatter()
         dateFormatter.timeStyle = .short
         return dateFormatter.string(from: self)
+    }
+    
+    func beginOfDay() ->Date{
+        return setTime(hour:0,minute: 0,second: 0)
+    }
+    func endOfDay() ->Date{
+        return setTime(hour:23,minute: 59,second: 59)
+    }
+    
+    func setTime(hour:Int, minute:Int,second:Int = 0) -> Date {
+        let date = Calendar.current.date(bySettingHour: hour, minute: minute, second: second, of: self)!
+        return date
     }
 }

@@ -26,4 +26,13 @@ struct Feeling{
         Feeling(id: 7,"Tédio ", "emoji-boredom"),
         Feeling(id: 8,"Tristeza ", "emoji-sad")
     ]
+    
+    static func getFeeling(byId id: Int) -> Feeling{
+        for felling in allFeelings{
+            if felling.id == id {
+                return felling
+            }
+        }
+        return allFeelings[0]
+    }
 }

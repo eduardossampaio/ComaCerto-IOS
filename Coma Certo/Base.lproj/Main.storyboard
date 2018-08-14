@@ -485,33 +485,17 @@
             </objects>
             <point key="canvasLocation" x="2694" y="-1108"/>
         </scene>
-        <!--View Controller-->
+        <!--Minhas Refeições-->
         <scene sceneID="BZG-kJ-Mtx">
             <objects>
                 <viewController id="upA-Go-rcf" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hXy-04-MSP">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Minhas refeições" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vfz-QS-uiq">
-                                <rect key="frame" x="166" y="323" width="130" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="qdV-RA-xab">
-                                <rect key="frame" x="16" y="411" width="375" height="162"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <date key="date" timeIntervalSinceReferenceDate="555702896.039078">
-                                    <!--2018-08-11 17:54:56 +0000-->
-                                </date>
-                            </datePicker>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="xCa-V3-Pjv"/>
                     </view>
-                    <navigationItem key="navigationItem" id="6Oc-hI-UMI"/>
+                    <navigationItem key="navigationItem" title="Minhas Refeições" id="6Oc-hI-UMI"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Q30-j3-YoQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -556,7 +540,7 @@
             </objects>
             <point key="canvasLocation" x="4" y="5.8470764617691158"/>
         </scene>
-        <!--View Controller-->
+        <!--Relatorios-->
         <scene sceneID="OpZ-rM-uIQ">
             <objects>
                 <viewController id="luD-yv-M8w" sceneMemberID="viewController">
@@ -564,43 +548,31 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Relatorios" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="icf-jy-gfP">
-                                <rect key="frame" x="166" y="301" width="77" height="21"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eFw-Za-cLS">
+                                <rect key="frame" x="87" y="81" width="200" height="110"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="Bl1-lU-wYp"/>
                     </view>
-                    <navigationItem key="navigationItem" id="eQq-04-V2k"/>
+                    <navigationItem key="navigationItem" title="Relatorios" id="eQq-04-V2k"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DIj-Ca-tAe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="924" y="710.19490254872574"/>
         </scene>
-        <!--View Controller-->
+        <!--Sobre o aplicativo-->
         <scene sceneID="62Q-Z6-blA">
             <objects>
                 <viewController id="77b-A3-dsF" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9jI-o5-qYQ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sobre o aplicativo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3x1-QX-PFE">
-                                <rect key="frame" x="166" y="303" width="137" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="7gU-QB-gn8"/>
                     </view>
-                    <navigationItem key="navigationItem" id="sz9-qM-Ujx"/>
+                    <navigationItem key="navigationItem" title="Sobre o aplicativo" id="sz9-qM-Ujx"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vdd-a9-NFa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

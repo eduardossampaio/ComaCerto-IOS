@@ -8,11 +8,11 @@
 
 import UIKit
 class ListFoodTableViewController : UITableViewController{
-    typealias OnFoodListUpdate = ( ([String])->Void )
+    typealias OnFoodListUpdate = ( ([Food])->Void )
     typealias OnAddNewFoodClicked = ( ()->Void )
 
     
-    var foodList = [String]()
+    var foodList = [Food]()
     var onFoodListUpdate:OnFoodListUpdate?
     var onAddNewFoodClicked:OnAddNewFoodClicked?
     
@@ -27,7 +27,7 @@ class ListFoodTableViewController : UITableViewController{
         }else{
             let foodIndex = indexPath.item - 1
             let cell = tableView.dequeueReusableCell(withIdentifier: "foodCell")
-            cell?.textLabel?.text = foodList[foodIndex]
+            cell?.textLabel?.text = foodList[foodIndex].name
             return cell!
         }
     }

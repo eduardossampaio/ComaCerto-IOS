@@ -8,7 +8,8 @@
 
 import UIKit
 import Foundation
-class DailyMealsViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
+class DailyMealsViewController: UIViewController,UITableViewDelegate,UITableViewDataSource, MealPresenter{
+    
     
     @IBOutlet weak var dateTextView: UILabel!
     @IBOutlet weak var weekDayTextView: UILabel!
@@ -18,7 +19,7 @@ class DailyMealsViewController: UIViewController,UITableViewDelegate,UITableView
     var selectedDate = Date()
     var meals = [Meal]()
     
-    let mealController = MealController()
+    var mealIteractor : MealIteractor!
     
     @IBAction func onNewMealClicked(_ sender: Any) {
         performSegue(withIdentifier: "NewMealSegue", sender: nil)
@@ -27,13 +28,13 @@ class DailyMealsViewController: UIViewController,UITableViewDelegate,UITableView
     @IBAction func onPreviousButtonClicked(_ sender: Any) {
         decreaseDate()
         updateDateLabels()
-        refreshTableView()
+        mealIteractor.dateSelected(date: self.selectedDate)
     }
     
     @IBAction func onNextButtonClicked(_ sender: Any) {
         increaseDate()
         updateDateLabels()
-        refreshTableView()
+        mealIteractor.dateSelected(date: self.selectedDate)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -54,10 +55,8 @@ class DailyMealsViewController: UIViewController,UITableViewDelegate,UITableView
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "mealCell") as! ListMealCellView
         let meal = meals[indexPath.item]
-        cell.descriptionTextField.text = meal.time?.toReadableTime()
-        if let feeling = meal.feeling{
-            cell.feelingImageView.image = UIImage(named: feeling.imageName )
-        }
+        cell.descriptionTextField.text = meal.date?.toReadableTime()
+        cell.feelingImageView.image = UIImage(named: meal.feeling.imageName )
         return cell
     }
     
@@ -66,6 +65,9 @@ class DailyMealsViewController: UIViewController,UITableViewDelegate,UITableView
             let navigationController = segue.destination as! UINavigationController
             let controller =  navigationController.viewControllers.first as! RegisterMealViewController
             controller.selectedDate = self.selectedDate
+            controller.onNewMealSaved = { (meal) in
+                self.mealIteractor.onSavePressed(meal: meal)
+            }
         }
     }
     
@@ -74,11 +76,9 @@ class DailyMealsViewController: UIViewController,UITableViewDelegate,UITableView
     }
     override func viewWillAppear(_ animated: Bool) {
         updateDateLabels()
-        refreshTableView()
-    }
-    private func refreshTableView(){
-        self.meals = mealController.listMeals(for: selectedDate)
-        tableView.reloadData()
+        self.mealIteractor = MealService(mealPresenter: self)
+        mealIteractor.dateSelected(date: self.selectedDate)
+        
     }
    
     private func increaseDate(){
@@ -92,6 +92,11 @@ class DailyMealsViewController: UIViewController,UITableViewDelegate,UITableView
         weekDayTextView.text = selectedDate.toReadableWeekDay()
     }
 
+    func updateMealList(meals: [Meal]) {
+        self.meals = meals
+        self.tableView.reloadData()
+    }
+    
 
 }
 

@@ -11,14 +11,14 @@ import UIKit
 import SearchTextField
 //https://github.com/apasccon/SearchTextField
 class AddFoodsToMealViewController : UIViewController,UITableViewDelegate,UITableViewDataSource,UITextFieldDelegate{
-    typealias OnFoodListUpdate = ( ([String])->Void )
+    typealias OnFoodListUpdate = ( ([Food])->Void )
     
     @IBOutlet weak var addFoodsTextField: SearchTextField!
     @IBOutlet weak var foodsTableView: UITableView!
     
     var onFoodListUpdate:OnFoodListUpdate? = nil
-    var allFoodsList = Food.allFoods
-    var selectedFoods = [String]()
+    var allFoodsList = FoodHttpService.foodList
+    var selectedFoods = [Food]()
     var itemToAdd = ""
     
     override func viewDidLoad() {
@@ -43,7 +43,7 @@ class AddFoodsToMealViewController : UIViewController,UITableViewDelegate,UITabl
     private func setupPreValues(){
         var searchItems = [SearchTextFieldItem]()
         for food in allFoodsList{
-            let item = SearchTextFieldItem(title: food.name,  subtitle: "Alimentos")
+            let item = SearchTextFieldItem(title: food.name,  subtitle: food.category)
             searchItems.append(item)
         }
         addFoodsTextField.filterItems(searchItems)
@@ -60,12 +60,12 @@ class AddFoodsToMealViewController : UIViewController,UITableViewDelegate,UITabl
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell =  tableView.dequeueReusableCell(withIdentifier: "foodCell")!
-        cell.textLabel?.text = selectedFoods[indexPath.item]
+        cell.textLabel?.text = selectedFoods[indexPath.item].name
         return cell;
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {
-        selectedFoods.insert(self.itemToAdd, at: 0)
+        selectedFoods.insert(getFoodOrCreateNew(foodName:self.itemToAdd), at: 0)
         textField.text = ""
         itemToAdd = ""
         foodsTableView.reloadData()
@@ -75,6 +75,15 @@ class AddFoodsToMealViewController : UIViewController,UITableViewDelegate,UITabl
         if let text = textField.text{
             self.itemToAdd = text
         }
+    }
+    
+    private func getFoodOrCreateNew(foodName: String) -> Food{
+        for food in allFoodsList {
+            if (food.name == foodName){
+                return food
+            }
+        }
+        return Food(name: foodName, category: "Meus Alimentos")
     }
     
 }
