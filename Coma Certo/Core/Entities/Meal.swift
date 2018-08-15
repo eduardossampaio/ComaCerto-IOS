@@ -8,13 +8,16 @@
 
 import Foundation
 struct Meal {
-    var date:Date?
-    var foods: [Food]?
-    var hungryBefore: Int?
-    var hungryAfter:Int?
-    var feeling:Feeling
+    var date = Date()
+    var foods = [Food]()
+    var hungryBefore = 0
+    var hungryAfter = 0
+    var feeling = Feeling.none
     
-    init( date:Date? ,foods: [Food]? ,hungryBefore: Int? ,hungryAfter:Int? ,feeling:Feeling) {
+    init(){
+        
+    }
+    init( date:Date ,foods: [Food] ,hungryBefore: Int ,hungryAfter:Int ,feeling:Feeling) {
         self.date = date
         self.foods = foods
         self.hungryBefore = hungryBefore

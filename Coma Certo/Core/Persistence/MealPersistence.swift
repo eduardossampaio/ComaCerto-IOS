@@ -11,12 +11,9 @@ import RealmSwift
 class MealPersistence {
     
     private func getRealmObject(_ meal:Meal) -> MealRealmEntity?{
-        guard let date = meal.date else{
-            return nil
-        }
         let realm = try! Realm()
 
-        let mealEntities = realm.objects(MealRealmEntity.self).filter("dateAndTime =%@",date );
+        let mealEntities = realm.objects(MealRealmEntity.self).filter("dateAndTime =%@",meal.date );
         if mealEntities.count > 0{
             return mealEntities.first
         }

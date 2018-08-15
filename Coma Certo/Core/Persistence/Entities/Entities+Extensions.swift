@@ -24,17 +24,15 @@ extension MealRealmEntity{
     }
     
     func fromMeal(meal:Meal){
-        self.dateAndTime = NSDate(timeIntervalSince1970: (meal.date?.timeIntervalSince1970)!)
+        self.dateAndTime = NSDate(timeIntervalSince1970: (meal.date.timeIntervalSince1970))
         self.feeling = meal.feeling.id
-        self.hungryBefore = meal.hungryBefore ?? 0
-        self.hungryAfter = meal.hungryAfter ?? 0
+        self.hungryBefore = meal.hungryBefore
+        self.hungryAfter = meal.hungryAfter
         let allFoods = List<FoodRealmEntity>()
-        if let mealFoods = meal.foods{
-            for food in mealFoods{
-                let foodRealmEntity = FoodRealmEntity()
-                foodRealmEntity.fromFood(food: food)
-                allFoods.append(foodRealmEntity)
-            }
+        for food in meal.foods{
+            let foodRealmEntity = FoodRealmEntity()
+            foodRealmEntity.fromFood(food: food)
+            allFoods.append(foodRealmEntity)
         }
         self.foods = allFoods
     }

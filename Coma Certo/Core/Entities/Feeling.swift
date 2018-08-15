@@ -7,7 +7,7 @@
 //
 
 import Foundation
-struct Feeling{
+struct Feeling : Equatable{
     var id:Int
     var displayName:String
     var imageName:String
@@ -16,6 +16,11 @@ struct Feeling{
         self.displayName = displayName
         self.imageName = imageName
     }
+    
+    static func ==(lhs: Feeling, rhs: Feeling) -> Bool {
+        return lhs.id == rhs.id
+    }
+    
     static let allFeelings = [
         Feeling(id: 1,"Alegria", "emoji-happy"),
         Feeling(id: 2,"Ansiedade ", "emoji-anxiety"),
@@ -26,6 +31,7 @@ struct Feeling{
         Feeling(id: 7,"Tédio ", "emoji-boredom"),
         Feeling(id: 8,"Tristeza ", "emoji-sad")
     ]
+    static let none = Feeling(id: -1, "", "")
     
     static func getFeeling(byId id: Int) -> Feeling{
         for felling in allFeelings{

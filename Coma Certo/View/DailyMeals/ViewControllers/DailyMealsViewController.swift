@@ -18,10 +18,12 @@ class DailyMealsViewController: UIViewController,UITableViewDelegate,UITableView
     let calendar = Calendar(identifier: Calendar.Identifier.gregorian)
     var selectedDate = Date()
     var meals = [Meal]()
+    var lastClickedMeal : Meal?
     
     var mealIteractor : MealIteractor!
     
     @IBAction func onNewMealClicked(_ sender: Any) {
+        self.lastClickedMeal = nil
         performSegue(withIdentifier: "NewMealSegue", sender: nil)
     }
     
@@ -57,16 +59,25 @@ class DailyMealsViewController: UIViewController,UITableViewDelegate,UITableView
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "mealCell") as! ListMealCellView
         let meal = meals[indexPath.item]
-        cell.descriptionTextField.text = meal.date?.toReadableTime()
+        cell.descriptionTextField.text = meal.date.toReadableTime()
         cell.feelingImageView.image = UIImage(named: meal.feeling.imageName )
         return cell
+    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.lastClickedMeal = self.meals[indexPath.row]
+        performSegue(withIdentifier: "NewMealSegue", sender: nil)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if  segue.identifier == "NewMealSegue" {
             let navigationController = segue.destination as! UINavigationController
             let controller =  navigationController.viewControllers.first as! RegisterMealViewController
-            controller.selectedDate = self.selectedDate
+            if let lastClickedMeal = self.lastClickedMeal{
+                controller.meal = lastClickedMeal
+            }else{
+                controller.meal = Meal()
+                controller.meal.date = self.selectedDate
+            }
             controller.onNewMealSaved = { (meal) in
                 self.mealIteractor.onSavePressed(meal: meal)
             }
@@ -80,7 +91,6 @@ class DailyMealsViewController: UIViewController,UITableViewDelegate,UITableView
         updateDateLabels()
         self.mealIteractor = MealService(mealPresenter: self)
         mealIteractor.dateSelected(date: self.selectedDate)
-        
     }
    
     private func increaseDate(){

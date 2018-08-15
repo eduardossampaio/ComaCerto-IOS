@@ -21,6 +21,7 @@
 		59538C382123205C0061147B /* FoodRealmEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59538C372123205C0061147B /* FoodRealmEntity.swift */; };
 		59538C3A212340CB0061147B /* Entities+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59538C39212340CB0061147B /* Entities+Extensions.swift */; };
 		59538C3D2123615C0061147B /* MyMealsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59538C3C2123615C0061147B /* MyMealsViewController.swift */; };
+		59538C42212468650061147B /* Slider+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59538C41212468650061147B /* Slider+Extensions.swift */; };
 		596516B0211F5E04005EE71D /* Food.swift in Sources */ = {isa = PBXBuildFile; fileRef = 596516AF211F5E04005EE71D /* Food.swift */; };
 		59720C04211C8B6B00C0826B /* RegisterMealViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59720C03211C8B6B00C0826B /* RegisterMealViewController.swift */; };
 		59720C06211CFEE200C0826B /* ReactionsCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59720C05211CFEE200C0826B /* ReactionsCollectionViewController.swift */; };
@@ -73,6 +74,7 @@
 		59538C372123205C0061147B /* FoodRealmEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodRealmEntity.swift; sourceTree = "<group>"; };
 		59538C39212340CB0061147B /* Entities+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Entities+Extensions.swift"; sourceTree = "<group>"; };
 		59538C3C2123615C0061147B /* MyMealsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyMealsViewController.swift; sourceTree = "<group>"; };
+		59538C41212468650061147B /* Slider+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Slider+Extensions.swift"; sourceTree = "<group>"; };
 		596516AF211F5E04005EE71D /* Food.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Food.swift; sourceTree = "<group>"; };
 		59720C03211C8B6B00C0826B /* RegisterMealViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterMealViewController.swift; sourceTree = "<group>"; };
 		59720C05211CFEE200C0826B /* ReactionsCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactionsCollectionViewController.swift; sourceTree = "<group>"; };
@@ -222,60 +224,68 @@
 			path = "My Meals";
 			sourceTree = "<group>";
 		};
-		596516B3211F6FDD005EE71D /* Custom */ = {
+		59538C3E2123700B0061147B /* Reports */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			name = Custom;
-			path = "New Group";
+			path = Reports;
+			sourceTree = "<group>";
+		};
+		59538C3F212370150061147B /* About */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = About;
+			sourceTree = "<group>";
+		};
+		59538C40212468420061147B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				59538C41212468650061147B /* Slider+Extensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		59720C01211C8B3500C0826B /* View */ = {
 			isa = PBXGroup;
 			children = (
-				596516B3211F6FDD005EE71D /* Custom */,
-				59720C02211C8B3B00C0826B /* Meals */,
+				59538C40212468420061147B /* Extensions */,
+				59538C3F212370150061147B /* About */,
+				59538C3E2123700B0061147B /* Reports */,
+				59720C02211C8B3B00C0826B /* DailyMeals */,
 				59538C3B2123613D0061147B /* My Meals */,
 			);
 			path = View;
 			sourceTree = "<group>";
 		};
-		59720C02211C8B3B00C0826B /* Meals */ = {
+		59720C02211C8B3B00C0826B /* DailyMeals */ = {
 			isa = PBXGroup;
 			children = (
-				59720C09211D175500C0826B /* Custom */,
+				59720C09211D175500C0826B /* Cells */,
 				59720C07211CFEEB00C0826B /* ViewControllers */,
 			);
-			path = Meals;
+			path = DailyMeals;
 			sourceTree = "<group>";
 		};
 		59720C07211CFEEB00C0826B /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
 				59D28817211A80B300CD38B7 /* DailyMealsViewController.swift */,
-				59720C08211CFF0700C0826B /* NewMeals */,
-			);
-			path = ViewControllers;
-			sourceTree = "<group>";
-		};
-		59720C08211CFF0700C0826B /* NewMeals */ = {
-			isa = PBXGroup;
-			children = (
 				59720C03211C8B6B00C0826B /* RegisterMealViewController.swift */,
 				59720C05211CFEE200C0826B /* ReactionsCollectionViewController.swift */,
 				59A9E63C211D2E7F009B38A0 /* ListFoodTableViewController.swift */,
 				59031CDF211E768200AFE685 /* AddFoodsToMealViewController.swift */,
 			);
-			path = NewMeals;
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
-		59720C09211D175500C0826B /* Custom */ = {
+		59720C09211D175500C0826B /* Cells */ = {
 			isa = PBXGroup;
 			children = (
 				59720C0A211D177C00C0826B /* FeelingCollectionCellView.swift */,
 				5902B572211E246500707EB0 /* ListMealCellView.swift */,
 			);
-			path = Custom;
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		59C705D6212125B4000423A4 /* Services */ = {
@@ -571,6 +581,7 @@
 			files = (
 				59720C04211C8B6B00C0826B /* RegisterMealViewController.swift in Sources */,
 				59720C06211CFEE200C0826B /* ReactionsCollectionViewController.swift in Sources */,
+				59538C42212468650061147B /* Slider+Extensions.swift in Sources */,
 				5902B573211E246500707EB0 /* ListMealCellView.swift in Sources */,
 				5902B568211DD20100707EB0 /* Date+Extensions.swift in Sources */,
 				59538C2E21226D010061147B /* MealPresenter.swift in Sources */,

@@ -12,6 +12,7 @@ class ReactionsCollectionViewController: UICollectionViewController {
     
     private var lastSelectedCell = 0
     private var firstSelectedWhenCreated = true
+    var preselectedFeeling = Feeling.none
     
     typealias OnFeelingSelected = ((Feeling)->Void)
     var onFeelingSelected :OnFeelingSelected?
@@ -30,7 +31,7 @@ class ReactionsCollectionViewController: UICollectionViewController {
         cell.reactionImage.image = feelingImage
         cell.reactionName.text = feeling.displayName
         
-        if (indexPath.row == 0 && firstSelectedWhenCreated){
+        if (feeling.id == preselectedFeeling.id && firstSelectedWhenCreated){
             firstSelectedWhenCreated = false
             cell.isSelected = true
             onFeelingSelected?(Feeling.allFeelings[indexPath.item])
