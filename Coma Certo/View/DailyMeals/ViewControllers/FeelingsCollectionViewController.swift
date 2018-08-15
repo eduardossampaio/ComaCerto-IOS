@@ -8,7 +8,7 @@
 
 import Foundation
 import UIKit
-class ReactionsCollectionViewController: UICollectionViewController {
+class FeelingsCollectionViewController: UICollectionViewController {
     
     private var lastSelectedCell = 0
     private var firstSelectedWhenCreated = true

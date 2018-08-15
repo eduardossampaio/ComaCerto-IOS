@@ -8,10 +8,19 @@
 
 import Foundation
 struct Food : Codable{
+    var primaryKey : String? = nil
     let name:String
     let category:String
-//    init(_ name:String, _ category:String) {
-//        self.name = name
-//        self.category = category
-//    }
+
+    init( name:String?, category:String?) {
+        self.name = name ?? ""
+        self.category = category ?? ""
+    }
+    
+    init(primaryKey: String?, name:String?,  category:String?) {
+        self.primaryKey = primaryKey
+        self.name = name ?? ""
+        self.category = category ?? ""
+        
+    }
 }

@@ -12,14 +12,15 @@ class MealPersistence {
     
     private func getRealmObject(_ meal:Meal) -> MealRealmEntity?{
         let realm = try! Realm()
-
-        let mealEntities = realm.objects(MealRealmEntity.self).filter("dateAndTime =%@",meal.date );
-        if mealEntities.count > 0{
-            return mealEntities.first
-        }
-        return nil
+        return realm.object(ofType: MealRealmEntity.self, forPrimaryKey: meal.primaryKey)
     }
-    
+    func saveOrUpdateMeal(_ meal: Meal){
+        if(meal.primaryKey == nil || (meal.primaryKey?.isEmpty)!){
+            saveMeal(meal)
+        }else{
+            updateMeal(meal)
+        }
+    }
     func saveMeal(_ meal: Meal){
         let realm = try! Realm()
         let mealRealmEntity = MealRealmEntity()
@@ -27,6 +28,15 @@ class MealPersistence {
         
         try! realm.write {
             realm.add(mealRealmEntity)
+        }
+    }
+    func updateMeal(_ meal : Meal){
+        if let mealRealmEntity = getRealmObject(meal){
+        let realm = try! Realm()
+            try! realm.write {
+                mealRealmEntity.fromMeal(meal: meal)
+                realm.add(mealRealmEntity, update: true)
+            }
         }
     }
     

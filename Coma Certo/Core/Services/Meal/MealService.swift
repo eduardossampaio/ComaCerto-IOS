@@ -21,7 +21,7 @@ class MealService : MealIteractor {
     }
     
     func onSavePressed(meal: Meal) {
-        mealPersistence.saveMeal(meal)
+        mealPersistence.saveOrUpdateMeal(meal)
     }
     
     func onCancelPressed() {

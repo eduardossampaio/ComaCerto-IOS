@@ -25,13 +25,12 @@ class RegisterMealViewController: UITableViewController {
     private let satietyStatus = ["Nem um pouco saciado","Um pouco saciado","Saciado","Muito Saciado","Bastante Saciado"]
     //embeededViewControllers
     private var listFoodTableViewController: ListFoodTableViewController!
-    private var reactionsCollectionViewController: ReactionsCollectionViewController!
+    private var feelingsCollectionViewController: FeelingsCollectionViewController!
     
     var meal = Meal()
     
     var onNewMealSaved: OnNewMealSaved?
     
-  
     @IBAction func onSaveButtonClicked(_ sender: Any) {
         let hungerBefore = Int(hungerBeforeSlider.value)
         let hungerAfter = Int(hungerAfterSlider.value)
@@ -98,9 +97,9 @@ class RegisterMealViewController: UITableViewController {
             controller.onAddNewFoodClicked = {
                 self.performSegue(withIdentifier: "selectFoodsSegue", sender: nil)
             }
-        }else if(segue.identifier == "listReactionsSegue"){
-            let controller = segue.destination as! ReactionsCollectionViewController
-            self.reactionsCollectionViewController = controller
+        }else if(segue.identifier == "listFeelingsSegue"){
+            let controller = segue.destination as! FeelingsCollectionViewController
+            self.feelingsCollectionViewController = controller
             controller.onFeelingSelected = {(feeling) in
                 self.meal.feeling = feeling
             }

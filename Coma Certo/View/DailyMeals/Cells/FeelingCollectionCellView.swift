@@ -15,10 +15,10 @@ class FeelingCollectionCellView : UICollectionViewCell{
     override var isSelected: Bool{
         didSet{
             if self.isSelected{
-                self.contentView.backgroundColor =  UIColor(red: 0, green: 1, blue: 0, alpha: 0.5)
+                self.contentView.backgroundColor =  UIColor(named: "SelectedFeelingColor")
             }
             else{
-                self.contentView.backgroundColor = UIColor(white: 1, alpha: 0)
+                self.contentView.backgroundColor = UIColor(named: "DeselectedFeelingColor")
             }
         }
     }

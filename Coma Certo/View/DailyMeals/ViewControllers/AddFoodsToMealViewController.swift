@@ -80,7 +80,7 @@ class AddFoodsToMealViewController : UIViewController,UITableViewDelegate,UITabl
                 return food
             }
         }
-        return Food(name: foodName, category: "Meus Alimentos")
+        return Food(name: foodName,category: "Meus Alimentos")
         //salvar alimento
     }
     

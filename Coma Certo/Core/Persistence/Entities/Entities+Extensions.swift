@@ -19,7 +19,8 @@ extension MealRealmEntity{
         for foodRealmEntity in foods{
             allFoods.append(foodRealmEntity.toFood())
         }
-        let meal = Meal(date: date, foods: allFoods, hungryBefore: hungryBefore, hungryAfter: hungryAfter, feeling: Feeling.getFeeling(byId:feeling))
+        var meal = Meal(date: date, foods: allFoods, hungryBefore: hungryBefore, hungryAfter: hungryAfter, feeling: Feeling.getFeeling(byId:feeling))
+        meal.primaryKey = self.primaryKey
         return meal
     }
     
@@ -28,20 +29,20 @@ extension MealRealmEntity{
         self.feeling = meal.feeling.id
         self.hungryBefore = meal.hungryBefore
         self.hungryAfter = meal.hungryAfter
-        let allFoods = List<FoodRealmEntity>()
+        
+        self.foods.removeAll()
         for food in meal.foods{
             let foodRealmEntity = FoodRealmEntity()
             foodRealmEntity.fromFood(food: food)
-            allFoods.append(foodRealmEntity)
+            self.foods.append(foodRealmEntity)
         }
-        self.foods = allFoods
     }
 }
 
 extension FoodRealmEntity{
     
     func toFood() -> Food{
-       return Food(name: self.name ?? "", category: self.category ?? "")
+        return Food(primaryKey: self.primaryKey,name: self.name, category: self.category)
     }
     
     func fromFood(food:Food){

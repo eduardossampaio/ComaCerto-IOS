@@ -359,7 +359,7 @@
                                                     <rect key="frame" x="16" y="10" width="382" height="160"/>
                                                     <color key="backgroundColor" red="0.0" green="0.99143940210000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <connections>
-                                                        <segue destination="y02-m8-1bn" kind="embed" identifier="listReactionsSegue" id="a8f-U9-U39"/>
+                                                        <segue destination="y02-m8-1bn" kind="embed" identifier="listFeelingsSegue" id="a8f-U9-U39"/>
                                                     </connections>
                                                 </containerView>
                                             </subviews>
@@ -380,12 +380,12 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Nova Refeição" id="555-NU-6qq">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="fgG-gy-n6f">
+                        <barButtonItem key="leftBarButtonItem" title="Cancelar" id="fgG-gy-n6f">
                             <connections>
                                 <action selector="onCancelButtonClicked:" destination="Wxm-gx-iKF" id="dTZ-6f-UPs"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="JZf-rY-JBs">
+                        <barButtonItem key="rightBarButtonItem" title="Salvar" id="JZf-rY-JBs">
                             <connections>
                                 <action selector="onSaveButtonClicked:" destination="Wxm-gx-iKF" id="FMT-S6-HA3"/>
                             </connections>
@@ -406,10 +406,10 @@
             </objects>
             <point key="canvasLocation" x="1794" y="-673"/>
         </scene>
-        <!--Reactions Collection View Controller-->
+        <!--Feelings Collection View Controller-->
         <scene sceneID="vj5-d0-2pP">
             <objects>
-                <collectionViewController id="y02-m8-1bn" customClass="ReactionsCollectionViewController" customModule="Coma_Certo" customModuleProvider="target" sceneMemberID="viewController">
+                <collectionViewController id="y02-m8-1bn" customClass="FeelingsCollectionViewController" customModule="Coma_Certo" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" indicatorStyle="black" dataMode="prototypes" id="Atm-op-0Ap">
                         <rect key="frame" x="0.0" y="0.0" width="382" height="160"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -543,7 +543,30 @@
                     <view key="view" contentMode="scaleToFill" id="Bf5-XX-Zsh">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GTT-d9-SFK">
+                                <rect key="frame" x="0.0" y="64" width="414" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E9I-AF-IZE">
+                                <rect key="frame" x="0.0" y="94" width="414" height="642"/>
+                                <connections>
+                                    <segue destination="CpF-Ru-hsn" kind="embed" id="6Gg-fH-VJM"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="E9I-AF-IZE" firstAttribute="leading" secondItem="ECr-5n-e3O" secondAttribute="leading" id="1ow-EH-E9a"/>
+                            <constraint firstItem="E9I-AF-IZE" firstAttribute="top" secondItem="GTT-d9-SFK" secondAttribute="bottom" id="1rZ-r5-vES"/>
+                            <constraint firstItem="ECr-5n-e3O" firstAttribute="bottom" secondItem="E9I-AF-IZE" secondAttribute="bottom" id="3fZ-hL-X9D"/>
+                            <constraint firstItem="GTT-d9-SFK" firstAttribute="leading" secondItem="ECr-5n-e3O" secondAttribute="leading" id="A7p-cY-14W"/>
+                            <constraint firstItem="ECr-5n-e3O" firstAttribute="trailing" secondItem="E9I-AF-IZE" secondAttribute="trailing" id="Vap-Tf-2y5"/>
+                            <constraint firstItem="ECr-5n-e3O" firstAttribute="trailing" secondItem="GTT-d9-SFK" secondAttribute="trailing" id="Zl5-dJ-HBS"/>
+                            <constraint firstItem="GTT-d9-SFK" firstAttribute="top" secondItem="ECr-5n-e3O" secondAttribute="top" id="zq2-G1-2lS"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="ECr-5n-e3O"/>
                     </view>
                 </viewController>
@@ -562,7 +585,6 @@
                     </tabBar>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="qkx-JY-p4g"/>
-                        <segue destination="iKW-Dr-hJe" kind="relationship" relationship="viewControllers" id="hsf-u6-zVY"/>
                         <segue destination="C1P-cm-5zL" kind="relationship" relationship="viewControllers" id="QhU-Gq-LBR"/>
                         <segue destination="UDh-Jn-w4l" kind="relationship" relationship="viewControllers" id="kTn-nQ-xcK"/>
                     </connections>
@@ -692,6 +714,11 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="17n-7l-SKw"/>
                     </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="WMM-pG-2lJ">
+                        <barButtonItem key="rightBarButtonItem" image="share" landscapeImage="share" id="PnD-Bu-Op3"/>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4JR-tj-0IK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -853,5 +880,9 @@
         <image name="list" width="42" height="42"/>
         <image name="meal" width="42" height="42"/>
         <image name="report" width="36" height="42"/>
+        <image name="share" width="42" height="42"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="nV5-Aj-GXN"/>
+    </inferredMetricsTieBreakers>
 </document>

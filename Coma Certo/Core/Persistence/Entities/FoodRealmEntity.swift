@@ -9,7 +9,11 @@
 import Foundation
 import RealmSwift
 class FoodRealmEntity : Object{
-    
+    @objc dynamic var primaryKey = UUID().uuidString
     @objc dynamic var name: String?
     @objc dynamic var category:String?
+    
+    override static func primaryKey() -> String? {
+        return "primaryKey"
+    }
 }

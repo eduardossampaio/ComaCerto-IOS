@@ -8,6 +8,7 @@
 
 import Foundation
 struct Meal {
+    var primaryKey : String?
     var date = Date()
     var foods = [Food]()
     var hungryBefore = 0
