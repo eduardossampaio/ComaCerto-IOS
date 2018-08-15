@@ -12,8 +12,8 @@ class MealRealmEntity : Object {
     @objc dynamic var primaryKey = UUID().uuidString
     @objc dynamic var dateAndTime = NSDate()
     var foods = List<FoodRealmEntity>()
-    @objc dynamic var hungryBefore = 0
-    @objc dynamic var hungryAfter = 0
+    @objc dynamic var hunger = 0
+    @objc dynamic var satiety = 0
     @objc dynamic var feeling = 0
     
     override static func primaryKey() -> String? {

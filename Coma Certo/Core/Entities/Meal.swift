@@ -11,18 +11,18 @@ struct Meal {
     var primaryKey : String?
     var date = Date()
     var foods = [Food]()
-    var hungryBefore = 0
-    var hungryAfter = 0
+    var hunger = 0
+    var satiety = 0
     var feeling = Feeling.none
     
     init(){
         
     }
-    init( date:Date ,foods: [Food] ,hungryBefore: Int ,hungryAfter:Int ,feeling:Feeling) {
+    init( date:Date ,foods: [Food] ,hunger: Int ,satiety:Int ,feeling:Feeling) {
         self.date = date
         self.foods = foods
-        self.hungryBefore = hungryBefore
-        self.hungryAfter = hungryAfter
+        self.hunger = hunger
+        self.satiety = satiety
         self.feeling = feeling
     }
     

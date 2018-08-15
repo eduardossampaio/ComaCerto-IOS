@@ -15,8 +15,8 @@ class RegisterMealViewController: UITableViewController {
     
     @IBOutlet weak var dateTextButton: UIButton!
     @IBOutlet weak var timeTextButton: UIButton!
-    @IBOutlet weak var hungerBeforeSlider: UISlider!
-    @IBOutlet weak var hungerAfterSlider: UISlider!
+    @IBOutlet weak var hungerSlider: UISlider!
+    @IBOutlet weak var satietySlider: UISlider!
     @IBOutlet weak var whatIAteCell: UITableViewCell!
     @IBOutlet weak var hungerStatusLabel: UILabel!
     @IBOutlet weak var satietyStatusLabel: UILabel!
@@ -32,11 +32,11 @@ class RegisterMealViewController: UITableViewController {
     var onNewMealSaved: OnNewMealSaved?
     
     @IBAction func onSaveButtonClicked(_ sender: Any) {
-        let hungerBefore = Int(hungerBeforeSlider.value)
-        let hungerAfter = Int(hungerAfterSlider.value)
+        let hunger = Int(hungerSlider.value)
+        let satiety = Int(satietySlider.value)
 
-        meal.hungryBefore = hungerBefore
-        meal.hungryAfter = hungerAfter
+        meal.hunger = hunger
+        meal.satiety = satiety
         onNewMealSaved?(meal)
         dismiss(animated: true, completion: nil)
     }
@@ -70,20 +70,22 @@ class RegisterMealViewController: UITableViewController {
         timeTextButton.setTitle(meal.date.toReadableTime(), for:.normal)
     }
     func updateSliders(){
-        hungerBeforeSlider.value = Float(meal.hungryBefore)
-        hungerAfterSlider.value = Float(meal.hungryAfter)
+        hungerSlider.value = Float(meal.hunger)
+        satietySlider.value = Float(meal.satiety)
         updateHungerStatusLabel()
         updateSatietyStatusLabel()
     }
     func updateHungerStatusLabel(){
-        let index = Int(hungerBeforeSlider.value)
+        let index = Int(hungerSlider.value)
         let status = hungerStatus[index - 1]
         hungerStatusLabel.text = status
+        meal.hunger = index
     }
     func updateSatietyStatusLabel(){
-        let index = Int(hungerAfterSlider.value)
+        let index = Int(satietySlider.value)
         let status = satietyStatus[index - 1]
         satietyStatusLabel.text = status
+        meal.satiety = index
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == "listFoodSegue"){
