@@ -17,9 +17,8 @@ extension Date{
     
     func toReadableWeekDay() -> String{
         let dateFormatter = DateFormatter()
-        let calendar = Calendar(identifier: Calendar.Identifier.gregorian)
         dateFormatter.dateStyle = .medium
-        return dateFormatter.weekdaySymbols[ calendar.component(.weekday, from: self) - 1]
+        return dateFormatter.weekdaySymbols[ Calendar.current.component(.weekday, from: self) - 1]
     }
     
     func toReadableTime() -> String{
@@ -33,6 +32,14 @@ extension Date{
     }
     func endOfDay() ->Date{
         return setTime(hour:23,minute: 59,second: 59)
+    }
+    
+    func startOfMonth() -> Date {
+        return Calendar.current.date(from: Calendar.current.dateComponents([.year, .month], from: Calendar.current.startOfDay(for: self)))!
+    }
+    
+    func endOfMonth() -> Date {
+        return Calendar.current.date(byAdding: DateComponents(month: 1, day: -1), to: self.startOfMonth())!
     }
     
     func setTime(hour:Int, minute:Int,second:Int = 0) -> Date {

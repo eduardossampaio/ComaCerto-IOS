@@ -22,6 +22,8 @@
 		59538C3A212340CB0061147B /* Entities+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59538C39212340CB0061147B /* Entities+Extensions.swift */; };
 		59538C3D2123615C0061147B /* MyMealsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59538C3C2123615C0061147B /* MyMealsViewController.swift */; };
 		59538C42212468650061147B /* Slider+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59538C41212468650061147B /* Slider+Extensions.swift */; };
+		59538C4421248DDD0061147B /* GenerateReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59538C4321248DDD0061147B /* GenerateReportViewController.swift */; };
+		59538C46212490F20061147B /* ViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59538C45212490F20061147B /* ViewController+Extensions.swift */; };
 		596516B0211F5E04005EE71D /* Food.swift in Sources */ = {isa = PBXBuildFile; fileRef = 596516AF211F5E04005EE71D /* Food.swift */; };
 		59720C04211C8B6B00C0826B /* RegisterMealViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59720C03211C8B6B00C0826B /* RegisterMealViewController.swift */; };
 		59720C06211CFEE200C0826B /* ReactionsCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59720C05211CFEE200C0826B /* ReactionsCollectionViewController.swift */; };
@@ -75,6 +77,8 @@
 		59538C39212340CB0061147B /* Entities+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Entities+Extensions.swift"; sourceTree = "<group>"; };
 		59538C3C2123615C0061147B /* MyMealsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyMealsViewController.swift; sourceTree = "<group>"; };
 		59538C41212468650061147B /* Slider+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Slider+Extensions.swift"; sourceTree = "<group>"; };
+		59538C4321248DDD0061147B /* GenerateReportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerateReportViewController.swift; sourceTree = "<group>"; };
+		59538C45212490F20061147B /* ViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+Extensions.swift"; sourceTree = "<group>"; };
 		596516AF211F5E04005EE71D /* Food.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Food.swift; sourceTree = "<group>"; };
 		59720C03211C8B6B00C0826B /* RegisterMealViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterMealViewController.swift; sourceTree = "<group>"; };
 		59720C05211CFEE200C0826B /* ReactionsCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactionsCollectionViewController.swift; sourceTree = "<group>"; };
@@ -147,7 +151,6 @@
 			children = (
 				59538C3321231A860061147B /* Persistence */,
 				59C705D6212125B4000423A4 /* Services */,
-				5902B56E211E033400707EB0 /* Controller */,
 				5902B56B211E014C00707EB0 /* Entities */,
 				5902B566211DD1EE00707EB0 /* Extensions */,
 			);
@@ -170,21 +173,6 @@
 				596516AF211F5E04005EE71D /* Food.swift */,
 			);
 			path = Entities;
-			sourceTree = "<group>";
-		};
-		5902B56E211E033400707EB0 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				5902B56F211E033A00707EB0 /* Meal */,
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		5902B56F211E033A00707EB0 /* Meal */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Meal;
 			sourceTree = "<group>";
 		};
 		59538C2C21226CF00061147B /* Meal */ = {
@@ -227,6 +215,7 @@
 		59538C3E2123700B0061147B /* Reports */ = {
 			isa = PBXGroup;
 			children = (
+				59538C4321248DDD0061147B /* GenerateReportViewController.swift */,
 			);
 			path = Reports;
 			sourceTree = "<group>";
@@ -242,6 +231,7 @@
 			isa = PBXGroup;
 			children = (
 				59538C41212468650061147B /* Slider+Extensions.swift */,
+				59538C45212490F20061147B /* ViewController+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -581,7 +571,9 @@
 			files = (
 				59720C04211C8B6B00C0826B /* RegisterMealViewController.swift in Sources */,
 				59720C06211CFEE200C0826B /* ReactionsCollectionViewController.swift in Sources */,
+				59538C4421248DDD0061147B /* GenerateReportViewController.swift in Sources */,
 				59538C42212468650061147B /* Slider+Extensions.swift in Sources */,
+				59538C46212490F20061147B /* ViewController+Extensions.swift in Sources */,
 				5902B573211E246500707EB0 /* ListMealCellView.swift in Sources */,
 				5902B568211DD20100707EB0 /* Date+Extensions.swift in Sources */,
 				59538C2E21226D010061147B /* MealPresenter.swift in Sources */,

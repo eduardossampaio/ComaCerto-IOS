@@ -129,29 +129,14 @@ class RegisterMealViewController: UITableViewController {
     }
     
     private func openDatePickerActionSheet(){
-       openDateActionSheet(.date)
+       openDateActionSheet(date: meal.date, mode: .date)
     }
     
     private func openTimePickerActionSheet(){
-       openDateActionSheet(.time)
-    }
-    private func openDateActionSheet(_ mode: UIDatePickerMode){
-        var items = [CustomizableActionSheetItem]()
-        let sampleViewItem = CustomizableActionSheetItem()
-        let datePicker = UIDatePicker()
-        datePicker.addTarget(self, action: #selector(RegisterMealViewController.datePickerValueChanged(_:)), for: .valueChanged)
-        datePicker.setDate(self.meal.date, animated: true)
-        datePicker.backgroundColor = UIColor.white
-        sampleViewItem.type = .view
-        sampleViewItem.view = datePicker
-        sampleViewItem.height = 250
-        items.append(sampleViewItem)
-        datePicker.datePickerMode = mode
-        let actionSheet = CustomizableActionSheet()
-        actionSheet.showInView(self.view, items: items)
+       openDateActionSheet(date: meal.date, mode:.time)
     }
     
-    @objc func datePickerValueChanged(_ sender: UIDatePicker){
+    @objc override func datePickerValueChanged(_ sender: UIDatePicker){
         self.meal.date =  sender.date
         updateDateTimeLabels()
     }
