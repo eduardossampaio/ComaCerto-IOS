@@ -8,7 +8,8 @@
 
 import Foundation
 import UIKit
-struct Feeling : Equatable , Displayable{
+struct Feeling : Equatable,Displayable {
+   
     func displayName() -> String {
         return name
     }

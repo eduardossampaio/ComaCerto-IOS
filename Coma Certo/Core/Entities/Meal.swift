@@ -9,7 +9,7 @@
 import Foundation
 struct Meal {
     var primaryKey : String?
-    
+    var mealType: MealType?
     var date = Date()
     var foods = [Food]()
     var hunger = 0
@@ -19,7 +19,8 @@ struct Meal {
     init(){
         
     }
-    init( date:Date ,foods: [Food] ,hunger: Int ,satiety:Int ,feeling:Feeling) {
+    init(mealType:MealType?, date:Date ,foods: [Food] ,hunger: Int ,satiety:Int ,feeling:Feeling) {
+        self.mealType = mealType
         self.date = date
         self.foods = foods
         self.hunger = hunger

@@ -117,10 +117,8 @@ class RegisterMealViewController: UITableViewController {
             self.mealTypesCollectionViewController = controller
             controller.items = MealType.allCases
             controller.onItemSelected = {(mealType) in
-//                self.meal.feeling = feeling as! Feeling
-                
+                self.meal.mealType = mealType as! MealType
             }
-        
         }else if(segue.identifier == "selectFoodsSegue"){
             let controller = segue.destination as! AddFoodsToMealViewController
             controller.selectedFoods = self.meal.foods

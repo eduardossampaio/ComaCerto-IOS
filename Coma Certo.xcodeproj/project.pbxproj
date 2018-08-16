@@ -172,6 +172,7 @@
 		5902B56B211E014C00707EB0 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
+				59538C492124C5B10061147B /* MealType.swift */,
 				5902B569211E013300707EB0 /* Meal.swift */,
 				5902B56C211E01E900707EB0 /* Feeling.swift */,
 				596516AF211F5E04005EE71D /* Food.swift */,
@@ -186,7 +187,6 @@
 				59538C2A21226CEB0061147B /* MealService.swift */,
 				59538C2D21226D010061147B /* MealPresenter.swift */,
 				59538C2F212274BB0061147B /* MealIteractor.swift */,
-				59538C492124C5B10061147B /* MealType.swift */,
 			);
 			path = Meal;
 			sourceTree = "<group>";

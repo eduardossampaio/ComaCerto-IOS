@@ -31,13 +31,13 @@ class ImageCollectionViewController: UICollectionViewController {
         
         cell.reactionImage.image = itemToDisplay.displayImage()
         cell.reactionName.text = itemToDisplay.displayName()
-        if let preselectedItem = self.preselectedItem{
+//        if let preselectedItem = self.preselectedItem{
 //            if(itemToDisplay == preselectedItem){
 //                firstSelectedWhenCreated = false
 //                cell.isSelected = true
 //                onFeelingSelected?(Feeling.allFeelings[indexPath.item])
 //            }
-        }
+//        }
        
 //        if (feeling.id == preselectedItem.id && firstSelectedWhenCreated){
 //            firstSelectedWhenCreated = false

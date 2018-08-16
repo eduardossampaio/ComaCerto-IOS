@@ -19,7 +19,7 @@ extension MealRealmEntity{
         for foodRealmEntity in foods{
             allFoods.append(foodRealmEntity.toFood())
         }
-        var meal = Meal(date: date, foods: allFoods, hunger: hunger, satiety: satiety, feeling: Feeling.getFeeling(byId:feeling))
+        var meal = Meal(mealType:MealType.get(rawValue: self.mealType), date: date, foods: allFoods, hunger: hunger, satiety: satiety, feeling: Feeling.getFeeling(byId:feeling))
         meal.primaryKey = self.primaryKey
         return meal
     }
@@ -29,7 +29,7 @@ extension MealRealmEntity{
         self.feeling = meal.feeling.id
         self.hunger = meal.hunger
         self.satiety = meal.satiety
-        
+        self.mealType = meal.mealType?.rawValue ?? 0;
         self.foods.removeAll()
         for food in meal.foods{
             let foodRealmEntity = FoodRealmEntity()
