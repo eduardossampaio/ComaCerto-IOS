@@ -24,10 +24,12 @@
 		59538C42212468650061147B /* Slider+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59538C41212468650061147B /* Slider+Extensions.swift */; };
 		59538C4421248DDD0061147B /* GenerateReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59538C4321248DDD0061147B /* GenerateReportViewController.swift */; };
 		59538C46212490F20061147B /* ViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59538C45212490F20061147B /* ViewController+Extensions.swift */; };
+		59538C482124C3FF0061147B /* Displayable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59538C472124C3FF0061147B /* Displayable.swift */; };
+		59538C4A2124C5B10061147B /* MealType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59538C492124C5B10061147B /* MealType.swift */; };
 		596516B0211F5E04005EE71D /* Food.swift in Sources */ = {isa = PBXBuildFile; fileRef = 596516AF211F5E04005EE71D /* Food.swift */; };
 		59720C04211C8B6B00C0826B /* RegisterMealViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59720C03211C8B6B00C0826B /* RegisterMealViewController.swift */; };
-		59720C06211CFEE200C0826B /* FeelingsCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59720C05211CFEE200C0826B /* FeelingsCollectionViewController.swift */; };
-		59720C0B211D177C00C0826B /* FeelingCollectionCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59720C0A211D177C00C0826B /* FeelingCollectionCellView.swift */; };
+		59720C06211CFEE200C0826B /* ImageCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59720C05211CFEE200C0826B /* ImageCollectionViewController.swift */; };
+		59720C0B211D177C00C0826B /* ImageCollectionCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59720C0A211D177C00C0826B /* ImageCollectionCellView.swift */; };
 		59A9E63D211D2E7F009B38A0 /* ListFoodTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A9E63C211D2E7F009B38A0 /* ListFoodTableViewController.swift */; };
 		59C705D8212125C7000423A4 /* FoodHttpService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59C705D7212125C7000423A4 /* FoodHttpService.swift */; };
 		59D28816211A80B300CD38B7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59D28815211A80B300CD38B7 /* AppDelegate.swift */; };
@@ -79,10 +81,12 @@
 		59538C41212468650061147B /* Slider+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Slider+Extensions.swift"; sourceTree = "<group>"; };
 		59538C4321248DDD0061147B /* GenerateReportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerateReportViewController.swift; sourceTree = "<group>"; };
 		59538C45212490F20061147B /* ViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+Extensions.swift"; sourceTree = "<group>"; };
+		59538C472124C3FF0061147B /* Displayable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Displayable.swift; sourceTree = "<group>"; };
+		59538C492124C5B10061147B /* MealType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealType.swift; sourceTree = "<group>"; };
 		596516AF211F5E04005EE71D /* Food.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Food.swift; sourceTree = "<group>"; };
 		59720C03211C8B6B00C0826B /* RegisterMealViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterMealViewController.swift; sourceTree = "<group>"; };
-		59720C05211CFEE200C0826B /* FeelingsCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeelingsCollectionViewController.swift; sourceTree = "<group>"; };
-		59720C0A211D177C00C0826B /* FeelingCollectionCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeelingCollectionCellView.swift; sourceTree = "<group>"; };
+		59720C05211CFEE200C0826B /* ImageCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewController.swift; sourceTree = "<group>"; };
+		59720C0A211D177C00C0826B /* ImageCollectionCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionCellView.swift; sourceTree = "<group>"; };
 		59A9E63C211D2E7F009B38A0 /* ListFoodTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListFoodTableViewController.swift; sourceTree = "<group>"; };
 		59C705D7212125C7000423A4 /* FoodHttpService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodHttpService.swift; sourceTree = "<group>"; };
 		59D28812211A80B300CD38B7 /* Coma Certo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Coma Certo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -171,6 +175,7 @@
 				5902B569211E013300707EB0 /* Meal.swift */,
 				5902B56C211E01E900707EB0 /* Feeling.swift */,
 				596516AF211F5E04005EE71D /* Food.swift */,
+				59538C472124C3FF0061147B /* Displayable.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -181,6 +186,7 @@
 				59538C2A21226CEB0061147B /* MealService.swift */,
 				59538C2D21226D010061147B /* MealPresenter.swift */,
 				59538C2F212274BB0061147B /* MealIteractor.swift */,
+				59538C492124C5B10061147B /* MealType.swift */,
 			);
 			path = Meal;
 			sourceTree = "<group>";
@@ -262,7 +268,7 @@
 			children = (
 				59D28817211A80B300CD38B7 /* DailyMealsViewController.swift */,
 				59720C03211C8B6B00C0826B /* RegisterMealViewController.swift */,
-				59720C05211CFEE200C0826B /* FeelingsCollectionViewController.swift */,
+				59720C05211CFEE200C0826B /* ImageCollectionViewController.swift */,
 				59A9E63C211D2E7F009B38A0 /* ListFoodTableViewController.swift */,
 				59031CDF211E768200AFE685 /* AddFoodsToMealViewController.swift */,
 			);
@@ -272,7 +278,7 @@
 		59720C09211D175500C0826B /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				59720C0A211D177C00C0826B /* FeelingCollectionCellView.swift */,
+				59720C0A211D177C00C0826B /* ImageCollectionCellView.swift */,
 				5902B572211E246500707EB0 /* ListMealCellView.swift */,
 			);
 			path = Cells;
@@ -570,13 +576,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				59720C04211C8B6B00C0826B /* RegisterMealViewController.swift in Sources */,
-				59720C06211CFEE200C0826B /* FeelingsCollectionViewController.swift in Sources */,
+				59720C06211CFEE200C0826B /* ImageCollectionViewController.swift in Sources */,
 				59538C4421248DDD0061147B /* GenerateReportViewController.swift in Sources */,
 				59538C42212468650061147B /* Slider+Extensions.swift in Sources */,
 				59538C46212490F20061147B /* ViewController+Extensions.swift in Sources */,
 				5902B573211E246500707EB0 /* ListMealCellView.swift in Sources */,
 				5902B568211DD20100707EB0 /* Date+Extensions.swift in Sources */,
 				59538C2E21226D010061147B /* MealPresenter.swift in Sources */,
+				59538C4A2124C5B10061147B /* MealType.swift in Sources */,
 				59538C3A212340CB0061147B /* Entities+Extensions.swift in Sources */,
 				5902B56D211E01E900707EB0 /* Feeling.swift in Sources */,
 				59538C3D2123615C0061147B /* MyMealsViewController.swift in Sources */,
@@ -588,10 +595,11 @@
 				596516B0211F5E04005EE71D /* Food.swift in Sources */,
 				59538C3221231A800061147B /* MealPersistence.swift in Sources */,
 				59538C382123205C0061147B /* FoodRealmEntity.swift in Sources */,
-				59720C0B211D177C00C0826B /* FeelingCollectionCellView.swift in Sources */,
+				59720C0B211D177C00C0826B /* ImageCollectionCellView.swift in Sources */,
 				59031CE0211E768200AFE685 /* AddFoodsToMealViewController.swift in Sources */,
 				59A9E63D211D2E7F009B38A0 /* ListFoodTableViewController.swift in Sources */,
 				59C705D8212125C7000423A4 /* FoodHttpService.swift in Sources */,
+				59538C482124C3FF0061147B /* Displayable.swift in Sources */,
 				59538C30212274BB0061147B /* MealIteractor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

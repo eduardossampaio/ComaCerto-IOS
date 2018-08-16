@@ -25,7 +25,8 @@ class RegisterMealViewController: UITableViewController {
     private let satietyStatus = ["Nem um pouco saciado","Um pouco saciado","Saciado","Muito Saciado","Bastante Saciado"]
     //embeededViewControllers
     private var listFoodTableViewController: ListFoodTableViewController!
-    private var feelingsCollectionViewController: FeelingsCollectionViewController!
+    private var feelingsCollectionViewController: ImageCollectionViewController!
+    private var mealTypesCollectionViewController: ImageCollectionViewController!
     
     var meal = Meal()
     
@@ -100,16 +101,26 @@ class RegisterMealViewController: UITableViewController {
                 self.performSegue(withIdentifier: "selectFoodsSegue", sender: nil)
             }
         }else if(segue.identifier == "listFeelingsSegue"){
-            let controller = segue.destination as! FeelingsCollectionViewController
+            let controller = segue.destination as! ImageCollectionViewController
             self.feelingsCollectionViewController = controller
-            controller.onFeelingSelected = {(feeling) in
-                self.meal.feeling = feeling
+            controller.items = Feeling.allFeelings
+            controller.onItemSelected = {(feeling) in
+                self.meal.feeling = feeling as! Feeling
             }
             if meal.feeling == Feeling.none{
-                controller.preselectedFeeling = Feeling.getFeeling(byId: 0)
+                controller.preselectedItem = Feeling.getFeeling(byId: 0)
             }else{
-                controller.preselectedFeeling = meal.feeling
+                controller.preselectedItem = meal.feeling
             }
+        }else if (segue.identifier == "listMealTypesSegue"){
+            let controller = segue.destination as! ImageCollectionViewController
+            self.mealTypesCollectionViewController = controller
+            controller.items = MealType.allCases
+            controller.onItemSelected = {(mealType) in
+//                self.meal.feeling = feeling as! Feeling
+                
+            }
+        
         }else if(segue.identifier == "selectFoodsSegue"){
             let controller = segue.destination as! AddFoodsToMealViewController
             controller.selectedFoods = self.meal.foods
@@ -123,7 +134,7 @@ class RegisterMealViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        if indexPath.section == 1 && meal.foods.count > 0{
+        if indexPath.section == 2 && meal.foods.count > 0{
             return CGFloat(44 * (meal.foods.count + 1) )
         }
         return super.tableView(tableView, heightForRowAt: indexPath)

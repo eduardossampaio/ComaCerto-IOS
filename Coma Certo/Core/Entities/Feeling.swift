@@ -7,13 +7,22 @@
 //
 
 import Foundation
-struct Feeling : Equatable{
+import UIKit
+struct Feeling : Equatable , Displayable{
+    func displayName() -> String {
+        return name
+    }
+    
+    func displayImage() -> UIImage? {
+        return UIImage(named: imageName)
+    }
+    
     var id:Int
-    var displayName:String
+    var name:String
     var imageName:String
-    init(id:Int, _ displayName:String, _ imageName:String) {
+    init(id:Int, _ name:String, _ imageName:String) {
         self.id = id
-        self.displayName = displayName
+        self.name = name
         self.imageName = imageName
     }
     
@@ -31,6 +40,7 @@ struct Feeling : Equatable{
         Feeling(id: 7,"Tédio ", "emoji-boredom"),
         Feeling(id: 8,"Tristeza ", "emoji-sad")
     ]
+    
     static let none = Feeling(id: -1, "", "")
     
     static func getFeeling(byId id: Int) -> Feeling{
