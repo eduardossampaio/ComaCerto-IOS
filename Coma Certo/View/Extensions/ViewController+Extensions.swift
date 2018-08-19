@@ -9,7 +9,23 @@
 import Foundation
 import UIKit
 import CustomizableActionSheet
-extension UIViewController {
+extension UIViewController : ViewPresenter {
+    func showAlert(message: String) {
+        
+    }
+    
+    func showErrpr(message: String) {
+        
+    }
+    
+    func showLoading() {
+        
+    }
+    
+    func hideLoading() {
+        
+    }
+    
     func openDateActionSheet(date:Date, mode: UIDatePickerMode, tag: Int = 0){
         var items = [CustomizableActionSheetItem]()
         let sampleViewItem = CustomizableActionSheetItem()

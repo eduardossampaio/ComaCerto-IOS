@@ -31,20 +31,13 @@ class ImageCollectionViewController: UICollectionViewController {
         
         cell.reactionImage.image = itemToDisplay.displayImage()
         cell.reactionName.text = itemToDisplay.displayName()
-//        if let preselectedItem = self.preselectedItem{
-//            if(itemToDisplay == preselectedItem){
-//                firstSelectedWhenCreated = false
-//                cell.isSelected = true
-//                onFeelingSelected?(Feeling.allFeelings[indexPath.item])
-//            }
-//        }
-       
-//        if (feeling.id == preselectedItem.id && firstSelectedWhenCreated){
-//            firstSelectedWhenCreated = false
-//            cell.isSelected = true
-//            onFeelingSelected?(Feeling.allFeelings[indexPath.item])
-//        }
-        
+        if let preselectedItem = self.preselectedItem{
+            if itemToDisplay.equals( other: preselectedItem) {
+                firstSelectedWhenCreated = false
+                cell.isSelected = true
+                onItemSelected?(items[indexPath.item])
+            }
+        }
         return cell
     }
     
@@ -54,7 +47,6 @@ class ImageCollectionViewController: UICollectionViewController {
         let newSelectedCell = collectionView.cellForItem(at: indexPath)
         newSelectedCell?.isSelected = true
         self.lastSelectedCell = indexPath.item
-//        onItemSelected?(Feeling.allFeelings[indexPath.item])
         onItemSelected?(items[indexPath.item])
     }
 }

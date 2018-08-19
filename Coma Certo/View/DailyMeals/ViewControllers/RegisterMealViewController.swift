@@ -62,6 +62,9 @@ class RegisterMealViewController: UITableViewController {
         sender.doStep(step: 1)
         updateSatietyStatusLabel()
     }
+    override func viewDidLoad() {
+        self.tableView.bounces = false
+    }
     override func viewWillAppear(_ animated: Bool) {
         updateDateTimeLabels()
         updateSliders()
@@ -119,6 +122,7 @@ class RegisterMealViewController: UITableViewController {
             controller.onItemSelected = {(mealType) in
                 self.meal.mealType = mealType as! MealType
             }
+            controller.preselectedItem = self.meal.mealType
         }else if(segue.identifier == "selectFoodsSegue"){
             let controller = segue.destination as! AddFoodsToMealViewController
             controller.selectedFoods = self.meal.foods

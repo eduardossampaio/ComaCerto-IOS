@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-enum  MealType : Displayable, Equatable {
+enum  MealType : Displayable {
     
     case breakfast
     case lunch
@@ -18,9 +18,11 @@ enum  MealType : Displayable, Equatable {
     
     static var allCases = [MealType.breakfast,MealType.lunch,MealType.snack,MealType.dinner ]
     
-    static func ==(lhs: MealType, rhs: MealType) -> Bool {
-        return lhs.rawValue == rhs.rawValue
+
+    func equals(other: Displayable) -> Bool {
+        return self.displayName() == other.displayName()
     }
+    
     static func get(rawValue value :Int) -> MealType{
         for mealType in allCases{
             if mealType.rawValue ==  value{

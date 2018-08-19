@@ -12,4 +12,6 @@ protocol Displayable {
     func displayName() -> String
     
     func displayImage() -> UIImage?
+    
+    func equals(other:Displayable) -> Bool 
 }

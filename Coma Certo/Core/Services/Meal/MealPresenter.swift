@@ -7,7 +7,7 @@
 //
 
 import Foundation
-protocol MealPresenter{
+protocol MealPresenter : ViewPresenter{
     func updateMealList(meals: [Meal])
     
 }

@@ -743,7 +743,7 @@
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="WMM-pG-2lJ">
-                        <barButtonItem key="rightBarButtonItem" image="share" landscapeImage="share" id="PnD-Bu-Op3"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="PnD-Bu-Op3"/>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
@@ -907,7 +907,6 @@
         <image name="list" width="42" height="42"/>
         <image name="meal" width="42" height="42"/>
         <image name="report" width="36" height="42"/>
-        <image name="share" width="42" height="42"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="nV5-Aj-GXN"/>

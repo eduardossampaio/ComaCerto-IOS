@@ -18,6 +18,10 @@ struct Feeling : Equatable,Displayable {
         return UIImage(named: imageName)
     }
     
+    func equals(other: Displayable) -> Bool {
+        return self.displayName() == other.displayName()
+    }
+    
     var id:Int
     var name:String
     var imageName:String
