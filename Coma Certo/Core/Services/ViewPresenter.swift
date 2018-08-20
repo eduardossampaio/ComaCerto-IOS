@@ -11,7 +11,7 @@ protocol ViewPresenter {
     
     func showAlert(message:String)
     
-    func showErrpr(message: String)
+    func showError(message: String)
     
     func showLoading()
     

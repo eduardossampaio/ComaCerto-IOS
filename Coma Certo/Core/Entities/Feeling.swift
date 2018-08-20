@@ -8,7 +8,7 @@
 
 import Foundation
 import UIKit
-struct Feeling : Equatable,Displayable {
+struct Feeling : Equatable,Displayable,Codable {
    
     func displayName() -> String {
         return name
@@ -36,7 +36,8 @@ struct Feeling : Equatable,Displayable {
     }
     
     static let allFeelings = [
-        Feeling(id: 1,"Alegria", "emoji-happy"),
+//        Feeling(id: 1,"Alegria", "emoji-happy"),
+        Feeling(id: 1,"Tranquilo", "emoji-natural"),
         Feeling(id: 2,"Ansiedade ", "emoji-anxiety"),
         Feeling(id: 3,"Frustração ", "emoji-frustration"),
         Feeling(id: 4,"Irritação ", "emoji-irritation"),

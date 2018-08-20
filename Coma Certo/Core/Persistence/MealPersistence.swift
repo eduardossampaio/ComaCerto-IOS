@@ -41,8 +41,13 @@ class MealPersistence {
     }
     
     func getMeals(forDate date: Date) -> [Meal] {
+       return getMeals(initialDate: date, finalDate: date)
+    }
+    
+    
+    func getMeals(initialDate: Date,finalDate:Date) -> [Meal] {
         let realm = try! Realm()
-        let mealEntities = realm.objects(MealRealmEntity.self).filter("dateAndTime BETWEEN %@", [date.beginOfDay(), date.endOfDay()])
+        let mealEntities = realm.objects(MealRealmEntity.self).filter("dateAndTime BETWEEN %@", [initialDate.beginOfDay(), finalDate.endOfDay()])
         var allMeals = [Meal]()
         for mealEntity in mealEntities{
             let meal = mealEntity.toMeal()
@@ -50,6 +55,7 @@ class MealPersistence {
         }
         return allMeals
     }
+    
     
     func deleteMeal(meal: Meal){
         let realm = try! Realm()

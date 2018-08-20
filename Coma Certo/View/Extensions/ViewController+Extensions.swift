@@ -10,20 +10,44 @@ import Foundation
 import UIKit
 import CustomizableActionSheet
 extension UIViewController : ViewPresenter {
+    static let SPINNER_VIEW_TAG = 1234;
+    
     func showAlert(message: String) {
-        
+        let alert = UIAlertController(title: "Coma Certo", message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: nil))
+        self.present(alert, animated: true)
     }
     
-    func showErrpr(message: String) {
-        
+    func showError(message: String) {
+        let alert = UIAlertController(title: "Erro", message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: nil))
+        self.present(alert, animated: true)
+
     }
     
     func showLoading() {
+        let spinnerView = UIView.init(frame: self.view.bounds)
+        spinnerView.tag = UIViewController.SPINNER_VIEW_TAG
+        spinnerView.backgroundColor = UIColor.init(red: 0.5, green: 0.5, blue: 0.5, alpha: 0.5)
+        let ai = UIActivityIndicatorView.init(activityIndicatorStyle: .whiteLarge)
+        ai.startAnimating()
+        ai.center = spinnerView.center
         
+        DispatchQueue.main.async {
+            spinnerView.addSubview(ai)
+            self.view.addSubview(spinnerView)
+        }
     }
     
     func hideLoading() {
-        
+        for view in self.view.subviews {
+            if ( view.tag == UIViewController.SPINNER_VIEW_TAG){
+                DispatchQueue.main.async {
+                    view.removeFromSuperview()
+                }
+                break;
+            }
+        }
     }
     
     func openDateActionSheet(date:Date, mode: UIDatePickerMode, tag: Int = 0){

@@ -731,10 +731,10 @@
             </objects>
             <point key="canvasLocation" x="943" y="859"/>
         </scene>
-        <!--View Controller-->
+        <!--Display Report View Controller-->
         <scene sceneID="fWQ-d4-ixN">
             <objects>
-                <viewController id="MhI-qR-JiV" sceneMemberID="viewController">
+                <viewController id="MhI-qR-JiV" customClass="DisplayReportViewController" customModule="Coma_Certo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="e18-B9-BmJ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -743,7 +743,11 @@
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="WMM-pG-2lJ">
-                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="PnD-Bu-Op3"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="PnD-Bu-Op3">
+                            <connections>
+                                <action selector="shareReportClicked:" destination="MhI-qR-JiV" id="upT-Jh-i7d"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>

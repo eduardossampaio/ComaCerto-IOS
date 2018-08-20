@@ -7,7 +7,7 @@
 //
 
 import Foundation
-struct Meal {
+class Meal : Codable  {
     var primaryKey : String?
     var mealType: MealType?
     var date = Date()

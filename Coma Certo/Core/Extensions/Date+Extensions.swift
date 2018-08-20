@@ -21,6 +21,12 @@ extension Date{
         return dateFormatter.weekdaySymbols[ Calendar.current.component(.weekday, from: self) - 1]
     }
     
+    func formatDate(format:String) -> String{
+        let dateFormatterPrint = DateFormatter()
+        dateFormatterPrint.dateFormat = format
+        return dateFormatterPrint.string(from: self);
+    }
+    
     func toReadableTime() -> String{
         let dateFormatter = DateFormatter()
         dateFormatter.timeStyle = .short

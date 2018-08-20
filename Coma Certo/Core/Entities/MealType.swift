@@ -9,15 +9,33 @@
 import Foundation
 import UIKit
 
-enum  MealType : Displayable {
+struct  MealType : Displayable , Codable {
+    func displayName() -> String {
+        return self.name
+    }
     
-    case breakfast
-    case lunch
-    case snack
-    case dinner
+    func displayImage() -> UIImage? {
+        return UIImage(named: self.imageName)
+    }
     
-    static var allCases = [MealType.breakfast,MealType.lunch,MealType.snack,MealType.dinner ]
     
+    var name:String
+    var imageName:String
+    var rawValue:Int
+    
+    static let breakfast = MealType(name: "Café da Manhã",imageName: "cafe",rawValue: 1)
+    static let lunch = MealType(name: "Almoço",imageName: "almoco",rawValue: 2)
+    static let snack = MealType(name: "Lanche",imageName: "lanche",rawValue: 3)
+    static let dinner = MealType(name: "Janta",imageName: "janta",rawValue: 4)
+    
+    
+    static var allCases = [breakfast,lunch,snack,dinner]
+    
+    private init(name: String,imageName:String,rawValue:Int) {
+        self.name = name
+        self.imageName = imageName
+        self.rawValue = rawValue
+    }
 
     func equals(other: Displayable) -> Bool {
         return self.displayName() == other.displayName()
@@ -31,68 +49,4 @@ enum  MealType : Displayable {
         }
         return MealType.lunch
     }
-        init?(rawValue: Int) {
-            switch rawValue {
-            case 1 : self = .breakfast
-            case 2 : self = .lunch
-            case 3 : self = .snack
-            case 4 : self = .dinner
-            default: return nil
-            }
-        }
-
-        var rawValue: Int {
-            switch self {
-            case .breakfast: return 1
-            case .lunch: return 2
-            case .snack: return 3
-            case .dinner: return 4
-            }
-        }
-
-//    init?(rawValue: Int) {
-//        switch rawValue {
-//        case "Café da Manhã": self = .breakfast
-//        case "Almoço": self = .lunch
-//        case "Lanche": self = .snack
-//        case "Janta": self = .dinner
-//        default: return nil
-//        }
-//    }
-//
-//    var rawValue: String {
-//        switch self {
-//        case .breakfast: return "Café da Manhã"
-//        case .lunch: return "Almoço"
-//        case .snack: return "Lanche"
-//        case .dinner: return "Janta"
-//        }
-//    }
-
-    func displayName() -> String {
-        switch self{
-        case .breakfast:
-            return "Café da Manhã"
-        case .lunch:
-            return "Almoço"
-        case .snack:
-            return "Lanche"
-        case .dinner:
-            return "Janta"
-        }
-    }
-    
-    func displayImage() -> UIImage? {
-        switch self{
-        case .breakfast:
-            return UIImage(named: "cafe")
-        case .lunch:
-            return UIImage(named: "almoco")
-        case .snack:
-            return UIImage(named: "lanche")
-        case .dinner:
-            return UIImage(named: "janta")
-        }
-    }
-    
 }
