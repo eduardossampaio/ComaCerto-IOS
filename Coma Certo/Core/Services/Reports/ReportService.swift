@@ -12,7 +12,7 @@ class ReportService : ReportIteractor {
     var reportPresenter: ReportPresenter
     let mealPersistence = MealPersistence()
     
-    let GENERATE_MEALS_REPORT_URL = "http://192.168.1.102:8080/reports/meals"
+    let GENERATE_MEALS_REPORT_URL = "http://192.168.43.184:8080/reports/meals"
     
     init(presenter: ReportPresenter ){
         self.reportPresenter = presenter
@@ -30,13 +30,14 @@ class ReportService : ReportIteractor {
             "finalDate": finalDate.formatDate(format: "dd/MM/yyyy"),
             "meals": meals
         ] as [String : Any]
-        Alamofire.request(GENERATE_MEALS_REPORT_URL,  method: .post, parameters:parameters,encoding: JSONEncoding.default).response{ response in
+        
+        Alamofire.request(GENERATE_MEALS_REPORT_URL,  method: .post, parameters:parameters,encoding: JSONEncoding.default).responseData{ response in
             self.reportPresenter.hideLoading()
             guard response.response?.statusCode == 200 else {
                 self.reportPresenter.showError(message: "Erro ao gerar relatório alimentar")
                 return
             }
-            if let pdfData = response.data{
+            if let pdfData = response.result.value{
                 self.reportPresenter.displayReport(asPdf: pdfData)
             }
         }

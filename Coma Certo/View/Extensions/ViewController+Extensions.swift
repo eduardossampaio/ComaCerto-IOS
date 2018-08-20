@@ -24,28 +24,39 @@ extension UIViewController : ViewPresenter {
         self.present(alert, animated: true)
 
     }
+    func getFistViewControllerInStack(from viewController :UIViewController) -> UIViewController?{
+        let currentParent = viewController.parent;
+        if ( currentParent == nil){
+            return viewController
+        }
+        return getFistViewControllerInStack(from: currentParent!)
+    }
     
     func showLoading() {
-        let spinnerView = UIView.init(frame: self.view.bounds)
-        spinnerView.tag = UIViewController.SPINNER_VIEW_TAG
-        spinnerView.backgroundColor = UIColor.init(red: 0.5, green: 0.5, blue: 0.5, alpha: 0.5)
-        let ai = UIActivityIndicatorView.init(activityIndicatorStyle: .whiteLarge)
-        ai.startAnimating()
-        ai.center = spinnerView.center
-        
-        DispatchQueue.main.async {
-            spinnerView.addSubview(ai)
-            self.view.addSubview(spinnerView)
+        if let parentViewController = getFistViewControllerInStack(from: self) , let view = parentViewController.view{
+            let spinnerView = UIView.init(frame: view.bounds)
+            spinnerView.tag = UIViewController.SPINNER_VIEW_TAG
+            spinnerView.backgroundColor = UIColor.init(red: 0.5, green: 0.5, blue: 0.5, alpha: 0.5)
+            let ai = UIActivityIndicatorView.init(activityIndicatorStyle: .whiteLarge)
+            ai.startAnimating()
+            ai.center = spinnerView.center
+            
+            DispatchQueue.main.async {
+                spinnerView.addSubview(ai)
+                view.addSubview(spinnerView)
+            }
         }
     }
     
     func hideLoading() {
-        for view in self.view.subviews {
-            if ( view.tag == UIViewController.SPINNER_VIEW_TAG){
-                DispatchQueue.main.async {
-                    view.removeFromSuperview()
+       if let parentViewController = getFistViewControllerInStack(from: self) , let view = parentViewController.view{
+            for subview in view.subviews {
+                if ( subview.tag == UIViewController.SPINNER_VIEW_TAG){
+                    DispatchQueue.main.async {
+                        subview.removeFromSuperview()
+                    }
+                    break;
                 }
-                break;
             }
         }
     }
