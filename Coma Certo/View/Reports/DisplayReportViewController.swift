@@ -37,6 +37,4 @@ class DisplayReportViewController : UIViewController{
     @IBAction func shareReportClicked(_ sender: Any) {
      
     }
-    
-    
 }

@@ -17,7 +17,11 @@ class FoodHttpService{
         Alamofire.request(todoEndpoint)
             .responseJSON { response in
                 if let data = response.data{
-                    FoodHttpService.foodList = try! JSONDecoder().decode([Food].self, from: data)
+                    do {
+                        try FoodHttpService.foodList = JSONDecoder().decode([Food].self, from: data)
+                    }catch {
+                        
+                    }
                 }
         }
     }
