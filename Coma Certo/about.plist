@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>credits</key>
+	<string>credits-text</string>
+	<key>how-to-input</key>
+	<string>Como preencher o app
+
+Que refeição estou fazendo?
+Escolha entre &quot;Beliscada&quot; &quot;Almoço&quot; &quot;Lanche&quot; &quot;Janta&quot; &quot;café da manhã&quot; ou &quot;outra refeição&quot;
+
+Quando eu comi?
+Tente ser preciso no horário em que comeu. Verifique com o profissional que te acompanha qual a frequência em que você deve se alimentar.
+
+O que comi?
+Seja fiel na descrição dos alimentos, caso não encontre na lista, você pode adicionar manualmente. As porções precisam ser combinadas com o profissional, por exemplo: 1 porção de arroz pode significar uma colher, uma concha ou 100g.
+
+O que estava fazendo?
+Indique onde você comeu e o que fez enquanto comia. Por exemplo: na sala vendo TV ou na mesa de jantar apenas comendo.
+
+Nível de fome
+Avalie o nível da sua fome antes de começar a comer. Encontre na escala, o que melhor sinaliza esse nível:
+1. Nada de fome
+2. Pouca fome
+3. Com fome
+4. Muita fome
+5. Morrendo de fome
+
+Nível de saciedade
+Depois que comer, avalie o quanto você se percebe saciado ou de estômago cheio. 
+1.Continuo com fome
+2.Poderia comer mais
+3.Estou satisfeito
+4.Comi demais
+5.Vou explodir
+
+Duração da alimentação
+Determine em minutos quanto tempo você levou para comer.
+
+Como me senti?
+Muitas vezes comemos errado tentando nos livrar de sentimentos ruins, para investigar isso, perceba como você se sente antes de comer. Caso seu sentimento não esteja listado, você poderá adicioná-lo manualmente.</string>
+	<key>about-app</key>
+	<string>O principal desafio no processo de emagrecimento são os vícios comportamentais que temos na hora de comer, apenas saber o que comer não é o suficiente para manter uma dieta saudável, precisamos conseguir seguir o plano alimentar.
+Dessa forma, pacientes com transtornos alimentares, podem usar essa ferramenta para registrar seu diário alimentar e depois utilizá-lo com o profissional da saúde que o acompanha. Ou caso o usuário saudável queira tomar consciência da sua alimentação, o registro também irá auxiliá-lo.
+Os ganhos primários do uso do app são:
+1. aumento da consciência sobre o comportamento: Grande parte dos sujeitos não se atentam a forma como comem, durante o registro das refeições o usuário vai precisar refletir para responder.
+2. mudança de regras sobre a alimentação: Percebendo o próprio comportamento alimentar, e com o auxílio do profissional, ele vai perceber os erros que tem cometido durante a refeição, relacionados a: a)frequencia das refeições b)quantidade de comida c)relação entre fome e quantidade de comida d)percepção da saciedade e)o comer emocional f)a velocidade da refeição. Outras regras podem ser trabalhadas de acordo com a percepção do profissional.
+3. mudança do comportamento alimentar: Agora consciente dos erros durante a alimentação, o usuário passará a ficar atento ao momento de comer, evitando cometer os erros que atrapalham no seu processo de emagrecimento.
+Ganhos secundários
+1. perda de gordura corporal
+2. aumento na autoestima
+3. diminuição das comorbidades advindas do sobrepeso</string>
+	<key>general-rules</key>
+	<string>Regras Gerais:
+
+1. Prestar bastante atenção nos alimentos e nas porções para o registro.
+2. Prestar atenção no nível de fome e no sentimento antes de comer.
+3. Enquanto está comendo, fique atento ao seu estômago, aprenda a identificar seu nível de saciedade.
+4. Caso você perceba a saciedade, pare de comer, você não é obrigado a comer tudo o que colocou no prato.
+5. Coma devagar, se você come muito rápido não dá pra avaliar a saciedade real.
+6. Caso você tenha comido mais do que o necessário, não fique chateado, você terá a próxima refeição para tentar acertar.
+7. Compartilhe o relatório de sua alimentação com o profissional que te acompanha. </string>
+</dict>
+</plist>

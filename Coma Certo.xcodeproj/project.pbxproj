@@ -33,10 +33,13 @@
 		59720C04211C8B6B00C0826B /* RegisterMealViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59720C03211C8B6B00C0826B /* RegisterMealViewController.swift */; };
 		59720C06211CFEE200C0826B /* ImageCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59720C05211CFEE200C0826B /* ImageCollectionViewController.swift */; };
 		59720C0B211D177C00C0826B /* ImageCollectionCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59720C0A211D177C00C0826B /* ImageCollectionCellView.swift */; };
+		5981835E212AECD500814C24 /* AboutAppInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5981835D212AECD500814C24 /* AboutAppInfoViewController.swift */; };
+		59818362212AF4F500814C24 /* about.plist in Resources */ = {isa = PBXBuildFile; fileRef = 59818361212AF4F500814C24 /* about.plist */; };
 		599948CE212A1B2200700900 /* ReportService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 599948CD212A1B2200700900 /* ReportService.swift */; };
 		599948D0212A1B5E00700900 /* ReportInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 599948CF212A1B5E00700900 /* ReportInteractor.swift */; };
 		599948D2212A1B7000700900 /* ReportPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 599948D1212A1B7000700900 /* ReportPresenter.swift */; };
 		599948D4212A36E200700900 /* DisplayReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 599948D3212A36E200700900 /* DisplayReportViewController.swift */; };
+		599948D6212A5CDF00700900 /* AboutAppViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 599948D5212A5CDF00700900 /* AboutAppViewController.swift */; };
 		59A9E63D211D2E7F009B38A0 /* ListFoodTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A9E63C211D2E7F009B38A0 /* ListFoodTableViewController.swift */; };
 		59C705D8212125C7000423A4 /* FoodHttpService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59C705D7212125C7000423A4 /* FoodHttpService.swift */; };
 		59D28816211A80B300CD38B7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59D28815211A80B300CD38B7 /* AppDelegate.swift */; };
@@ -97,10 +100,13 @@
 		59720C03211C8B6B00C0826B /* RegisterMealViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterMealViewController.swift; sourceTree = "<group>"; };
 		59720C05211CFEE200C0826B /* ImageCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewController.swift; sourceTree = "<group>"; };
 		59720C0A211D177C00C0826B /* ImageCollectionCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionCellView.swift; sourceTree = "<group>"; };
+		5981835D212AECD500814C24 /* AboutAppInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutAppInfoViewController.swift; sourceTree = "<group>"; };
+		59818361212AF4F500814C24 /* about.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = about.plist; sourceTree = "<group>"; };
 		599948CD212A1B2200700900 /* ReportService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportService.swift; sourceTree = "<group>"; };
 		599948CF212A1B5E00700900 /* ReportInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportInteractor.swift; sourceTree = "<group>"; };
 		599948D1212A1B7000700900 /* ReportPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportPresenter.swift; sourceTree = "<group>"; };
 		599948D3212A36E200700900 /* DisplayReportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayReportViewController.swift; sourceTree = "<group>"; };
+		599948D5212A5CDF00700900 /* AboutAppViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutAppViewController.swift; sourceTree = "<group>"; };
 		59A9E63C211D2E7F009B38A0 /* ListFoodTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListFoodTableViewController.swift; sourceTree = "<group>"; };
 		59C705D7212125C7000423A4 /* FoodHttpService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodHttpService.swift; sourceTree = "<group>"; };
 		59D28812211A80B300CD38B7 /* Coma Certo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Coma Certo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -254,6 +260,8 @@
 		59538C3F212370150061147B /* About */ = {
 			isa = PBXGroup;
 			children = (
+				599948D5212A5CDF00700900 /* AboutAppViewController.swift */,
+				5981835D212AECD500814C24 /* AboutAppInfoViewController.swift */,
 			);
 			path = About;
 			sourceTree = "<group>";
@@ -362,6 +370,7 @@
 				59D2881C211A80B400CD38B7 /* Assets.xcassets */,
 				59D2881E211A80B400CD38B7 /* LaunchScreen.storyboard */,
 				59D28821211A80B400CD38B7 /* Info.plist */,
+				59818361212AF4F500814C24 /* about.plist */,
 			);
 			path = "Coma Certo";
 			sourceTree = "<group>";
@@ -502,6 +511,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				59818362212AF4F500814C24 /* about.plist in Resources */,
 				59D28820211A80B400CD38B7 /* LaunchScreen.storyboard in Resources */,
 				59D2881D211A80B400CD38B7 /* Assets.xcassets in Resources */,
 				59D2881B211A80B300CD38B7 /* Main.storyboard in Resources */,
@@ -612,6 +622,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				599948D6212A5CDF00700900 /* AboutAppViewController.swift in Sources */,
 				59720C04211C8B6B00C0826B /* RegisterMealViewController.swift in Sources */,
 				59720C06211CFEE200C0826B /* ImageCollectionViewController.swift in Sources */,
 				59538C4421248DDD0061147B /* GenerateReportViewController.swift in Sources */,
@@ -627,6 +638,7 @@
 				59538C4A2124C5B10061147B /* MealType.swift in Sources */,
 				59538C3A212340CB0061147B /* Entities+Extensions.swift in Sources */,
 				5902B56D211E01E900707EB0 /* Feeling.swift in Sources */,
+				5981835E212AECD500814C24 /* AboutAppInfoViewController.swift in Sources */,
 				59044BF021251D1000A6BF4D /* FoodIteractor.swift in Sources */,
 				59538C3D2123615C0061147B /* MyMealsViewController.swift in Sources */,
 				59D28818211A80B300CD38B7 /* DailyMealsViewController.swift in Sources */,
