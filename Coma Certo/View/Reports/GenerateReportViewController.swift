@@ -65,6 +65,8 @@ class GenerateReportViewController : UIViewController, ReportPresenter{
         if ( segue.identifier == "goToReportResultSegue"){
             let controller = segue.destination as! DisplayReportViewController
             controller.pdfData = self.pdfToDisplay
+            controller.initialDate = self.initialDate
+            controller.finalDate = self.finalDate
         }
     }
     
