@@ -23,14 +23,22 @@ O usuário pode fazer o registro de sua alimentação, registrando as informaç�
 - Seu nível de fome e saciedade
 - Como a pessoa estava se sentindo no momento da refeição
 
+<img src="screenshots/screen-2.jpeg" alt="drawing" height="300"/>
+
 ### Acompanhe suas refeições diárias
 
 O usuário pode acompanhar todas as suas refeições, agrupadas por dia e ordenadas pelo horário. A partir desta tela é possível editar e excluir 
 as refeições cadastradas anteriormente
 
+<img src="screenshots/screen-1.jpeg" alt="drawing" height="300"/>
+
 ### Relatório alimentar
 
 Aqui o usuário pode acompanhar seu diário alimentar de um determinado período, e visualizar as informações agrupadas em um arquivo PDF, pronto para ser compartilhado com seu profissional de saúde.
+
+<img src="screenshots/screen-3.jpeg" alt="drawing" height="300"/>
+<img src="screenshots/screen-4.jpeg" alt="drawing" height="300"/>
+
 
 ## Instalação
 
