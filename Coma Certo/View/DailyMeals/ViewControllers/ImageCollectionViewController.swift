@@ -35,6 +35,7 @@ class ImageCollectionViewController: UICollectionViewController {
             if itemToDisplay.equals( other: preselectedItem) {
                 firstSelectedWhenCreated = false
                 cell.isSelected = true
+                lastSelectedCell = indexPath.row
                 onItemSelected?(items[indexPath.item])
             }
         }

@@ -928,6 +928,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="DEd-Ww-88z"/>
                     </view>
+                    <connections>
+                        <outlet property="infoTextView" destination="FWG-F3-bdD" id="pji-rm-raB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N7w-JG-TTY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
