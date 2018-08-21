@@ -910,27 +910,9 @@
                     <view key="view" contentMode="scaleToFill" id="6NG-T6-XvB">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FWG-F3-bdD">
-                                <rect key="frame" x="16" y="64" width="382" height="623"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="FWG-F3-bdD" firstAttribute="top" secondItem="DEd-Ww-88z" secondAttribute="top" id="OIK-3s-Djc"/>
-                            <constraint firstItem="FWG-F3-bdD" firstAttribute="leading" secondItem="DEd-Ww-88z" secondAttribute="leading" constant="16" id="RRU-79-Zlt"/>
-                            <constraint firstItem="DEd-Ww-88z" firstAttribute="bottom" secondItem="FWG-F3-bdD" secondAttribute="bottom" id="X6u-eu-kzD"/>
-                            <constraint firstItem="DEd-Ww-88z" firstAttribute="trailing" secondItem="FWG-F3-bdD" secondAttribute="trailing" constant="16" id="gs4-yr-5F1"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="DEd-Ww-88z"/>
                     </view>
-                    <connections>
-                        <outlet property="infoTextView" destination="FWG-F3-bdD" id="pji-rm-raB"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N7w-JG-TTY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

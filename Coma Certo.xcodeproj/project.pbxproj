@@ -17,6 +17,10 @@
 		59044BF021251D1000A6BF4D /* FoodIteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59044BEF21251D1000A6BF4D /* FoodIteractor.swift */; };
 		59044BF221251D1F00A6BF4D /* FoodPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59044BF121251D1F00A6BF4D /* FoodPresenter.swift */; };
 		594DAC25212C983900E1729D /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 594DAC24212C983900E1729D /* String+Extensions.swift */; };
+		594DAC27212CB27700E1729D /* about-app.md in Resources */ = {isa = PBXBuildFile; fileRef = 594DAC26212CAF8700E1729D /* about-app.md */; };
+		594DAC2B212CB34F00E1729D /* general-rules.md in Resources */ = {isa = PBXBuildFile; fileRef = 594DAC28212CB30E00E1729D /* general-rules.md */; };
+		594DAC2C212CB34F00E1729D /* how-to-input.md in Resources */ = {isa = PBXBuildFile; fileRef = 594DAC29212CB33200E1729D /* how-to-input.md */; };
+		594DAC2D212CB34F00E1729D /* credits.md in Resources */ = {isa = PBXBuildFile; fileRef = 594DAC2A212CB33F00E1729D /* credits.md */; };
 		59538C2B21226CEB0061147B /* MealService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59538C2A21226CEB0061147B /* MealService.swift */; };
 		59538C2E21226D010061147B /* MealPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59538C2D21226D010061147B /* MealPresenter.swift */; };
 		59538C30212274BB0061147B /* MealIteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59538C2F212274BB0061147B /* MealIteractor.swift */; };
@@ -86,6 +90,10 @@
 		59044BEF21251D1000A6BF4D /* FoodIteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodIteractor.swift; sourceTree = "<group>"; };
 		59044BF121251D1F00A6BF4D /* FoodPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodPresenter.swift; sourceTree = "<group>"; };
 		594DAC24212C983900E1729D /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
+		594DAC26212CAF8700E1729D /* about-app.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "about-app.md"; sourceTree = "<group>"; };
+		594DAC28212CB30E00E1729D /* general-rules.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "general-rules.md"; sourceTree = "<group>"; };
+		594DAC29212CB33200E1729D /* how-to-input.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "how-to-input.md"; sourceTree = "<group>"; };
+		594DAC2A212CB33F00E1729D /* credits.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = credits.md; sourceTree = "<group>"; };
 		59538C2A21226CEB0061147B /* MealService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealService.swift; sourceTree = "<group>"; };
 		59538C2D21226D010061147B /* MealPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealPresenter.swift; sourceTree = "<group>"; };
 		59538C2F212274BB0061147B /* MealIteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealIteractor.swift; sourceTree = "<group>"; };
@@ -377,6 +385,10 @@
 				59D28821211A80B400CD38B7 /* Info.plist */,
 				59818361212AF4F500814C24 /* about.plist */,
 				59818365212BB5A800814C24 /* Assets.xcassets */,
+				594DAC26212CAF8700E1729D /* about-app.md */,
+				594DAC28212CB30E00E1729D /* general-rules.md */,
+				594DAC29212CB33200E1729D /* how-to-input.md */,
+				594DAC2A212CB33F00E1729D /* credits.md */,
 			);
 			path = "Coma Certo";
 			sourceTree = "<group>";
@@ -517,6 +529,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				594DAC2B212CB34F00E1729D /* general-rules.md in Resources */,
+				594DAC2C212CB34F00E1729D /* how-to-input.md in Resources */,
+				594DAC2D212CB34F00E1729D /* credits.md in Resources */,
+				594DAC27212CB27700E1729D /* about-app.md in Resources */,
 				59818362212AF4F500814C24 /* about.plist in Resources */,
 				59D28820211A80B400CD38B7 /* LaunchScreen.storyboard in Resources */,
 				59818366212BB5A800814C24 /* Assets.xcassets in Resources */,
@@ -568,6 +584,7 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-Coma Certo/Pods-Coma Certo-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/CustomizableActionSheet/CustomizableActionSheet.framework",
+				"${BUILT_PRODUCTS_DIR}/MarkdownView/MarkdownView.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SearchTextField/SearchTextField.framework",
@@ -576,6 +593,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CustomizableActionSheet.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MarkdownView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SearchTextField.framework",

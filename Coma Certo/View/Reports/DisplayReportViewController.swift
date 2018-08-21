@@ -23,7 +23,6 @@ class DisplayReportViewController : UIViewController{
         super.viewDidLoad()
         pdfView =  PDFView(frame: CGRect(x: 0, y: 0, width: view.frame.width, height: view.frame.height))
         pdfView.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(pdfView)
 
         pdfView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor).isActive = true
         pdfView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor).isActive = true

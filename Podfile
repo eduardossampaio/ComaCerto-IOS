@@ -10,6 +10,7 @@ target 'Coma Certo' do
   pod "SearchTextField"
   pod 'CustomizableActionSheet'
   pod 'Alamofire', '~> 4.7'
+  pod "MarkdownView"
   target 'Coma CertoTests' do
     inherit! :search_paths
     # Pods for testing

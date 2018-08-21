@@ -20,14 +20,7 @@ class AboutAppViewController : UITableViewController{
             self.aboutAppInfo = myDict
         }
     }
-//    <key>credits</key>
-//    <string>credits-text</string>
-//    <key>how-to-input</key>
-//    <string>how to input text</string>
-//    <key>about-app</key>
-//    <string>about app text</string>
-//    <key>general-rules</key>
-//    <string>general rules text</string>
+
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         switch indexPath.row {
@@ -49,7 +42,7 @@ class AboutAppViewController : UITableViewController{
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "goToAboutAppDetailSegue" {
             let controller = segue.destination as! AboutAppInfoViewController
-            controller.detailText = self.detailText
+            controller.resourceFileName = self.detailText
         }
     }
 }
