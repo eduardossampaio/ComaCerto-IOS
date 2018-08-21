@@ -17,8 +17,8 @@ class MealService : MealIteractor {
     
     func dateSelected(date: Date) {
         let mealsForDate = mealPersistence.getMeals(forDate: date)
-        
-        mealPresenter.updateMealList(meals: mealsForDate)
+        let sortedMeals = mealsForDate.sorted(by: { $0.mealType.rawValue < $1.mealType.rawValue })
+        mealPresenter.updateMealList(meals: sortedMeals)
     }
     
     func onSavePressed(meal: Meal) {
