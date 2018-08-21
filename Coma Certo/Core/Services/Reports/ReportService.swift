@@ -13,7 +13,7 @@ class ReportService : ReportIteractor {
     let mealPersistence = MealPersistence()
     
     let GENERATE_MEALS_REPORT_URL = "https://coma-certo.herokuapp.com/reports/meals"
-    
+//    let GENERATE_MEALS_REPORT_URL = "http://192.168.1.102:8080/reports/meals"
     init(presenter: ReportPresenter ){
         self.reportPresenter = presenter
     }
@@ -25,13 +25,21 @@ class ReportService : ReportIteractor {
     
     func generateReport(initialDate: Date,finalDate:Date){
         let meals = mealPersistence.getMeals(initialDate: initialDate,finalDate:finalDate)
-        let parameters = [
-            "initialDate": initialDate.formatDate(format: "dd/MM/yyyy"),
-            "finalDate": finalDate.formatDate(format: "dd/MM/yyyy"),
-            "meals": meals
-        ] as [String : Any]
+        let mealRequest = MealReportRequest(initialDate,finalDate,meals)
+        var mealsJson : Data?
+        do {
+            let decoder = JSONEncoder()
+            mealsJson  = try decoder.encode(mealRequest)
+        } catch {
+            // No-op
+        }
+
+        var request = URLRequest(url: URL(string: GENERATE_MEALS_REPORT_URL)!)
+        request.httpMethod = HTTPMethod.post.rawValue
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.httpBody = mealsJson
         
-        Alamofire.request(GENERATE_MEALS_REPORT_URL,  method: .post, parameters:parameters,encoding: JSONEncoding.default).responseData{ response in
+        Alamofire.request(request).responseData{ response in
             self.reportPresenter.hideLoading()
             guard response.response?.statusCode == 200 else {
                 self.reportPresenter.showError(message: "Erro ao gerar relatório alimentar")

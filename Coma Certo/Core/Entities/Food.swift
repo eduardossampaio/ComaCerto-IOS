@@ -11,6 +11,7 @@ struct Food : Codable{
     var primaryKey : String? = nil
     let name:String
     let category:String
+    let portion = 1
 
     init( name:String?, category:String?) {
         self.name = name ?? ""

@@ -122,11 +122,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Coma Certo/Core/Persistence/Entities/Entities+Extensions.swift"
-            timestampString = "556412868.462301"
+            timestampString = "556513705.187704"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "28"
-            endingLineNumber = "28"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
             landmarkName = "fromMeal(meal:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -138,7 +138,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Coma Certo/Core/Persistence/MealPersistence.swift"
-            timestampString = "556425842.467976"
+            timestampString = "556491197.4613431"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "25"
@@ -154,7 +154,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Coma Certo/View/About/AboutAppViewController.swift"
-            timestampString = "556484910.540841"
+            timestampString = "556513705.1891609"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "19"
@@ -169,13 +169,13 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Coma Certo/Core/Services/Reports/ReportService.swift"
-            timestampString = "556484910.540921"
+            filePath = "Coma Certo/View/Extensions/ViewController+Extensions.swift"
+            timestampString = "556513705.190853"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "35"
-            endingLineNumber = "35"
-            landmarkName = "generateReport(initialDate:finalDate:)"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
+            landmarkName = "showLoading()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -185,13 +185,61 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Coma Certo/View/Extensions/ViewController+Extensions.swift"
-            timestampString = "556484910.541291"
+            filePath = "Coma Certo/Core/Services/Reports/ReportService.swift"
+            timestampString = "556513705.192153"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "37"
-            endingLineNumber = "37"
-            landmarkName = "showLoading()"
+            startingLineNumber = "42"
+            endingLineNumber = "42"
+            landmarkName = "generateReport(initialDate:finalDate:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Coma_Certo.ReportService.generateReport(initialDate: Foundation.Date, finalDate: Foundation.Date) -&gt; ()"
+                  moduleName = "Coma Certo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/eduardosoares/Documents/github/Coma%20Certo/Coma%20Certo/Core/Services/Reports/ReportService.swift"
+                  timestampString = "556511119.701292"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "42"
+                  endingLineNumber = "42"
+                  offsetFromSymbolStart = "1356">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Alamofire.DataResponse&lt;Foundation.Data&gt;) -&gt; () in Coma_Certo.ReportService.generateReport(initialDate: Foundation.Date, finalDate: Foundation.Date) -&gt; ()"
+                  moduleName = "Coma Certo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/eduardosoares/Documents/github/Coma%20Certo/Coma%20Certo/Core/Services/Reports/ReportService.swift"
+                  timestampString = "556511119.70621"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "43"
+                  endingLineNumber = "43"
+                  offsetFromSymbolStart = "25">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Coma Certo/Core/Services/Reports/ReportService.swift"
+            timestampString = "556513705.192903"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "44"
+            endingLineNumber = "44"
+            landmarkName = "generateReport(initialDate:finalDate:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
