@@ -17,6 +17,7 @@ class MealService : MealIteractor {
     
     func dateSelected(date: Date) {
         let mealsForDate = mealPersistence.getMeals(forDate: date)
+        
         mealPresenter.updateMealList(meals: mealsForDate)
     }
     
