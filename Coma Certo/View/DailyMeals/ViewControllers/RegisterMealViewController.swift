@@ -21,8 +21,9 @@ class RegisterMealViewController: UITableViewController {
     @IBOutlet weak var hungerStatusLabel: UILabel!
     @IBOutlet weak var satietyStatusLabel: UILabel!
     
-    private let hungerStatus = ["Nenhuma Fome","Um pouco de fome","Com Fome","Muita Fome","Bastante Fome"]
-    private let satietyStatus = ["Nem um pouco saciado","Um pouco saciado","Saciado","Muito Saciado","Bastante Saciado"]
+    private let hungerStatus = ["Nada de fome","Pouca fome","Com Fome","Muita Fome","Morrendo de fome"]
+    private let satietyStatus = ["Continuo com fome","Poderia comer mais","Estou satisfeito","Comi demais","Vou explodir"]
+    
     //embeededViewControllers
     private var listFoodTableViewController: ListFoodTableViewController!
     private var feelingsCollectionViewController: ImageCollectionViewController!

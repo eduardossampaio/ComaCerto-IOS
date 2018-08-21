@@ -683,7 +683,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="tfP-G0-HkL">
                                 <rect key="frame" x="16" y="80" width="382" height="101"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Escolha o Período para gerar seu relaório " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UV7-dH-cuE">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Escolha o período para gerar seu relatório " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UV7-dH-cuE">
                                         <rect key="frame" x="0.0" y="0.0" width="382" height="20.333333333333332"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
@@ -941,11 +941,11 @@
             <objects>
                 <viewController id="CpF-Ru-hsn" customClass="AddFoodsToMealViewController" customModule="Coma_Certo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eg9-Wy-ACd">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="642"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Alimentos" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lcE-dK-5UR" customClass="SearchTextField" customModule="SearchTextField">
-                                <rect key="frame" x="16" y="98.666666666666671" width="382" height="30.000000000000014"/>
+                                <rect key="frame" x="16" y="54.666666666666657" width="382" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -954,13 +954,13 @@
                                 </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Adicione os alimentos que você comeu" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bg7-nM-V9I">
-                                <rect key="frame" x="16" y="74" width="382" height="19.666666666666671"/>
+                                <rect key="frame" x="16" y="30" width="382" height="19.666666666666671"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ku6-2w-1sz">
-                                <rect key="frame" x="0.0" y="133.66666666666669" width="414" height="602.33333333333326"/>
+                                <rect key="frame" x="0.0" y="89.666666666666686" width="414" height="552.33333333333326"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="foodCell" textLabel="3JZ-4K-A3G" style="IBUITableViewCellStyleDefault" id="fgM-wY-7QK">
@@ -1060,7 +1060,7 @@
         <image name="report" width="29" height="29"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="nV5-Aj-GXN"/>
+        <segue reference="6Gg-fH-VJM"/>
         <segue reference="Bsa-Er-Zy0"/>
     </inferredMetricsTieBreakers>
 </document>
