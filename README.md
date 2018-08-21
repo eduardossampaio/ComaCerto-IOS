@@ -36,8 +36,7 @@ as refeições cadastradas anteriormente
 
 Aqui o usuário pode acompanhar seu diário alimentar de um determinado período, e visualizar as informações agrupadas em um arquivo PDF, pronto para ser compartilhado com seu profissional de saúde.
 
-<img src="screenshots/screen-3.jpeg" alt="drawing" height="300"/>
-<img src="screenshots/screen-4.jpeg" alt="drawing" height="300"/>
+<img src="screenshots/screen-3.jpeg" alt="drawing" height="300"/> <img src="screenshots/screen-4.jpeg" alt="drawing" height="300"/>
 
 
 ## Instalação
