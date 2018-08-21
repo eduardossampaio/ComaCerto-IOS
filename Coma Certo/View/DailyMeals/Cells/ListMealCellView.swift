@@ -10,7 +10,8 @@ import Foundation
 import UIKit
 
 class ListMealCellView : UITableViewCell{
-    @IBOutlet weak var descriptionTextField:UILabel!
-    
-    @IBOutlet weak var feelingImageView: UIImageView!
+    @IBOutlet weak var mealImage: UIImageView!
+    @IBOutlet weak var mealNameTextField:UILabel!
+    @IBOutlet weak var mealHourTextField:UILabel!
+    @IBOutlet weak var mealInfoTextField:UILabel!
 }

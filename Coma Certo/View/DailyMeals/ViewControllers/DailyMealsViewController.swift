@@ -59,8 +59,14 @@ class DailyMealsViewController: UIViewController,UITableViewDelegate,UITableView
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "mealCell") as! ListMealCellView
         let meal = meals[indexPath.item]
-        cell.descriptionTextField.text = meal.date.toReadableTime()
-        cell.feelingImageView.image = UIImage(named: meal.feeling.imageName )
+        cell.mealImage.image = (meal.mealType?.displayImage())!
+        cell.mealNameTextField.text = meal.mealType?.displayName()
+        cell.mealHourTextField.text = meal.date.toReadableTime()
+        if ( meal.foods.isEmpty){
+            cell.mealInfoTextField.text = "Nenhum alimento adicionado"
+        }else{
+            cell.mealInfoTextField.text = "\(meal.foods.count) alimento(s)"
+        }
         return cell
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
