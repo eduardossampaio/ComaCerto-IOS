@@ -22,6 +22,11 @@ class MealService : MealIteractor {
     
     func onSavePressed(meal: Meal) {
         mealPersistence.saveOrUpdateMeal(meal)
+        if (meal.primaryKey == nil){
+            mealPresenter.showAlert(message: "Refeição adicionada com sucesso")
+        }else{
+            mealPresenter.showAlert(message: "Refeição atualizada com sucesso")
+        }
     }
     
     func onCancelPressed() {

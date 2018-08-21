@@ -38,8 +38,9 @@ class RegisterMealViewController: UITableViewController {
 
         meal.hunger = hunger
         meal.satiety = satiety
-        onNewMealSaved?(meal)
+       
         dismiss(animated: true, completion: nil)
+         onNewMealSaved?(meal)
     }
     
     @IBAction func onDateButtonClicked(_ sender: Any) {

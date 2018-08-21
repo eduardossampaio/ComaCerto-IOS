@@ -19,19 +19,22 @@ class ReportService : ReportIteractor {
     }
     
     func generateReportClicked(initialDate: Date, finalDate: Date) {
-        reportPresenter.showLoading()
         generateReport(initialDate: initialDate, finalDate: finalDate)
     }
     
     func generateReport(initialDate: Date,finalDate:Date){
         let meals = mealPersistence.getMeals(initialDate: initialDate,finalDate:finalDate)
+        if meals.isEmpty {
+            reportPresenter.showError(message: "Não há refeições registradas no período selecionado")
+            return
+        }
+        reportPresenter.showLoading()
         let mealRequest = MealReportRequest(initialDate,finalDate,meals)
         var mealsJson : Data?
         do {
             let decoder = JSONEncoder()
             mealsJson  = try decoder.encode(mealRequest)
         } catch {
-            // No-op
         }
 
         var request = URLRequest(url: URL(string: GENERATE_MEALS_REPORT_URL)!)
