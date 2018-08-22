@@ -12,8 +12,7 @@ class ReportService : ReportIteractor {
     var reportPresenter: ReportPresenter
     let mealPersistence = MealPersistence()
     
-//    let GENERATE_MEALS_REPORT_URL = "https://coma-certo.herokuapp.com/reports/meals"
-    let GENERATE_MEALS_REPORT_URL = "http://192.168.1.102:8080/reports/meals"
+    let GENERATE_MEALS_REPORT_URL = "https://coma-certo.herokuapp.com/reports/meals"
     init(presenter: ReportPresenter ){
         self.reportPresenter = presenter
     }
@@ -35,6 +34,7 @@ class ReportService : ReportIteractor {
             let decoder = JSONEncoder()
             mealsJson  = try decoder.encode(mealRequest)
         } catch {
+            reportPresenter.showError(message: "Ocorreu um erro ao gerar o relatório alimentar")
         }
 
         var request = URLRequest(url: URL(string: GENERATE_MEALS_REPORT_URL)!)
@@ -45,7 +45,7 @@ class ReportService : ReportIteractor {
         Alamofire.request(request).responseData{ response in
             self.reportPresenter.hideLoading()
             guard response.response?.statusCode == 200 else {
-                self.reportPresenter.showError(message: "Erro ao gerar relatório alimentar")
+                self.reportPresenter.showError(message: "Ocorreu um erro ao gerar o relatório alimentar")
                 return
             }
             if let pdfData = response.result.value{
