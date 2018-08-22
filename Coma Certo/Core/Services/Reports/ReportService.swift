@@ -12,8 +12,8 @@ class ReportService : ReportIteractor {
     var reportPresenter: ReportPresenter
     let mealPersistence = MealPersistence()
     
-    let GENERATE_MEALS_REPORT_URL = "https://coma-certo.herokuapp.com/reports/meals"
-//    let GENERATE_MEALS_REPORT_URL = "http://192.168.1.102:8080/reports/meals"
+//    let GENERATE_MEALS_REPORT_URL = "https://coma-certo.herokuapp.com/reports/meals"
+    let GENERATE_MEALS_REPORT_URL = "http://192.168.1.102:8080/reports/meals"
     init(presenter: ReportPresenter ){
         self.reportPresenter = presenter
     }
