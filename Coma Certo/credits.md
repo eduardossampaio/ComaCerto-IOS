@@ -12,5 +12,8 @@ Os ícones utilizados neste aplicativo foram desenvolvidos por
 - Perdana Kurniawan Arta
 - Adlena Zhuvich 
 - Zlatko Najdenovski 
+- Carlos F. Garcia G.
   
-Disponíveis em: https://www.iconfinder.com
+Disponíveis em:
+- [iconfinder](https://www.iconfinder.com)
+- [pngtree](https://pt.pngtree.com/freepng/creative-clock-cutlery_331819.html)
