@@ -21,14 +21,10 @@ class DisplayReportViewController : UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        pdfView =  PDFView(frame: CGRect(x: 0, y: 0, width: view.frame.width, height: view.frame.height))
-//        pdfView.translatesAutoresizingMaskIntoConstraints = false
-//
-//        pdfView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor).isActive = true
-//        pdfView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor).isActive = true
-//        pdfView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor).isActive = true
-//        pdfView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor).isActive = true
+        pdfView =  PDFView(frame: view.frame)
+        pdfView.translatesAutoresizingMaskIntoConstraints = false
         pdfView.autoScales = true
+        pdfView.scaleFactor = pdfView.scaleFactorForSizeToFit
         self.view.addSubview(pdfView)
     }
     
