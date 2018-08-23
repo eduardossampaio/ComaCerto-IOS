@@ -17,7 +17,7 @@ class AddFoodsToMealViewController : UIViewController,UITableViewDelegate,UITabl
     @IBOutlet weak var foodsTableView: UITableView!
     
     var onFoodListUpdate:OnFoodListUpdate? = nil
-    var allFoodsList = FoodHttpService.foodList
+    var allFoodsList = [Food]()
     var selectedFoods = [Food]()
     var itemToAdd = ""
     
@@ -28,11 +28,22 @@ class AddFoodsToMealViewController : UIViewController,UITableViewDelegate,UITabl
         addFoodsTextField.theme.cellHeight = 50
         addFoodsTextField.theme.font = UIFont.systemFont(ofSize: 17.0)
         addFoodsTextField.returnKeyType = .next
-        setupPreValues()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+         fetchFoodsList()
     }
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         onFoodListUpdate?(selectedFoods)
+    }
+    private func fetchFoodsList(){
+        let foodService = FoodHttpService(presenter: self)
+        foodService.fetchFoodsList(){ foods in
+            self.allFoodsList = FoodHttpService.foodList
+            self.setupPreValues()
+        }
     }
     private func setupPreValues(){
         var searchItems = [SearchTextFieldItem]()

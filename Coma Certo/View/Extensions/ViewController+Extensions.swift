@@ -45,6 +45,7 @@ extension UIViewController : ViewPresenter {
                 spinnerView.addSubview(ai)
                 view.addSubview(spinnerView)
             }
+           
         }
     }
     

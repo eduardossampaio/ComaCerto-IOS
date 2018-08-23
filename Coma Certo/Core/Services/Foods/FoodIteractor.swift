@@ -8,7 +8,7 @@
 
 import Foundation
 class FoodIteractor {
-    func onScreenLoac()  {
+    func onScreenLoad()  {
     }
     
     func onNewFoodEntered(food: Food){
