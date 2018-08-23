@@ -65,12 +65,21 @@ class RegisterMealViewController: UITableViewController {
         updateSatietyStatusLabel()
     }
     override func viewDidLoad() {
+        super.viewDidLoad()
         self.tableView.bounces = false
     }
     override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         updateDateTimeLabels()
         updateSliders()
     }
+    
+    private func updateSliderStatusText(slider:UISlider,statusTexts:[String], targetLabel:UILabel){
+        let index = Int(slider.value)
+        let status = statusTexts[index - 1]
+        targetLabel.text = status
+    }
+    
     func updateDateTimeLabels(){
         dateTextButton.setTitle(meal.date.toReadableDate(style: .short), for:.normal)
         timeTextButton.setTitle(meal.date.toReadableTime(), for:.normal)
@@ -81,17 +90,14 @@ class RegisterMealViewController: UITableViewController {
         updateHungerStatusLabel()
         updateSatietyStatusLabel()
     }
+   
     func updateHungerStatusLabel(){
-        let index = Int(hungerSlider.value)
-        let status = hungerStatus[index - 1]
-        hungerStatusLabel.text = status
-        meal.hunger = index
+        updateSliderStatusText(slider: hungerSlider, statusTexts: hungerStatus, targetLabel: hungerStatusLabel)
+        meal.hunger = Int(hungerSlider.value)
     }
     func updateSatietyStatusLabel(){
-        let index = Int(satietySlider.value)
-        let status = satietyStatus[index - 1]
-        satietyStatusLabel.text = status
-        meal.satiety = index
+        updateSliderStatusText(slider: satietySlider, statusTexts: satietyStatus, targetLabel: satietyStatusLabel)
+        meal.satiety = Int(satietySlider.value)
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == "listFoodSegue"){

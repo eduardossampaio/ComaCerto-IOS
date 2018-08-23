@@ -32,7 +32,7 @@ class GenerateReportViewController : UIViewController, ReportPresenter{
         initialDateLabel.addGestureRecognizer( UITapGestureRecognizer(target: self, action: #selector(initialDateLabelClicked)))
         finalDateLabel.addGestureRecognizer( UITapGestureRecognizer(target: self, action: #selector(finalDateLabelClicked)))
         updateDateLabels()
-        self.reportIteractor = ReportService(presenter: self)
+        reportIteractor = ReportService(presenter: self)
     }
     
     @objc func initialDateLabelClicked(sender: UITapGestureRecognizer){
@@ -44,7 +44,7 @@ class GenerateReportViewController : UIViewController, ReportPresenter{
     }
     
     @objc override func datePickerValueChanged(_ sender: UIDatePicker){
-        if ( sender.tag == INITIAL_DATE_TAG){
+        if (sender.tag == INITIAL_DATE_TAG){
             initialDate = sender.date
         }else if(sender.tag == FINAL_DATE_TAG){
             finalDate = sender.date
@@ -62,7 +62,7 @@ class GenerateReportViewController : UIViewController, ReportPresenter{
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if ( segue.identifier == "goToReportResultSegue"){
+        if  segue.identifier == "goToReportResultSegue" {
             let controller = segue.destination as! DisplayReportViewController
             controller.pdfData = self.pdfToDisplay
             controller.initialDate = self.initialDate
