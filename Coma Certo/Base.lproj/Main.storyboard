@@ -488,19 +488,38 @@
                                     <rect key="frame" x="0.0" y="0.0" width="76" height="76"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lFQ-4l-w8m">
-                                            <rect key="frame" x="0.0" y="60" width="76" height="16"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="emoji-happy" translatesAutoresizingMaskIntoConstraints="NO" id="LZs-jy-WoC">
-                                            <rect key="frame" x="10" y="0.0" width="56" height="56"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        </imageView>
+                                        <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="h8l-Xq-4eq">
+                                            <rect key="frame" x="0.0" y="0.0" width="76" height="76"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="7" translatesAutoresizingMaskIntoConstraints="NO" id="lFQ-4l-w8m">
+                                                    <rect key="frame" x="0.0" y="56" width="76" height="20"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="emoji-happy" translatesAutoresizingMaskIntoConstraints="NO" id="LZs-jy-WoC">
+                                                    <rect key="frame" x="10" y="0.0" width="56" height="56"/>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="lFQ-4l-w8m" firstAttribute="top" secondItem="LZs-jy-WoC" secondAttribute="bottom" id="52I-UN-YPA"/>
+                                                <constraint firstItem="LZs-jy-WoC" firstAttribute="top" secondItem="h8l-Xq-4eq" secondAttribute="top" id="6HY-Bc-W3w"/>
+                                                <constraint firstAttribute="bottom" secondItem="lFQ-4l-w8m" secondAttribute="bottom" id="G9i-5s-s7C"/>
+                                                <constraint firstAttribute="trailing" secondItem="LZs-jy-WoC" secondAttribute="trailing" constant="10" id="aVj-BQ-Voi"/>
+                                                <constraint firstItem="LZs-jy-WoC" firstAttribute="leading" secondItem="h8l-Xq-4eq" secondAttribute="leading" constant="10" id="dyu-Bc-pV1"/>
+                                                <constraint firstAttribute="trailing" secondItem="lFQ-4l-w8m" secondAttribute="trailing" id="y6y-4s-mNy"/>
+                                                <constraint firstItem="lFQ-4l-w8m" firstAttribute="leading" secondItem="h8l-Xq-4eq" secondAttribute="leading" id="yZ6-0R-zfC"/>
+                                            </constraints>
+                                            <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
+                                        </view>
                                     </subviews>
                                 </view>
+                                <constraints>
+                                    <constraint firstItem="h8l-Xq-4eq" firstAttribute="top" secondItem="2Gp-Q6-T83" secondAttribute="top" id="CUk-J1-qLK"/>
+                                    <constraint firstAttribute="bottom" secondItem="h8l-Xq-4eq" secondAttribute="bottom" id="RSy-EH-j6f"/>
+                                    <constraint firstItem="h8l-Xq-4eq" firstAttribute="leading" secondItem="2Gp-Q6-T83" secondAttribute="leading" id="b8B-Ru-sm3"/>
+                                    <constraint firstAttribute="trailing" secondItem="h8l-Xq-4eq" secondAttribute="trailing" id="omj-Qg-LYd"/>
+                                </constraints>
                                 <connections>
                                     <outlet property="reactionImage" destination="LZs-jy-WoC" id="IaZ-GL-1su"/>
                                     <outlet property="reactionName" destination="lFQ-4l-w8m" id="NJE-cX-QKU"/>
@@ -515,7 +534,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YTT-NR-qH6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2695" y="-854"/>
+            <point key="canvasLocation" x="2694.202898550725" y="-854.34782608695662"/>
         </scene>
         <!--List Food Table View Controller-->
         <scene sceneID="2T7-fI-s7k">
