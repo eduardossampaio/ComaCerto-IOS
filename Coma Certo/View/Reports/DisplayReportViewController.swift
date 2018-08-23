@@ -22,7 +22,6 @@ class DisplayReportViewController : UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         pdfView =  PDFView(frame: view.frame)
-        pdfView.translatesAutoresizingMaskIntoConstraints = false
         pdfView.autoScales = true
         pdfView.scaleFactor = pdfView.scaleFactorForSizeToFit
         self.view.addSubview(pdfView)

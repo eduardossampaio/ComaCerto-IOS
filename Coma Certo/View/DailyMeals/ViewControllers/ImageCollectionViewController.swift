@@ -8,7 +8,7 @@
 
 import Foundation
 import UIKit
-class ImageCollectionViewController: UICollectionViewController {
+class ImageCollectionViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
     
     private var lastSelectedCell = 0
     private var firstSelectedWhenCreated = true
@@ -24,7 +24,9 @@ class ImageCollectionViewController: UICollectionViewController {
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return items.count
     }
-    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: self.view.frame.width / 5, height: self.view.frame.width / 4)
+    }
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "emojiCell", for: indexPath) as! ImageCollectionCellView
         let itemToDisplay = items[indexPath.item]
