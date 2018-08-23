@@ -25,7 +25,11 @@ class ImageCollectionViewController: UICollectionViewController, UICollectionVie
         return items.count
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: self.view.frame.width / 5, height: self.view.frame.width / 5)
+        var divisionFactor = CGFloat(5)
+        if UIInterfaceOrientationIsLandscape(UIApplication.shared.statusBarOrientation) {
+            divisionFactor = CGFloat(10)
+        }
+        return CGSize(width: self.view.frame.width / divisionFactor, height: self.view.frame.width / divisionFactor)
     }
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "emojiCell", for: indexPath) as! ImageCollectionCellView
