@@ -23,39 +23,23 @@ class Preferences {
         set { userPreferences.set(newValue, forKey: ENABLE_REMINDERS_KEY)}
     }
     var breakfastHour: String? {
-        get {
-            return userPreferences.string(forKey: BREAKFAST_HOUR_KEY)
-        }
-        set{
-            userPreferences.set(newValue, forKey: BREAKFAST_HOUR_KEY)
-        }
+        get { return userPreferences.string(forKey: BREAKFAST_HOUR_KEY) }
+        set{ userPreferences.set(newValue, forKey: BREAKFAST_HOUR_KEY) }
     }
     
     var lunchHour: String? {
-        get {
-            return userPreferences.string(forKey: LUNCK_HOUR_KEY)
-        }
-        set{
-            userPreferences.set(newValue, forKey: LUNCK_HOUR_KEY)
-        }
+        get { return userPreferences.string(forKey: LUNCK_HOUR_KEY) }
+        set{ userPreferences.set(newValue, forKey: LUNCK_HOUR_KEY) }
     }
     
     var snackHour: String? {
-        get {
-            return userPreferences.string(forKey: SNACK_HOUR_KEY)
-        }
-        set{
-            userPreferences.set(newValue, forKey: SNACK_HOUR_KEY)
-        }
+        get { return userPreferences.string(forKey: SNACK_HOUR_KEY)}
+        set{ userPreferences.set(newValue, forKey: SNACK_HOUR_KEY)}
     }
     
     var dinnerHour: String? {
-        get {
-            return userPreferences.string(forKey: DINNER_HOUR_KEY)
-        }
-        set{
-            userPreferences.set(newValue, forKey: DINNER_HOUR_KEY)
-        }
+        get { return userPreferences.string(forKey: DINNER_HOUR_KEY)}
+        set{ userPreferences.set(newValue, forKey: DINNER_HOUR_KEY)}
     }
    
 

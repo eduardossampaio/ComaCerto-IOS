@@ -1142,7 +1142,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" id="qor-DI-0le">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" id="qor-DI-0le" customClass="SettingsHourCell" customModule="Coma_Certo" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="72" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="qor-DI-0le" id="XTh-Xx-Leb">
@@ -1162,9 +1162,6 @@
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <state key="normal" title="08:00"/>
-                                                    <connections>
-                                                        <action selector="onBreakfastTimeButtonClicked:" destination="x18-sC-Bo7" eventType="touchUpInside" id="Q85-8L-ekd"/>
-                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -1175,8 +1172,12 @@
                                                 <constraint firstAttribute="trailing" secondItem="bWH-qA-zUC" secondAttribute="trailing" id="yjG-cY-Ldk"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="hourButton" destination="bWH-qA-zUC" id="mDE-0G-eUU"/>
+                                            <outlet property="mealName" destination="cZX-Ho-C98" id="EBL-hK-yjK"/>
+                                        </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" id="dQc-Am-GF2">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" id="dQc-Am-GF2" customClass="SettingsHourCell" customModule="Coma_Certo" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="116" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="dQc-Am-GF2" id="qMr-DN-lsx">
@@ -1196,9 +1197,6 @@
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <state key="normal" title="12:00"/>
-                                                    <connections>
-                                                        <action selector="onLunckTimeButtonClicked:" destination="x18-sC-Bo7" eventType="touchUpInside" id="FIS-hg-ygE"/>
-                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -1209,8 +1207,12 @@
                                                 <constraint firstItem="8Sj-bb-9Sk" firstAttribute="centerY" secondItem="qMr-DN-lsx" secondAttribute="centerY" id="zC3-Cp-w4C"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="hourButton" destination="STx-aJ-3AX" id="4Ng-CB-LGl"/>
+                                            <outlet property="mealName" destination="8Sj-bb-9Sk" id="9Mb-F8-fKj"/>
+                                        </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" id="q1T-jz-b85">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" id="q1T-jz-b85" customClass="SettingsHourCell" customModule="Coma_Certo" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="160" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="q1T-jz-b85" id="LQF-cV-gxP">
@@ -1230,9 +1232,6 @@
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <state key="normal" title="16:00"/>
-                                                    <connections>
-                                                        <action selector="onSnackTimeButtonClicked:" destination="x18-sC-Bo7" eventType="touchUpInside" id="jnY-1H-YIw"/>
-                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -1243,8 +1242,12 @@
                                                 <constraint firstItem="Cw7-RA-2dA" firstAttribute="leading" secondItem="LQF-cV-gxP" secondAttribute="leadingMargin" id="yRx-DF-KnQ"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="hourButton" destination="nNs-PO-5Ke" id="bF7-Lz-DI1"/>
+                                            <outlet property="mealName" destination="Cw7-RA-2dA" id="AYD-Ve-Ze4"/>
+                                        </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" id="az8-cg-loO">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" id="az8-cg-loO" customClass="SettingsHourCell" customModule="Coma_Certo" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="204" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="az8-cg-loO" id="H1m-OS-RF9">
@@ -1264,9 +1267,6 @@
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <state key="normal" title="20:00"/>
-                                                    <connections>
-                                                        <action selector="onDinnerTimeButtonClicked:" destination="x18-sC-Bo7" eventType="touchUpInside" id="ceA-wb-EcY"/>
-                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -1277,6 +1277,10 @@
                                                 <constraint firstAttribute="trailing" secondItem="CFi-i8-oqg" secondAttribute="trailing" id="uvg-mc-gym"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="hourButton" destination="CFi-i8-oqg" id="Uvs-Mz-m4j"/>
+                                            <outlet property="mealName" destination="6Te-D7-KDh" id="Vhb-YR-jgk"/>
+                                        </connections>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>

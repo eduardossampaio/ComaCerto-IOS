@@ -58,6 +58,7 @@
 		59D28836211A80B400CD38B7 /* Coma_CertoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59D28835211A80B400CD38B7 /* Coma_CertoUITests.swift */; };
 		59F64EE2213085AE007759BA /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59F64EE1213085AE007759BA /* SettingsViewController.swift */; };
 		59F64EE421309285007759BA /* Preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59F64EE321309285007759BA /* Preferences.swift */; };
+		59F64EE72130A001007759BA /* SettingsHourCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59F64EE62130A001007759BA /* SettingsHourCell.swift */; };
 		782E3B17E67DB2D6C920D4F3 /* Pods_Coma_CertoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6DCB1157A44DDF29BE4393E /* Pods_Coma_CertoTests.framework */; };
 		DDDC202D4E6333106AF3B768 /* Pods_Coma_Certo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05C3673518273A41C5D8B498 /* Pods_Coma_Certo.framework */; };
 /* End PBXBuildFile section */
@@ -140,6 +141,7 @@
 		59D28837211A80B400CD38B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		59F64EE1213085AE007759BA /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		59F64EE321309285007759BA /* Preferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preferences.swift; sourceTree = "<group>"; };
+		59F64EE62130A001007759BA /* SettingsHourCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsHourCell.swift; sourceTree = "<group>"; };
 		71107D5B0984A01E6044D8F1 /* Pods-Coma CertoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Coma CertoTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Coma CertoTests/Pods-Coma CertoTests.debug.xcconfig"; sourceTree = "<group>"; };
 		8F0CCA0A452B7980D8B10C1E /* Pods-Coma CertoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Coma CertoUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Coma CertoUITests/Pods-Coma CertoUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		D00B0633BF8963A4FA605337 /* Pods-Coma Certo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Coma Certo.release.xcconfig"; path = "Pods/Target Support Files/Pods-Coma Certo/Pods-Coma Certo.release.xcconfig"; sourceTree = "<group>"; };
@@ -424,6 +426,7 @@
 			isa = PBXGroup;
 			children = (
 				59F64EE1213085AE007759BA /* SettingsViewController.swift */,
+				59F64EE62130A001007759BA /* SettingsHourCell.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -708,6 +711,7 @@
 				599948D0212A1B5E00700900 /* ReportInteractor.swift in Sources */,
 				59031CE0211E768200AFE685 /* AddFoodsToMealViewController.swift in Sources */,
 				59A9E63D211D2E7F009B38A0 /* ListFoodTableViewController.swift in Sources */,
+				59F64EE72130A001007759BA /* SettingsHourCell.swift in Sources */,
 				59C705D8212125C7000423A4 /* FoodHttpService.swift in Sources */,
 				59538C482124C3FF0061147B /* Displayable.swift in Sources */,
 				59538C30212274BB0061147B /* MealIteractor.swift in Sources */,

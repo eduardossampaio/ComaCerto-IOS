@@ -29,29 +29,59 @@ class  SettingsViewController : UITableViewController {
     }
     
     @IBAction func onAddRememberSwitchChange(_ sender: UISwitch) {
-       Preferences.instance.remindersEnabled = sender.isOn
+        Preferences.instance.remindersEnabled = sender.isOn
+        self.tableView.reloadData()
     }
     
-    @IBAction func onBreakfastTimeButtonClicked(_ sender: UIButton) {
+    func openBreakfastTimeActionSheet() {
         openActionDateSheet(for: breakfastButton, with: BREAKFAST_TIME_PICKER_TAG)
     }
     
-    @IBAction func onLunckTimeButtonClicked(_ sender: UIButton) {
+    func openLunckTimeActionSheet() {
         openActionDateSheet(for: lunchButton, with: LUNCH_TIME_PICKER_TAG)
     }
     
-    @IBAction func onSnackTimeButtonClicked(_ sender: UIButton) {
+    func openSnackTimeActionSheet() {
         openActionDateSheet(for: snackButton, with: SNACK_TIME_PICKER_TAG)
     }
     
-    @IBAction func onDinnerTimeButtonClicked(_ sender: UIButton) {
+    func openDinnerTimeActionSheet() {
          openActionDateSheet(for: dinnerButton, with: DINNER_PICKER_TAG)
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if indexPath.section == 1 && indexPath.item == 0 {
+        if indexPath.section == 0 {
+            if !addReminderSwitch.isOn {
+                return
+            }
+            if indexPath.item == 1{
+                openBreakfastTimeActionSheet()
+            }else if indexPath.item == 2{
+                openLunckTimeActionSheet()
+            }else if indexPath.item == 3{
+                openSnackTimeActionSheet()
+            }else if indexPath.item == 4{
+                openDinnerTimeActionSheet()
+            }
+            
+        }else if indexPath.section == 1 && indexPath.item == 0 {
             performSegue(withIdentifier: "goToManageFeelingsViewController", sender: nil)
         }
+    }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = super.tableView(tableView, cellForRowAt: indexPath)
+        if indexPath.section == 0 && indexPath.item >= 1{
+            let hourCell = cell as! SettingsHourCell
+            if !addReminderSwitch.isOn{
+                hourCell.mealName.textColor  = UIColor.gray
+                hourCell.hourButton.tintColor  = UIColor.gray
+            }else{
+                hourCell.mealName.textColor = UIColor.black
+                hourCell.hourButton.tintColor  = UIColor.blue
+            }
+        }
+        return cell
     }
     
     private func openActionDateSheet(for button: UIButton, with tag: Int){
