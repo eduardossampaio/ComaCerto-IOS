@@ -57,6 +57,7 @@
 		59D2882B211A80B400CD38B7 /* Coma_CertoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59D2882A211A80B400CD38B7 /* Coma_CertoTests.swift */; };
 		59D28836211A80B400CD38B7 /* Coma_CertoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59D28835211A80B400CD38B7 /* Coma_CertoUITests.swift */; };
 		59F64EE2213085AE007759BA /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59F64EE1213085AE007759BA /* SettingsViewController.swift */; };
+		59F64EE421309285007759BA /* Preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59F64EE321309285007759BA /* Preferences.swift */; };
 		782E3B17E67DB2D6C920D4F3 /* Pods_Coma_CertoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6DCB1157A44DDF29BE4393E /* Pods_Coma_CertoTests.framework */; };
 		DDDC202D4E6333106AF3B768 /* Pods_Coma_Certo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05C3673518273A41C5D8B498 /* Pods_Coma_Certo.framework */; };
 /* End PBXBuildFile section */
@@ -138,6 +139,7 @@
 		59D28835211A80B400CD38B7 /* Coma_CertoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coma_CertoUITests.swift; sourceTree = "<group>"; };
 		59D28837211A80B400CD38B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		59F64EE1213085AE007759BA /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		59F64EE321309285007759BA /* Preferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preferences.swift; sourceTree = "<group>"; };
 		71107D5B0984A01E6044D8F1 /* Pods-Coma CertoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Coma CertoTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Coma CertoTests/Pods-Coma CertoTests.debug.xcconfig"; sourceTree = "<group>"; };
 		8F0CCA0A452B7980D8B10C1E /* Pods-Coma CertoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Coma CertoUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Coma CertoUITests/Pods-Coma CertoUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		D00B0633BF8963A4FA605337 /* Pods-Coma Certo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Coma Certo.release.xcconfig"; path = "Pods/Target Support Files/Pods-Coma Certo/Pods-Coma Certo.release.xcconfig"; sourceTree = "<group>"; };
@@ -189,6 +191,7 @@
 		5902B565211DD1E100707EB0 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				59F64EE52130928A007759BA /* Preferences */,
 				59538C3321231A860061147B /* Persistence */,
 				59C705D6212125B4000423A4 /* Services */,
 				5902B56B211E014C00707EB0 /* Entities */,
@@ -423,6 +426,14 @@
 				59F64EE1213085AE007759BA /* SettingsViewController.swift */,
 			);
 			path = Settings;
+			sourceTree = "<group>";
+		};
+		59F64EE52130928A007759BA /* Preferences */ = {
+			isa = PBXGroup;
+			children = (
+				59F64EE321309285007759BA /* Preferences.swift */,
+			);
+			path = Preferences;
 			sourceTree = "<group>";
 		};
 		6219415686C4E0BBC3DAFD41 /* Frameworks */ = {
@@ -682,6 +693,7 @@
 				59538C3D2123615C0061147B /* MyMealsViewController.swift in Sources */,
 				59D28818211A80B300CD38B7 /* DailyMealsViewController.swift in Sources */,
 				5902B56A211E013300707EB0 /* Meal.swift in Sources */,
+				59F64EE421309285007759BA /* Preferences.swift in Sources */,
 				59928F1B212F9664003B9D7E /* AddFoodListCellView.swift in Sources */,
 				59F64EE2213085AE007759BA /* SettingsViewController.swift in Sources */,
 				59538C3621231F5C0061147B /* MealRealmEntity.swift in Sources */,

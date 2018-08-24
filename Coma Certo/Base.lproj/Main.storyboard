@@ -1156,10 +1156,11 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" verticalHuggingPriority="248" horizontalCompressionResistancePriority="748" verticalCompressionResistancePriority="748" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bWH-qA-zUC">
-                                                    <rect key="frame" x="339" y="6" width="75" height="30"/>
+                                                    <rect key="frame" x="339" y="6.6666666666666679" width="75" height="29.000000000000004"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="75" id="o9i-Cf-spl"/>
                                                     </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <state key="normal" title="08:00"/>
                                                     <connections>
                                                         <action selector="onBreakfastTimeButtonClicked:" destination="x18-sC-Bo7" eventType="touchUpInside" id="Q85-8L-ekd"/>
@@ -1189,10 +1190,11 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" verticalHuggingPriority="248" horizontalCompressionResistancePriority="748" verticalCompressionResistancePriority="748" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="STx-aJ-3AX">
-                                                    <rect key="frame" x="339" y="6" width="75" height="30"/>
+                                                    <rect key="frame" x="339" y="6.6666666666666679" width="75" height="29.000000000000004"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="75" id="NBh-y7-a5L"/>
                                                     </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <state key="normal" title="12:00"/>
                                                     <connections>
                                                         <action selector="onLunckTimeButtonClicked:" destination="x18-sC-Bo7" eventType="touchUpInside" id="FIS-hg-ygE"/>
@@ -1222,10 +1224,11 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" verticalHuggingPriority="248" horizontalCompressionResistancePriority="748" verticalCompressionResistancePriority="748" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nNs-PO-5Ke">
-                                                    <rect key="frame" x="339" y="6" width="75" height="30"/>
+                                                    <rect key="frame" x="339" y="6.6666666666666679" width="75" height="29.000000000000004"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="75" id="Cc9-M1-JBH"/>
                                                     </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <state key="normal" title="16:00"/>
                                                     <connections>
                                                         <action selector="onSnackTimeButtonClicked:" destination="x18-sC-Bo7" eventType="touchUpInside" id="jnY-1H-YIw"/>
@@ -1255,10 +1258,11 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" verticalHuggingPriority="248" horizontalCompressionResistancePriority="748" verticalCompressionResistancePriority="748" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CFi-i8-oqg">
-                                                    <rect key="frame" x="339" y="6" width="75" height="30"/>
+                                                    <rect key="frame" x="339" y="6.6666666666666679" width="75" height="29.000000000000004"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="75" id="Flu-nx-ISJ"/>
                                                     </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <state key="normal" title="20:00"/>
                                                     <connections>
                                                         <action selector="onDinnerTimeButtonClicked:" destination="x18-sC-Bo7" eventType="touchUpInside" id="ceA-wb-EcY"/>
@@ -1276,27 +1280,6 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
-                            <tableViewSection headerTitle=" " id="Ii2-8o-JmX">
-                                <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" textLabel="8LZ-Wy-Jh0" style="IBUITableViewCellStyleDefault" id="w07-nO-J58">
-                                        <rect key="frame" x="0.0" y="276" width="414" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="w07-nO-J58" id="eJu-YP-gRV">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.666666666666664"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Gerenciar sentimentos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="8LZ-Wy-Jh0">
-                                                    <rect key="frame" x="20" y="0.0" width="374" height="43.666666666666664"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </cells>
-                            </tableViewSection>
                         </sections>
                         <connections>
                             <outlet property="dataSource" destination="x18-sC-Bo7" id="TAU-Ia-LnY"/>
@@ -1305,6 +1288,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Configurações" id="Gze-io-Web"/>
                     <connections>
+                        <outlet property="addReminderSwitch" destination="Qhw-oX-y3u" id="btq-ve-raZ"/>
                         <outlet property="breakfastButton" destination="bWH-qA-zUC" id="AJm-p5-gxp"/>
                         <outlet property="dinnerButton" destination="CFi-i8-oqg" id="Fgs-cR-99h"/>
                         <outlet property="lunchButton" destination="STx-aJ-3AX" id="AOO-e9-YHi"/>

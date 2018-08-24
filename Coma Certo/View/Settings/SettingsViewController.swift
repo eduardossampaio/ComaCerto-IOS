@@ -14,13 +14,22 @@ class  SettingsViewController : UITableViewController {
     private let SNACK_TIME_PICKER_TAG       = 3333
     private let DINNER_PICKER_TAG           = 4444
     
+    @IBOutlet weak var addReminderSwitch: UISwitch!
     @IBOutlet weak var breakfastButton: UIButton!
     @IBOutlet weak var lunchButton: UIButton!
     @IBOutlet weak var snackButton: UIButton!
     @IBOutlet weak var dinnerButton: UIButton!
     
+    override func viewDidLoad() {
+        addReminderSwitch.isOn = Preferences.instance.remindersEnabled
+        breakfastButton.setTitle(Preferences.instance.breakfastHour, for: .normal)
+        lunchButton.setTitle( Preferences.instance.lunchHour, for: .normal)
+        snackButton.setTitle( Preferences.instance.snackHour, for: .normal)
+        dinnerButton.setTitle( Preferences.instance.dinnerHour, for: .normal)
+    }
+    
     @IBAction func onAddRememberSwitchChange(_ sender: UISwitch) {
-       
+       Preferences.instance.remindersEnabled = sender.isOn
     }
     
     @IBAction func onBreakfastTimeButtonClicked(_ sender: UIButton) {
@@ -49,4 +58,23 @@ class  SettingsViewController : UITableViewController {
         let timeToDisplay = Date.fromFormat(format: "HH:mm", formattedDate: button.titleLabel?.text ?? "") ?? Date()
         openDateActionSheet(date: timeToDisplay, mode: .time, tag: tag)
     }
+    
+    override func datePickerValueChanged(_ sender: UIDatePicker) {
+        let tag = sender.tag
+        let timeText =  sender.date.formatDate(format: "HH:mm")
+        if tag == BREAKFAST_TIME_PICKER_TAG {
+            breakfastButton.setTitle( timeText, for: .normal)
+            Preferences.instance.breakfastHour = timeText
+        }else if tag == LUNCH_TIME_PICKER_TAG {
+            lunchButton.setTitle( timeText, for: .normal)
+            Preferences.instance.lunchHour = timeText
+        }else if tag == SNACK_TIME_PICKER_TAG {
+            snackButton.setTitle( timeText, for: .normal)
+            Preferences.instance.snackHour = timeText
+        }else if tag == DINNER_PICKER_TAG {
+            dinnerButton.setTitle( timeText, for: .normal)
+            Preferences.instance.dinnerHour = timeText
+        }
+    }
+    
 }
