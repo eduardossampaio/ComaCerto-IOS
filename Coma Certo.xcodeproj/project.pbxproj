@@ -42,6 +42,7 @@
 		59818362212AF4F500814C24 /* about.plist in Resources */ = {isa = PBXBuildFile; fileRef = 59818361212AF4F500814C24 /* about.plist */; };
 		59818364212B62EF00814C24 /* MealReportRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59818363212B62EF00814C24 /* MealReportRequest.swift */; };
 		59818366212BB5A800814C24 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 59818365212BB5A800814C24 /* Assets.xcassets */; };
+		59928F1B212F9664003B9D7E /* AddFoodListCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59928F1A212F9664003B9D7E /* AddFoodListCellView.swift */; };
 		599948CE212A1B2200700900 /* ReportService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 599948CD212A1B2200700900 /* ReportService.swift */; };
 		599948D0212A1B5E00700900 /* ReportInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 599948CF212A1B5E00700900 /* ReportInteractor.swift */; };
 		599948D2212A1B7000700900 /* ReportPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 599948D1212A1B7000700900 /* ReportPresenter.swift */; };
@@ -115,6 +116,7 @@
 		59818361212AF4F500814C24 /* about.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = about.plist; sourceTree = "<group>"; };
 		59818363212B62EF00814C24 /* MealReportRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealReportRequest.swift; sourceTree = "<group>"; };
 		59818365212BB5A800814C24 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		59928F1A212F9664003B9D7E /* AddFoodListCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFoodListCellView.swift; sourceTree = "<group>"; };
 		599948CD212A1B2200700900 /* ReportService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportService.swift; sourceTree = "<group>"; };
 		599948CF212A1B5E00700900 /* ReportInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportInteractor.swift; sourceTree = "<group>"; };
 		599948D1212A1B7000700900 /* ReportPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportPresenter.swift; sourceTree = "<group>"; };
@@ -326,6 +328,7 @@
 			children = (
 				59720C0A211D177C00C0826B /* ImageCollectionCellView.swift */,
 				5902B572211E246500707EB0 /* ListMealCellView.swift */,
+				59928F1A212F9664003B9D7E /* AddFoodListCellView.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -668,6 +671,7 @@
 				59538C3D2123615C0061147B /* MyMealsViewController.swift in Sources */,
 				59D28818211A80B300CD38B7 /* DailyMealsViewController.swift in Sources */,
 				5902B56A211E013300707EB0 /* Meal.swift in Sources */,
+				59928F1B212F9664003B9D7E /* AddFoodListCellView.swift in Sources */,
 				59538C3621231F5C0061147B /* MealRealmEntity.swift in Sources */,
 				59538C2B21226CEB0061147B /* MealService.swift in Sources */,
 				59D28816211A80B300CD38B7 /* AppDelegate.swift in Sources */,

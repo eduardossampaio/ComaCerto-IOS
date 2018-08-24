@@ -64,8 +64,8 @@ class AddFoodsToMealViewController : UIViewController,UITableViewDelegate,UITabl
         }
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell =  tableView.dequeueReusableCell(withIdentifier: "foodCell")!
-        cell.textLabel?.text = selectedFoods[indexPath.item].name
+        let cell =  tableView.dequeueReusableCell(withIdentifier: "foodCell") as! AddFoodListCellView
+        cell.foodNameLabel.text = selectedFoods[indexPath.item].name
         return cell;
     }
     
