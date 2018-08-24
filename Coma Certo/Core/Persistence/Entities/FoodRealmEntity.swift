@@ -12,6 +12,7 @@ class FoodRealmEntity : Object{
     @objc dynamic var primaryKey = UUID().uuidString
     @objc dynamic var name: String?
     @objc dynamic var category:String?
+    @objc dynamic var portion = 1
     
     override static func primaryKey() -> String? {
         return "primaryKey"

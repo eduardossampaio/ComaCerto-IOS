@@ -28,6 +28,7 @@ class ListFoodTableViewController : UITableViewController{
             let foodIndex = indexPath.item - 1
             let cell = tableView.dequeueReusableCell(withIdentifier: "foodCell")
             cell?.textLabel?.text = foodList[foodIndex].name
+            cell?.detailTextLabel?.text = String(foodList[foodIndex].portion!)
             return cell!
         }
     }

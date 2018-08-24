@@ -34,7 +34,6 @@ class FoodHttpService{
         presenter.showLoading()
         Alamofire.request(foodListEndpoint)
             .responseJSON { response in
-                Thread.sleep(until: Date(timeIntervalSinceNow: 1))
                 self.presenter.hideLoading()
                 if ( response.response?.statusCode != 200){
                     self.presenter.showError(message: "Houve um erro ao recuperar a lista de alimentos, por favor insira-os manualmente")

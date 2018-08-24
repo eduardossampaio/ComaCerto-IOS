@@ -66,6 +66,13 @@ class AddFoodsToMealViewController : UIViewController,UITableViewDelegate,UITabl
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell =  tableView.dequeueReusableCell(withIdentifier: "foodCell") as! AddFoodListCellView
         cell.foodNameLabel.text = selectedFoods[indexPath.item].name
+        let portion = selectedFoods[indexPath.item].portion ?? 1
+        cell.portionQuantityLabel.text = String(portion)
+        cell.portionQuantityStepper.value = Double(portion)
+        cell.onPortionQuantityChange = { newPortion in
+            self.selectedFoods[indexPath.item].portion = newPortion
+            self.foodsTableView.reloadRows(at: [indexPath], with: UITableViewRowAnimation.none)
+        }
         return cell;
     }
     

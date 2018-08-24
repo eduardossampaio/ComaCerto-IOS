@@ -12,7 +12,13 @@ class AddFoodListCellView : UITableViewCell{
     @IBOutlet weak var foodNameLabel:UILabel!
     @IBOutlet weak var portionQuantityLabel:UILabel!
     @IBOutlet weak var portionQuantityStepper:UIStepper!
+    
+    typealias OnPortionQuantityChange = ((Int) -> Void)
+    var onPortionQuantityChange: OnPortionQuantityChange?
+    
     @IBAction func onPortionValueChanged(_ sender: UIStepper) {
-        portionQuantityLabel.text = "\(Int(sender.value))"
+        let portion = Int(sender.value)
+//        portionQuantityLabel.text = "\(portion)"
+        onPortionQuantityChange?(portion)
     }
 }

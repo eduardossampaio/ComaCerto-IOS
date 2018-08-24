@@ -11,17 +11,13 @@ struct Food : Codable{
     var primaryKey : String? = nil
     let name:String
     let category:String
-    let portion = 1
+    var portion : Int?
 
-    init( name:String?, category:String?) {
-        self.name = name ?? ""
-        self.category = category ?? ""
-    }
     
-    init(primaryKey: String?, name:String?,  category:String?) {
+    init(primaryKey: String? = nil, name:String?,  category:String?, portion:Int? = 1) {
         self.primaryKey = primaryKey
         self.name = name ?? ""
         self.category = category ?? ""
-        
+        self.portion = portion
     }
 }

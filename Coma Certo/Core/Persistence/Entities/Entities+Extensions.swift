@@ -42,11 +42,12 @@ extension MealRealmEntity{
 extension FoodRealmEntity{
     
     func toFood() -> Food{
-        return Food(primaryKey: self.primaryKey,name: self.name, category: self.category)
+        return Food(primaryKey: self.primaryKey,name: self.name, category: self.category,portion: self.portion)
     }
     
     func fromFood(food:Food){
         self.name = food.name
         self.category = food.category
+        self.portion = food.portion ?? 1
     }
 }
