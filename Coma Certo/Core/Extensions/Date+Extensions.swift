@@ -26,7 +26,11 @@ extension Date{
         dateFormatterPrint.dateFormat = format
         return dateFormatterPrint.string(from: self);
     }
-    
+    static func fromFormat(format:String,formattedDate:String) -> Date?{
+        let dateFormatterPrint = DateFormatter()
+        dateFormatterPrint.dateFormat = format
+        return dateFormatterPrint.date(from: formattedDate)
+    }
     func toReadableTime() -> String{
         let dateFormatter = DateFormatter()
         dateFormatter.timeStyle = .short

@@ -16,6 +16,18 @@ class Meal : Codable  {
     var satiety = 0
     var feeling = Feeling.none
     
+    init(){
+        
+    }
+    init(mealType:MealType, date:Date ,foods: [Food] ,hunger: Int ,satiety:Int ,feeling:Feeling) {
+        self.mealType = mealType
+        self.date = date
+        self.foods = foods
+        self.hunger = hunger
+        self.satiety = satiety
+        self.feeling = feeling
+    }
+    
     enum CodingKeys: String, CodingKey{
         case mealType
         case date = "dateAndTime"
@@ -35,17 +47,4 @@ class Meal : Codable  {
         try container.encode(satiety, forKey: .satiety)
         try container.encode(feeling.name, forKey: .feeling)
     }
-    
-    init(){
-        
-    }
-    init(mealType:MealType, date:Date ,foods: [Food] ,hunger: Int ,satiety:Int ,feeling:Feeling) {
-        self.mealType = mealType
-        self.date = date
-        self.foods = foods
-        self.hunger = hunger
-        self.satiety = satiety
-        self.feeling = feeling
-    }
-    
 }
