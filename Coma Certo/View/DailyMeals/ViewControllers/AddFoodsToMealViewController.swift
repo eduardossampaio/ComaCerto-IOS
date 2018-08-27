@@ -95,6 +95,7 @@ class AddFoodsToMealViewController : UIViewController,UITableViewDelegate,UITabl
     private func getFoodOrCreateNew(foodName: String) -> Food{
         for food in allFoodsList {
             if (food.name == foodName){
+//                food.portion = 1
                 return food
             }
         }
