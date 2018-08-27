@@ -12,8 +12,8 @@ class Meal : Codable  {
     var mealType: MealType!
     var date = Date()
     var foods = [Food]()
-    var hunger = 0
-    var satiety = 0
+    var hunger:Level = Level.hunger()
+    var satiety:Level = Level.satiety()
     var feeling = Feeling.none
     
     init(){
@@ -23,8 +23,8 @@ class Meal : Codable  {
         self.mealType = mealType
         self.date = date
         self.foods = foods
-        self.hunger = hunger
-        self.satiety = satiety
+        self.hunger = Level.hunger(level: hunger)
+        self.satiety = Level.satiety(level:satiety)
         self.feeling = feeling
     }
     
@@ -43,8 +43,8 @@ class Meal : Codable  {
         try container.encode(mealType.name, forKey: .mealType)
         try container.encode(date.formatDate(format: "dd/MM/yyyy HH:mm"), forKey: .date)
         try container.encode(foods, forKey: .foods)
-        try container.encode(hunger, forKey: .hunger)
-        try container.encode(satiety, forKey: .satiety)
+        try container.encode(hunger.selectedLevelName(), forKey: .hunger)
+        try container.encode(satiety.selectedLevelName(), forKey: .satiety)
         try container.encode(feeling.name, forKey: .feeling)
     }
 }

@@ -39,6 +39,7 @@ class ReportService : ReportIteractor {
 
         var request = URLRequest(url: URL(string: GENERATE_MEALS_REPORT_URL)!)
         request.httpMethod = HTTPMethod.post.rawValue
+        request.addValue("v1", forHTTPHeaderField: "version")
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
         request.httpBody = mealsJson
         

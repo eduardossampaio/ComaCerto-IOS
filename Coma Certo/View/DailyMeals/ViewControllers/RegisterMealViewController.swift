@@ -21,9 +21,6 @@ class RegisterMealViewController: UITableViewController {
     @IBOutlet weak var hungerStatusLabel: UILabel!
     @IBOutlet weak var satietyStatusLabel: UILabel!
     
-    private let hungerStatus = ["Nada de fome","Pouca fome","Com Fome","Muita Fome","Morrendo de fome"]
-    private let satietyStatus = ["Continuo com fome","Poderia comer mais","Estou satisfeito","Comi demais","Vou explodir"]
-    
     //embeededViewControllers
     private var listFoodTableViewController: ListFoodTableViewController!
     private var feelingsCollectionViewController: ImageCollectionViewController!
@@ -37,8 +34,8 @@ class RegisterMealViewController: UITableViewController {
         let hunger = Int(hungerSlider.value)
         let satiety = Int(satietySlider.value)
 
-        meal.hunger = hunger
-        meal.satiety = satiety
+        meal.hunger.level = hunger
+        meal.satiety.level = satiety
        
         dismiss(animated: true, completion: nil)
          onNewMealSaved?(meal)
@@ -74,10 +71,8 @@ class RegisterMealViewController: UITableViewController {
         updateSliders()
     }
     
-    private func updateSliderStatusText(slider:UISlider,statusTexts:[String], targetLabel:UILabel){
-        let index = Int(slider.value)
-        let status = statusTexts[index - 1]
-        targetLabel.text = status
+    private func updateSliderStatusText(slider:UISlider,level:Level, targetLabel:UILabel){
+        targetLabel.text = level.selectedLevelName()
     }
     
     func updateDateTimeLabels(){
@@ -85,19 +80,19 @@ class RegisterMealViewController: UITableViewController {
         timeTextButton.setTitle(meal.date.toReadableTime(), for:.normal)
     }
     func updateSliders(){
-        hungerSlider.value = Float(meal.hunger)
-        satietySlider.value = Float(meal.satiety)
+        hungerSlider.value = Float(meal.hunger.level)
+        satietySlider.value = Float(meal.satiety.level)
         updateHungerStatusLabel()
         updateSatietyStatusLabel()
     }
    
     func updateHungerStatusLabel(){
-        updateSliderStatusText(slider: hungerSlider, statusTexts: hungerStatus, targetLabel: hungerStatusLabel)
-        meal.hunger = Int(hungerSlider.value)
+        updateSliderStatusText(slider: hungerSlider, level: meal.hunger, targetLabel: hungerStatusLabel)
+        meal.hunger.level = Int(hungerSlider.value)
     }
     func updateSatietyStatusLabel(){
-        updateSliderStatusText(slider: satietySlider, statusTexts: satietyStatus, targetLabel: satietyStatusLabel)
-        meal.satiety = Int(satietySlider.value)
+        updateSliderStatusText(slider: satietySlider, level: meal.satiety, targetLabel: satietyStatusLabel)
+        meal.satiety.level = Int(satietySlider.value)
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == "listFoodSegue"){

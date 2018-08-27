@@ -16,6 +16,7 @@
 		59044BED21251A5E00A6BF4D /* ViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59044BEC21251A5E00A6BF4D /* ViewPresenter.swift */; };
 		59044BF021251D1000A6BF4D /* FoodIteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59044BEF21251D1000A6BF4D /* FoodIteractor.swift */; };
 		59044BF221251D1F00A6BF4D /* FoodPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59044BF121251D1F00A6BF4D /* FoodPresenter.swift */; };
+		59180429213483C900C6F2DE /* Level.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59180428213483C900C6F2DE /* Level.swift */; };
 		594DAC25212C983900E1729D /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 594DAC24212C983900E1729D /* String+Extensions.swift */; };
 		594DAC27212CB27700E1729D /* about-app.md in Resources */ = {isa = PBXBuildFile; fileRef = 594DAC26212CAF8700E1729D /* about-app.md */; };
 		594DAC2B212CB34F00E1729D /* general-rules.md in Resources */ = {isa = PBXBuildFile; fileRef = 594DAC28212CB30E00E1729D /* general-rules.md */; };
@@ -93,6 +94,7 @@
 		59044BEC21251A5E00A6BF4D /* ViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewPresenter.swift; sourceTree = "<group>"; };
 		59044BEF21251D1000A6BF4D /* FoodIteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodIteractor.swift; sourceTree = "<group>"; };
 		59044BF121251D1F00A6BF4D /* FoodPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodPresenter.swift; sourceTree = "<group>"; };
+		59180428213483C900C6F2DE /* Level.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Level.swift; sourceTree = "<group>"; };
 		594DAC24212C983900E1729D /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		594DAC26212CAF8700E1729D /* about-app.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "about-app.md"; sourceTree = "<group>"; };
 		594DAC28212CB30E00E1729D /* general-rules.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "general-rules.md"; sourceTree = "<group>"; };
@@ -219,6 +221,7 @@
 				5902B56C211E01E900707EB0 /* Feeling.swift */,
 				596516AF211F5E04005EE71D /* Food.swift */,
 				59538C472124C3FF0061147B /* Displayable.swift */,
+				59180428213483C900C6F2DE /* Level.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -697,6 +700,7 @@
 				59D28818211A80B300CD38B7 /* DailyMealsViewController.swift in Sources */,
 				5902B56A211E013300707EB0 /* Meal.swift in Sources */,
 				59F64EE421309285007759BA /* Preferences.swift in Sources */,
+				59180429213483C900C6F2DE /* Level.swift in Sources */,
 				59928F1B212F9664003B9D7E /* AddFoodListCellView.swift in Sources */,
 				59F64EE2213085AE007759BA /* SettingsViewController.swift in Sources */,
 				59538C3621231F5C0061147B /* MealRealmEntity.swift in Sources */,

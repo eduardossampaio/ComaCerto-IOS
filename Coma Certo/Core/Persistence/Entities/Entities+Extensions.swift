@@ -27,8 +27,8 @@ extension MealRealmEntity{
     func fromMeal(meal:Meal){
         self.dateAndTime = NSDate(timeIntervalSince1970: (meal.date.timeIntervalSince1970))
         self.feeling = meal.feeling.id
-        self.hunger = meal.hunger
-        self.satiety = meal.satiety
+        self.hunger = meal.hunger.level
+        self.satiety = meal.satiety.level
         self.mealType = meal.mealType?.rawValue ?? 0;
         self.foods.removeAll()
         for food in meal.foods{
