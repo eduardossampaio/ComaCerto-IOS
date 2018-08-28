@@ -702,8 +702,8 @@
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="qkx-JY-p4g"/>
                         <segue destination="C1P-cm-5zL" kind="relationship" relationship="viewControllers" id="QhU-Gq-LBR"/>
-                        <segue destination="PBv-i9-VmR" kind="relationship" relationship="viewControllers" id="alC-HF-mip"/>
                         <segue destination="Db9-qi-WLm" kind="relationship" relationship="viewControllers" id="EqP-Eh-sei"/>
+                        <segue destination="PBv-i9-VmR" kind="relationship" relationship="viewControllers" id="alC-HF-mip"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1nW-h9-crT" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -893,7 +893,7 @@
             </objects>
             <point key="canvasLocation" x="-30" y="686"/>
         </scene>
-        <!--Sobre o aplicativo-->
+        <!--Ajuda-->
         <scene sceneID="K2m-Lz-4Er">
             <objects>
                 <tableViewController id="YXp-Rd-ohC" customClass="AboutAppViewController" customModule="Coma_Certo" customModuleProvider="target" sceneMemberID="viewController">
@@ -980,7 +980,7 @@
                             <outlet property="delegate" destination="YXp-Rd-ohC" id="BYQ-jJ-iGG"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Sobre o aplicativo" id="QQF-xp-hPE"/>
+                    <navigationItem key="navigationItem" title="Ajuda" id="QQF-xp-hPE"/>
                     <connections>
                         <segue destination="zis-pz-qBa" kind="show" identifier="goToAboutAppDetailSegue" id="sne-4p-luR"/>
                     </connections>
@@ -1122,11 +1122,11 @@
             </objects>
             <point key="canvasLocation" x="943" y="-673"/>
         </scene>
-        <!--Sobre o aplicativo-->
+        <!--Ajuda-->
         <scene sceneID="BdC-Lg-BMt">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="PBv-i9-VmR" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Sobre o aplicativo" image="about" id="9nC-1z-CQR"/>
+                    <tabBarItem key="tabBarItem" title="Ajuda" image="about" id="9nC-1z-CQR"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="qnY-v2-NvG">
                         <rect key="frame" x="0.0" y="20" width="414" height="44"/>

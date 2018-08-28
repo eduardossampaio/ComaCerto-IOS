@@ -9,7 +9,9 @@
 import Foundation
 import UIKit
 import UserNotifications
-class  SettingsViewController : UITableViewController {
+class  SettingsViewController : UITableViewController, SettingsPresenter{
+   
+    
     private let BREAKFAST_TIME_PICKER_TAG   = 1111
     private let LUNCH_TIME_PICKER_TAG       = 2222
     private let SNACK_TIME_PICKER_TAG       = 3333
@@ -21,37 +23,30 @@ class  SettingsViewController : UITableViewController {
     @IBOutlet weak var snackLabel: UILabel!
     @IBOutlet weak var dinnerLabel: UILabel!
     
+    var settingsIteractor : SettingsIteractor!
+    
+    func setNotificationsEnabled(_ enabled: Bool) {
+        addReminderSwitch.isOn = enabled
+    }
     override func viewDidLoad() {
-        addReminderSwitch.isOn = Preferences.instance.remindersEnabled
-        breakfastLabel.text = Preferences.instance.breakfastHour
-        lunchLabel.text =  Preferences.instance.lunchHour
-        snackLabel.text =  Preferences.instance.snackHour
-        dinnerLabel.text =  Preferences.instance.dinnerHour
+        settingsIteractor = SettingsService(presenter: self)
+        settingsIteractor.onScreenLoaded()
     }
     
-    override func viewDidDisappear(_ animated: Bool) {
-//
-//        let center = UNUserNotificationCenter.current()
-//        let content = UNMutableNotificationContent()
-//        content.title = "Test"
-//        var date = DateComponents()
-//        date.hour = 19  // 8 AM
-//        date.minute = 32
-//        let trigger = UNCalendarNotificationTrigger(dateMatching: date, repeats: true)
-//        
-//        let identifier = "UYLLocalNotification"
-//                    let request = UNNotificationRequest(identifier: identifier,
-//                                                        content: content, trigger: trigger)
-//                    center.add(request, withCompletionHandler: { (error) in
-//                        if let error = error {
-//                            // Something went wrong
-//                            print(error)
-//                        }
-//                    })
-////        }
+    func updateNotificationHour(hour: Date, for mealType: MealType) {
+        if mealType.equals(other: MealType.breakfast){
+            breakfastLabel.text = hour.toReadableTime()
+        }else if mealType.equals( other: MealType.lunch){
+            lunchLabel.text = hour.toReadableTime()
+        }else if mealType.equals( other: MealType.snack){
+            snackLabel.text = hour.toReadableTime()
+        }else if mealType.equals( other: MealType.dinner){
+            dinnerLabel.text = hour.toReadableTime()
+        }
     }
+  
     @IBAction func onAddRememberSwitchChange(_ sender: UISwitch) {
-        Preferences.instance.remindersEnabled = sender.isOn
+        settingsIteractor.onScheduleNotificationsChange(sender.isOn)
         self.tableView.reloadData()
     }
     
@@ -97,10 +92,10 @@ class  SettingsViewController : UITableViewController {
             let hourCell = cell as! SettingsHourCell
             if !addReminderSwitch.isOn{
                 hourCell.mealName.textColor  = UIColor.gray
-                hourCell.hourLabel.tintColor  = UIColor.gray
+                hourCell.hourLabel.textColor  = UIColor.gray
             }else{
                 hourCell.mealName.textColor = UIColor.black
-                hourCell.hourLabel.tintColor  = UIColor.blue
+                hourCell.hourLabel.textColor  = UIColor.blue
             }
         }
         return cell
@@ -116,16 +111,16 @@ class  SettingsViewController : UITableViewController {
         let timeText =  sender.date.formatDate(format: "HH:mm")
         if tag == BREAKFAST_TIME_PICKER_TAG {
             breakfastLabel.text =  timeText
-            Preferences.instance.breakfastHour = timeText
+            settingsIteractor.onNotificationAlarmChanged(mealType: MealType.breakfast, hour: sender.date)
         }else if tag == LUNCH_TIME_PICKER_TAG {
             lunchLabel.text = timeText
-            Preferences.instance.lunchHour = timeText
+            settingsIteractor.onNotificationAlarmChanged(mealType: MealType.lunch, hour: sender.date)
         }else if tag == SNACK_TIME_PICKER_TAG {
             snackLabel.text =  timeText
-            Preferences.instance.snackHour = timeText
+            settingsIteractor.onNotificationAlarmChanged(mealType: MealType.snack, hour: sender.date)
         }else if tag == DINNER_PICKER_TAG {
             dinnerLabel.text =  timeText
-            Preferences.instance.dinnerHour = timeText
+            settingsIteractor.onNotificationAlarmChanged(mealType: MealType.dinner, hour: sender.date)
         }
     }
     
