@@ -34,7 +34,7 @@ class ImageCollectionViewController: UICollectionViewController, UICollectionVie
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "emojiCell", for: indexPath) as! ImageCollectionCellView
         let itemToDisplay = items[indexPath.item]
-        
+        print("ImageCollectionViewController: creating cell for \(indexPath)")
         cell.reactionImage.image = itemToDisplay.displayImage()
         cell.reactionName.text = itemToDisplay.displayName()
         if let preselectedItem = self.preselectedItem{
@@ -55,5 +55,6 @@ class ImageCollectionViewController: UICollectionViewController, UICollectionVie
         newSelectedCell?.isSelected = true
         self.lastSelectedCell = indexPath.item
         onItemSelected?(items[indexPath.item])
+        self.preselectedItem = items[indexPath.item]
     }
 }

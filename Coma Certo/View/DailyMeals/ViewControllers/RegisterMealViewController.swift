@@ -63,7 +63,7 @@ class RegisterMealViewController: UITableViewController, UITextViewDelegate {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.tableView.bounces = false       
+        tableView.bounces = false
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -96,23 +96,29 @@ class RegisterMealViewController: UITableViewController, UITextViewDelegate {
         meal.satiety.level = Int(satietySlider.value)
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        print("preparing for segue")
         if (segue.identifier == "listFoodSegue"){
+            print("goint to listFoodSegue")
             let controller = segue.destination as! ListFoodTableViewController
             self.listFoodTableViewController = controller
             controller.foodList = meal.foods
             controller.onFoodListUpdate = { (foodList) in
-                self.meal.foods = foodList;
+                self.meal.foods = foodList
                 self.tableView.reloadData()
+                print("updating foods list")
             }
             controller.onAddNewFoodClicked = {
                 self.performSegue(withIdentifier: "selectFoodsSegue", sender: nil)
+                print("going to selectFoodsSegue")
             }
         }else if(segue.identifier == "listFeelingsSegue"){
+            print("going to listFeelingsSegue")
             let controller = segue.destination as! ImageCollectionViewController
             self.feelingsCollectionViewController = controller
             controller.items = Feeling.allFeelings
             controller.onItemSelected = {(feeling) in
                 self.meal.feeling = feeling as! Feeling
+                print("felling updated: \(self.meal.feeling)")
             }
             if meal.feeling == Feeling.none{
                 controller.preselectedItem = Feeling.getFeeling(byId: 0)
@@ -120,20 +126,26 @@ class RegisterMealViewController: UITableViewController, UITextViewDelegate {
                 controller.preselectedItem = meal.feeling
             }
         }else if (segue.identifier == "listMealTypesSegue"){
+            print("going to listMealTypesSegue")
             let controller = segue.destination as! ImageCollectionViewController
             self.mealTypesCollectionViewController = controller
             controller.items = MealType.allCases
             controller.onItemSelected = {(mealType) in
                 self.meal.mealType = mealType as! MealType
+                print("meal type updated \(self.meal.mealType)")
             }
-            controller.preselectedItem = self.meal.mealType
+            controller.preselectedItem = self.meal.mealType ?? MealType.breakfast
         }else if(segue.identifier == "selectFoodsSegue"){
+            print("going to selectFoodsSegue")
             let controller = segue.destination as! AddFoodsToMealViewController
             controller.selectedFoods = self.meal.foods
             controller.onFoodListUpdate = { (foodList) in
+                print("foods list updated")
                 self.meal.foods = foodList;
                 self.listFoodTableViewController.foodList = foodList
                 self.listFoodTableViewController.tableView.reloadData()
+                self.feelingsCollectionViewController.collectionView?.reloadData()
+                self.mealTypesCollectionViewController.collectionView?.reloadData()
                 self.tableView.reloadData()
             }
         }
