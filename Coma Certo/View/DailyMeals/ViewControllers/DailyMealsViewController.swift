@@ -63,9 +63,11 @@ class DailyMealsViewController: UIViewController,UITableViewDelegate,UITableView
         cell.mealNameTextField.text = meal.mealType?.displayName()
         cell.mealHourTextField.text = meal.date.toReadableTime()
         if ( meal.foods.isEmpty){
-            cell.mealInfoTextField.text = "Nenhum alimento adicionado"
+            cell.mealInfoTextField.text = "Adicione alimentos"
+            cell.mealInfoTextField.textColor = UIColor.red
         }else{
             cell.mealInfoTextField.text = "\(meal.foods.count) alimento(s)"
+            cell.mealInfoTextField.textColor = UIColor.black
         }
         return cell
     }

@@ -47,7 +47,7 @@ class MealPersistence {
     
     func getMeals(initialDate: Date,finalDate:Date) -> [Meal] {
         let realm = try! Realm()
-        let mealEntities = realm.objects(MealRealmEntity.self).filter("dateAndTime BETWEEN %@", [initialDate.beginOfDay(), finalDate.endOfDay()])
+        let mealEntities = realm.objects(MealRealmEntity.self).filter("dateAndTime BETWEEN %@", [initialDate.beginOfDay(), finalDate.endOfDay()]).sorted(byKeyPath: "dateAndTime", ascending: true)
         var allMeals = [Meal]()
         for mealEntity in mealEntities{
             let meal = mealEntity.toMeal()

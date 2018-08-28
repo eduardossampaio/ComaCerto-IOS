@@ -161,6 +161,10 @@ class RegisterMealViewController: UITableViewController, UITextViewDelegate {
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if indexPath.section == 2 && meal.foods.count > 0{
             return CGFloat(44 * (meal.foods.count + 1) )
+        }else if indexPath.section == 0 {
+           return self.mealTypesCollectionViewController.getCollectionViewHeight()
+        }else if indexPath.section == 5 {
+            return self.feelingsCollectionViewController.getCollectionViewHeight()
         }
         return super.tableView(tableView, heightForRowAt: indexPath)
     }
