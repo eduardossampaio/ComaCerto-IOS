@@ -1213,25 +1213,26 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" verticalHuggingPriority="248" horizontalCompressionResistancePriority="748" verticalCompressionResistancePriority="748" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bWH-qA-zUC">
-                                                    <rect key="frame" x="339" y="6.6666666666666679" width="75" height="29.000000000000004"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="249" horizontalCompressionResistancePriority="749" verticalCompressionResistancePriority="749" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zu0-wi-uOF">
+                                                    <rect key="frame" x="339" y="11" width="55" height="21"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="75" id="o9i-Cf-spl"/>
+                                                        <constraint firstAttribute="width" constant="55" id="gEE-lM-qKk"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <state key="normal" title="08:00"/>
-                                                </button>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="cZX-Ho-C98" firstAttribute="leading" secondItem="XTh-Xx-Leb" secondAttribute="leadingMargin" id="2Qm-py-izm"/>
-                                                <constraint firstItem="cZX-Ho-C98" firstAttribute="centerY" secondItem="XTh-Xx-Leb" secondAttribute="centerY" id="lmA-0M-wYB"/>
-                                                <constraint firstItem="bWH-qA-zUC" firstAttribute="leading" secondItem="cZX-Ho-C98" secondAttribute="trailing" id="pg2-P8-ddf"/>
-                                                <constraint firstItem="bWH-qA-zUC" firstAttribute="centerY" secondItem="XTh-Xx-Leb" secondAttribute="centerY" id="yet-m0-f0w"/>
-                                                <constraint firstAttribute="trailing" secondItem="bWH-qA-zUC" secondAttribute="trailing" id="yjG-cY-Ldk"/>
+                                                <constraint firstItem="cZX-Ho-C98" firstAttribute="leading" secondItem="XTh-Xx-Leb" secondAttribute="leadingMargin" id="HRQ-93-dSb"/>
+                                                <constraint firstItem="Zu0-wi-uOF" firstAttribute="centerY" secondItem="XTh-Xx-Leb" secondAttribute="centerY" id="Oh4-mj-Trg"/>
+                                                <constraint firstItem="Zu0-wi-uOF" firstAttribute="leading" secondItem="cZX-Ho-C98" secondAttribute="trailing" id="PxV-II-cCs"/>
+                                                <constraint firstItem="cZX-Ho-C98" firstAttribute="centerY" secondItem="XTh-Xx-Leb" secondAttribute="centerY" id="uuq-3m-gu9"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="Zu0-wi-uOF" secondAttribute="trailing" id="vOs-Lw-57v"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="hourButton" destination="bWH-qA-zUC" id="mDE-0G-eUU"/>
+                                            <outlet property="hourLabel" destination="Zu0-wi-uOF" id="7ba-VE-ao2"/>
                                             <outlet property="mealName" destination="cZX-Ho-C98" id="EBL-hK-yjK"/>
                                         </connections>
                                     </tableViewCell>
@@ -1248,25 +1249,28 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" verticalHuggingPriority="248" horizontalCompressionResistancePriority="748" verticalCompressionResistancePriority="748" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="STx-aJ-3AX">
-                                                    <rect key="frame" x="339" y="6.6666666666666679" width="75" height="29.000000000000004"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cGd-9D-JQH">
+                                                    <rect key="frame" x="339" y="11" width="55" height="21"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="75" id="NBh-y7-a5L"/>
+                                                        <constraint firstAttribute="width" constant="55" id="TC8-Jb-jD7"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <state key="normal" title="12:00"/>
-                                                </button>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="STx-aJ-3AX" firstAttribute="leading" secondItem="8Sj-bb-9Sk" secondAttribute="trailing" id="UQy-CA-nwa"/>
-                                                <constraint firstItem="8Sj-bb-9Sk" firstAttribute="leading" secondItem="qMr-DN-lsx" secondAttribute="leadingMargin" id="ZZP-sA-syl"/>
-                                                <constraint firstAttribute="trailing" secondItem="STx-aJ-3AX" secondAttribute="trailing" id="g8I-0f-XPh"/>
-                                                <constraint firstItem="STx-aJ-3AX" firstAttribute="centerY" secondItem="qMr-DN-lsx" secondAttribute="centerY" id="m6e-H4-tAm"/>
-                                                <constraint firstItem="8Sj-bb-9Sk" firstAttribute="centerY" secondItem="qMr-DN-lsx" secondAttribute="centerY" id="zC3-Cp-w4C"/>
+                                                <constraint firstItem="8Sj-bb-9Sk" firstAttribute="leading" secondItem="qMr-DN-lsx" secondAttribute="leadingMargin" id="0MA-Rg-bUP"/>
+                                                <constraint firstItem="cGd-9D-JQH" firstAttribute="centerY" secondItem="qMr-DN-lsx" secondAttribute="centerY" id="Vsb-cs-vSP"/>
+                                                <constraint firstItem="cGd-9D-JQH" firstAttribute="leading" secondItem="8Sj-bb-9Sk" secondAttribute="trailing" id="Zv6-1L-y3e"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="cGd-9D-JQH" secondAttribute="trailing" id="iE3-A5-kzG"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <constraints>
+                                            <constraint firstItem="8Sj-bb-9Sk" firstAttribute="centerY" secondItem="dQc-Am-GF2" secondAttribute="centerY" id="wT0-do-BY3"/>
+                                        </constraints>
                                         <connections>
-                                            <outlet property="hourButton" destination="STx-aJ-3AX" id="4Ng-CB-LGl"/>
+                                            <outlet property="hourLabel" destination="cGd-9D-JQH" id="Gkg-L0-zDA"/>
                                             <outlet property="mealName" destination="8Sj-bb-9Sk" id="9Mb-F8-fKj"/>
                                         </connections>
                                     </tableViewCell>
@@ -1283,25 +1287,28 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" verticalHuggingPriority="248" horizontalCompressionResistancePriority="748" verticalCompressionResistancePriority="748" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nNs-PO-5Ke">
-                                                    <rect key="frame" x="339" y="6.6666666666666679" width="75" height="29.000000000000004"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qnk-UN-4EB">
+                                                    <rect key="frame" x="339" y="11" width="55" height="21"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="75" id="Cc9-M1-JBH"/>
+                                                        <constraint firstAttribute="width" constant="55" id="yHF-xn-pes"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <state key="normal" title="16:00"/>
-                                                </button>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="nNs-PO-5Ke" firstAttribute="leading" secondItem="Cw7-RA-2dA" secondAttribute="trailing" id="Fn7-Uv-ob6"/>
-                                                <constraint firstAttribute="trailing" secondItem="nNs-PO-5Ke" secondAttribute="trailing" id="FpC-NQ-Pwj"/>
-                                                <constraint firstItem="Cw7-RA-2dA" firstAttribute="centerY" secondItem="LQF-cV-gxP" secondAttribute="centerY" id="iId-EZ-ZYf"/>
-                                                <constraint firstItem="nNs-PO-5Ke" firstAttribute="centerY" secondItem="LQF-cV-gxP" secondAttribute="centerY" id="pz7-0A-u4r"/>
-                                                <constraint firstItem="Cw7-RA-2dA" firstAttribute="leading" secondItem="LQF-cV-gxP" secondAttribute="leadingMargin" id="yRx-DF-KnQ"/>
+                                                <constraint firstItem="Qnk-UN-4EB" firstAttribute="centerY" secondItem="LQF-cV-gxP" secondAttribute="centerY" id="5AY-Lh-gIz"/>
+                                                <constraint firstItem="Cw7-RA-2dA" firstAttribute="leading" secondItem="LQF-cV-gxP" secondAttribute="leadingMargin" id="Bw1-XN-9jZ"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="Qnk-UN-4EB" secondAttribute="trailing" id="Tes-sa-ZRf"/>
+                                                <constraint firstItem="Qnk-UN-4EB" firstAttribute="leading" secondItem="Cw7-RA-2dA" secondAttribute="trailing" id="aZT-ZT-z13"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <constraints>
+                                            <constraint firstItem="Cw7-RA-2dA" firstAttribute="centerY" secondItem="q1T-jz-b85" secondAttribute="centerY" id="1Hf-cO-0TY"/>
+                                        </constraints>
                                         <connections>
-                                            <outlet property="hourButton" destination="nNs-PO-5Ke" id="bF7-Lz-DI1"/>
+                                            <outlet property="hourLabel" destination="Qnk-UN-4EB" id="acV-o7-IKb"/>
                                             <outlet property="mealName" destination="Cw7-RA-2dA" id="AYD-Ve-Ze4"/>
                                         </connections>
                                     </tableViewCell>
@@ -1318,25 +1325,28 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" verticalHuggingPriority="248" horizontalCompressionResistancePriority="748" verticalCompressionResistancePriority="748" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CFi-i8-oqg">
-                                                    <rect key="frame" x="339" y="6.6666666666666679" width="75" height="29.000000000000004"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9LZ-LJ-nXl">
+                                                    <rect key="frame" x="339" y="11" width="55" height="21"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="75" id="Flu-nx-ISJ"/>
+                                                        <constraint firstAttribute="width" constant="55" id="sKW-GD-UcG"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <state key="normal" title="20:00"/>
-                                                </button>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="CFi-i8-oqg" firstAttribute="leading" secondItem="6Te-D7-KDh" secondAttribute="trailing" id="KwM-zt-OUs"/>
-                                                <constraint firstItem="6Te-D7-KDh" firstAttribute="leading" secondItem="H1m-OS-RF9" secondAttribute="leadingMargin" id="SNv-eR-Lv0"/>
-                                                <constraint firstItem="CFi-i8-oqg" firstAttribute="centerY" secondItem="H1m-OS-RF9" secondAttribute="centerY" id="e6m-NC-j8O"/>
-                                                <constraint firstItem="6Te-D7-KDh" firstAttribute="centerY" secondItem="H1m-OS-RF9" secondAttribute="centerY" id="gW9-XM-3qA"/>
-                                                <constraint firstAttribute="trailing" secondItem="CFi-i8-oqg" secondAttribute="trailing" id="uvg-mc-gym"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="9LZ-LJ-nXl" secondAttribute="trailing" id="36g-Su-R99"/>
+                                                <constraint firstItem="6Te-D7-KDh" firstAttribute="leading" secondItem="H1m-OS-RF9" secondAttribute="leadingMargin" id="XIZ-uW-tLN"/>
+                                                <constraint firstItem="9LZ-LJ-nXl" firstAttribute="centerY" secondItem="H1m-OS-RF9" secondAttribute="centerY" id="aVo-Bc-aef"/>
+                                                <constraint firstItem="9LZ-LJ-nXl" firstAttribute="leading" secondItem="6Te-D7-KDh" secondAttribute="trailing" id="tjQ-Lr-5eP"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <constraints>
+                                            <constraint firstItem="6Te-D7-KDh" firstAttribute="centerY" secondItem="az8-cg-loO" secondAttribute="centerY" id="haD-x8-aGh"/>
+                                        </constraints>
                                         <connections>
-                                            <outlet property="hourButton" destination="CFi-i8-oqg" id="Uvs-Mz-m4j"/>
+                                            <outlet property="hourLabel" destination="9LZ-LJ-nXl" id="6ip-dk-Dmj"/>
                                             <outlet property="mealName" destination="6Te-D7-KDh" id="Vhb-YR-jgk"/>
                                         </connections>
                                     </tableViewCell>
@@ -1351,10 +1361,10 @@
                     <navigationItem key="navigationItem" title="Configurações" id="Gze-io-Web"/>
                     <connections>
                         <outlet property="addReminderSwitch" destination="Qhw-oX-y3u" id="btq-ve-raZ"/>
-                        <outlet property="breakfastButton" destination="bWH-qA-zUC" id="AJm-p5-gxp"/>
-                        <outlet property="dinnerButton" destination="CFi-i8-oqg" id="Fgs-cR-99h"/>
-                        <outlet property="lunchButton" destination="STx-aJ-3AX" id="AOO-e9-YHi"/>
-                        <outlet property="snackButton" destination="nNs-PO-5Ke" id="iPY-1W-91H"/>
+                        <outlet property="breakfastLabel" destination="Zu0-wi-uOF" id="a0Z-Kk-AN0"/>
+                        <outlet property="dinnerLabel" destination="9LZ-LJ-nXl" id="Mdu-HW-2At"/>
+                        <outlet property="lunchLabel" destination="cGd-9D-JQH" id="LTp-Mc-8h6"/>
+                        <outlet property="snackLabel" destination="Qnk-UN-4EB" id="Lhc-0k-GFB"/>
                         <segue destination="UVb-zU-rCU" kind="show" identifier="goToManageFeelingsViewController" id="dtm-7O-10s"/>
                     </connections>
                 </tableViewController>

@@ -10,5 +10,5 @@ import Foundation
 import UIKit
 class SettingsHourCell : UITableViewCell {
     @IBOutlet weak var mealName: UILabel!
-    @IBOutlet weak var hourButton: UIButton!
+    @IBOutlet weak var hourLabel: UILabel!
 }

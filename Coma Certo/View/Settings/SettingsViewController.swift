@@ -16,17 +16,17 @@ class  SettingsViewController : UITableViewController {
     private let DINNER_PICKER_TAG           = 4444
     
     @IBOutlet weak var addReminderSwitch: UISwitch!
-    @IBOutlet weak var breakfastButton: UIButton!
-    @IBOutlet weak var lunchButton: UIButton!
-    @IBOutlet weak var snackButton: UIButton!
-    @IBOutlet weak var dinnerButton: UIButton!
+    @IBOutlet weak var breakfastLabel: UILabel!
+    @IBOutlet weak var lunchLabel: UILabel!
+    @IBOutlet weak var snackLabel: UILabel!
+    @IBOutlet weak var dinnerLabel: UILabel!
     
     override func viewDidLoad() {
         addReminderSwitch.isOn = Preferences.instance.remindersEnabled
-        breakfastButton.setTitle(Preferences.instance.breakfastHour, for: .normal)
-        lunchButton.setTitle( Preferences.instance.lunchHour, for: .normal)
-        snackButton.setTitle( Preferences.instance.snackHour, for: .normal)
-        dinnerButton.setTitle( Preferences.instance.dinnerHour, for: .normal)
+        breakfastLabel.text = Preferences.instance.breakfastHour
+        lunchLabel.text =  Preferences.instance.lunchHour
+        snackLabel.text =  Preferences.instance.snackHour
+        dinnerLabel.text =  Preferences.instance.dinnerHour
     }
     
     override func viewDidDisappear(_ animated: Bool) {
@@ -56,19 +56,19 @@ class  SettingsViewController : UITableViewController {
     }
     
     func openBreakfastTimeActionSheet() {
-        openActionDateSheet(for: breakfastButton, with: BREAKFAST_TIME_PICKER_TAG)
+        openActionDateSheet(for: breakfastLabel, with: BREAKFAST_TIME_PICKER_TAG)
     }
     
     func openLunckTimeActionSheet() {
-        openActionDateSheet(for: lunchButton, with: LUNCH_TIME_PICKER_TAG)
+        openActionDateSheet(for: lunchLabel, with: LUNCH_TIME_PICKER_TAG)
     }
     
     func openSnackTimeActionSheet() {
-        openActionDateSheet(for: snackButton, with: SNACK_TIME_PICKER_TAG)
+        openActionDateSheet(for: snackLabel, with: SNACK_TIME_PICKER_TAG)
     }
     
     func openDinnerTimeActionSheet() {
-         openActionDateSheet(for: dinnerButton, with: DINNER_PICKER_TAG)
+         openActionDateSheet(for: dinnerLabel, with: DINNER_PICKER_TAG)
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -97,17 +97,17 @@ class  SettingsViewController : UITableViewController {
             let hourCell = cell as! SettingsHourCell
             if !addReminderSwitch.isOn{
                 hourCell.mealName.textColor  = UIColor.gray
-                hourCell.hourButton.tintColor  = UIColor.gray
+                hourCell.hourLabel.tintColor  = UIColor.gray
             }else{
                 hourCell.mealName.textColor = UIColor.black
-                hourCell.hourButton.tintColor  = UIColor.blue
+                hourCell.hourLabel.tintColor  = UIColor.blue
             }
         }
         return cell
     }
     
-    private func openActionDateSheet(for button: UIButton, with tag: Int){
-        let timeToDisplay = Date.fromFormat(format: "HH:mm", formattedDate: button.titleLabel?.text ?? "") ?? Date()
+    private func openActionDateSheet(for label: UILabel, with tag: Int){
+        let timeToDisplay = Date.fromFormat(format: "HH:mm", formattedDate: label.text ?? "") ?? Date()
         openDateActionSheet(date: timeToDisplay, mode: .time, tag: tag)
     }
     
@@ -115,16 +115,16 @@ class  SettingsViewController : UITableViewController {
         let tag = sender.tag
         let timeText =  sender.date.formatDate(format: "HH:mm")
         if tag == BREAKFAST_TIME_PICKER_TAG {
-            breakfastButton.setTitle( timeText, for: .normal)
+            breakfastLabel.text =  timeText
             Preferences.instance.breakfastHour = timeText
         }else if tag == LUNCH_TIME_PICKER_TAG {
-            lunchButton.setTitle( timeText, for: .normal)
+            lunchLabel.text = timeText
             Preferences.instance.lunchHour = timeText
         }else if tag == SNACK_TIME_PICKER_TAG {
-            snackButton.setTitle( timeText, for: .normal)
+            snackLabel.text =  timeText
             Preferences.instance.snackHour = timeText
         }else if tag == DINNER_PICKER_TAG {
-            dinnerButton.setTitle( timeText, for: .normal)
+            dinnerLabel.text =  timeText
             Preferences.instance.dinnerHour = timeText
         }
     }

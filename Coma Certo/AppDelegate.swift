@@ -25,7 +25,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 print("Something went wrong")
             }
         }
-
+        Preferences.instance.preload()
         return true
     }
 

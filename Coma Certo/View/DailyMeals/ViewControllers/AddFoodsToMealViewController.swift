@@ -103,8 +103,9 @@ class AddFoodsToMealViewController : UIViewController,UITableViewDelegate,UITabl
                 return food
             }
         }
-        return Food(name: foodName,category: "Meus Alimentos")
-        //salvar alimento
+        let newFood = Food(name: foodName,category: "Meus Alimentos")
+        foodIteractor.onNewFoodEntered(food: newFood)
+        return newFood
     }
     
 }
