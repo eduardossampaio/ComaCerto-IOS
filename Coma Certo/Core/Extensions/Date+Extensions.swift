@@ -56,4 +56,15 @@ extension Date{
         let date = Calendar.current.date(bySettingHour: hour, minute: minute, second: second, of: self)!
         return date
     }
+    func getHour() -> Int {
+        let units: Set<Calendar.Component> = [.hour]
+        let comp = Calendar.current.dateComponents(units, from: self)
+        return comp.hour ?? 0
+    }
+    func getMinute() -> Int {
+        let units: Set<Calendar.Component> = [.minute]
+        let comp = Calendar.current.dateComponents(units, from: self)
+        return comp.minute ?? 0
+    }
+
 }

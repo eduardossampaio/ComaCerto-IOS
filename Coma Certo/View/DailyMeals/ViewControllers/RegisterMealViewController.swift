@@ -63,8 +63,7 @@ class RegisterMealViewController: UITableViewController, UITextViewDelegate {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.tableView.bounces = false
-       
+        self.tableView.bounces = false       
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)

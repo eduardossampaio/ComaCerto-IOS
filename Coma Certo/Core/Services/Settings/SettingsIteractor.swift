@@ -10,6 +10,8 @@ import Foundation
 protocol SettingsIteractor  {
     func onScreenLoaded()
     
+    func onScreenClose()
+    
     func onScheduleNotificationsChange(_ notificationsEnabled: Bool)
     
     func onNotificationAlarmChanged(mealType: MealType, hour:Date)

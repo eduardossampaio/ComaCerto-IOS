@@ -22,6 +22,7 @@
 		591EE23A2134D5560087538B /* SettingsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 591EE2392134D5560087538B /* SettingsService.swift */; };
 		591EE23C2134D5630087538B /* SettingsIteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 591EE23B2134D5630087538B /* SettingsIteractor.swift */; };
 		591EE23E2134D62B0087538B /* SettingsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 591EE23D2134D62B0087538B /* SettingsPresenter.swift */; };
+		591EE2402134E19A0087538B /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 591EE23F2134E19A0087538B /* NotificationService.swift */; };
 		594DAC25212C983900E1729D /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 594DAC24212C983900E1729D /* String+Extensions.swift */; };
 		594DAC27212CB27700E1729D /* about-app.md in Resources */ = {isa = PBXBuildFile; fileRef = 594DAC26212CAF8700E1729D /* about-app.md */; };
 		594DAC2B212CB34F00E1729D /* general-rules.md in Resources */ = {isa = PBXBuildFile; fileRef = 594DAC28212CB30E00E1729D /* general-rules.md */; };
@@ -105,6 +106,7 @@
 		591EE2392134D5560087538B /* SettingsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsService.swift; sourceTree = "<group>"; };
 		591EE23B2134D5630087538B /* SettingsIteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsIteractor.swift; sourceTree = "<group>"; };
 		591EE23D2134D62B0087538B /* SettingsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsPresenter.swift; sourceTree = "<group>"; };
+		591EE23F2134E19A0087538B /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
 		594DAC24212C983900E1729D /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		594DAC26212CAF8700E1729D /* about-app.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "about-app.md"; sourceTree = "<group>"; };
 		594DAC28212CB30E00E1729D /* general-rules.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "general-rules.md"; sourceTree = "<group>"; };
@@ -205,7 +207,6 @@
 		5902B565211DD1E100707EB0 /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				59F64EE52130928A007759BA /* Preferences */,
 				59538C3321231A860061147B /* Persistence */,
 				59C705D6212125B4000423A4 /* Services */,
 				5902B56B211E014C00707EB0 /* Entities */,
@@ -380,11 +381,13 @@
 		59C705D6212125B4000423A4 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				59F64EE52130928A007759BA /* Preferences */,
 				591EE2382134D5410087538B /* Settings */,
 				599948CC212A1AFD00700900 /* Reports */,
 				59044BEE21251CFC00A6BF4D /* Foods */,
 				59538C2C21226CF00061147B /* Meal */,
 				59044BEC21251A5E00A6BF4D /* ViewPresenter.swift */,
+				591EE23F2134E19A0087538B /* NotificationService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -728,6 +731,7 @@
 				591EE23C2134D5630087538B /* SettingsIteractor.swift in Sources */,
 				5902B56A211E013300707EB0 /* Meal.swift in Sources */,
 				59F64EE421309285007759BA /* Preferences.swift in Sources */,
+				591EE2402134E19A0087538B /* NotificationService.swift in Sources */,
 				59180429213483C900C6F2DE /* Level.swift in Sources */,
 				59928F1B212F9664003B9D7E /* AddFoodListCellView.swift in Sources */,
 				59F64EE2213085AE007759BA /* SettingsViewController.swift in Sources */,

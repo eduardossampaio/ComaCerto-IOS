@@ -10,7 +10,6 @@ import Foundation
 import UIKit
 import UserNotifications
 class  SettingsViewController : UITableViewController, SettingsPresenter{
-   
     
     private let BREAKFAST_TIME_PICKER_TAG   = 1111
     private let LUNCH_TIME_PICKER_TAG       = 2222
@@ -31,6 +30,9 @@ class  SettingsViewController : UITableViewController, SettingsPresenter{
     override func viewDidLoad() {
         settingsIteractor = SettingsService(presenter: self)
         settingsIteractor.onScreenLoaded()
+    }
+    override func viewDidDisappear(_ animated: Bool) {
+        settingsIteractor.onScreenClose()
     }
     
     func updateNotificationHour(hour: Date, for mealType: MealType) {
