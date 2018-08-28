@@ -32,9 +32,7 @@ extension Date{
         return dateFormatterPrint.date(from: formattedDate)
     }
     func toReadableTime() -> String{
-        let dateFormatter = DateFormatter()
-        dateFormatter.timeStyle = .short
-        return dateFormatter.string(from: self)
+        return formatDate(format: "HH:mm")
     }
     
     func beginOfDay() ->Date{

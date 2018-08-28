@@ -122,7 +122,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Coma Certo/Core/Persistence/MealPersistence.swift"
-            timestampString = "557173885.6021971"
+            timestampString = "557175666.41881"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "25"
@@ -186,13 +186,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Coma Certo/Core/Services/Settings/SettingsService.swift"
-            timestampString = "557159081.2220401"
+            timestampString = "557174555.734177"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "54"
             endingLineNumber = "54"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            landmarkName = "scheduleNotifications()"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -202,13 +202,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Coma Certo/Core/Services/Settings/SettingsService.swift"
-            timestampString = "557159081.222098"
+            timestampString = "557174555.734673"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "19"
             endingLineNumber = "19"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            landmarkName = "onScreenLoaded()"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -218,13 +218,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Coma Certo/Core/Services/Settings/SettingsService.swift"
-            timestampString = "557159081.222142"
+            timestampString = "557174555.734888"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "26"
             endingLineNumber = "26"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            landmarkName = "onScreenClose()"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -266,7 +266,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Coma Certo/View/DailyMeals/ViewControllers/ImageCollectionViewController.swift"
-            timestampString = "557173885.602888"
+            timestampString = "557175666.419481"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "34"
