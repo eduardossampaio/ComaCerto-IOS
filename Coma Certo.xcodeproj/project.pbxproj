@@ -35,7 +35,6 @@
 		59538C3621231F5C0061147B /* MealRealmEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59538C3521231F5C0061147B /* MealRealmEntity.swift */; };
 		59538C382123205C0061147B /* FoodRealmEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59538C372123205C0061147B /* FoodRealmEntity.swift */; };
 		59538C3A212340CB0061147B /* Entities+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59538C39212340CB0061147B /* Entities+Extensions.swift */; };
-		59538C3D2123615C0061147B /* MyMealsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59538C3C2123615C0061147B /* MyMealsViewController.swift */; };
 		59538C42212468650061147B /* Slider+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59538C41212468650061147B /* Slider+Extensions.swift */; };
 		59538C4421248DDD0061147B /* GenerateReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59538C4321248DDD0061147B /* GenerateReportViewController.swift */; };
 		59538C46212490F20061147B /* ViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59538C45212490F20061147B /* ViewController+Extensions.swift */; };
@@ -119,7 +118,6 @@
 		59538C3521231F5C0061147B /* MealRealmEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealRealmEntity.swift; sourceTree = "<group>"; };
 		59538C372123205C0061147B /* FoodRealmEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodRealmEntity.swift; sourceTree = "<group>"; };
 		59538C39212340CB0061147B /* Entities+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Entities+Extensions.swift"; sourceTree = "<group>"; };
-		59538C3C2123615C0061147B /* MyMealsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyMealsViewController.swift; sourceTree = "<group>"; };
 		59538C41212468650061147B /* Slider+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Slider+Extensions.swift"; sourceTree = "<group>"; };
 		59538C4321248DDD0061147B /* GenerateReportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerateReportViewController.swift; sourceTree = "<group>"; };
 		59538C45212490F20061147B /* ViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+Extensions.swift"; sourceTree = "<group>"; };
@@ -291,7 +289,6 @@
 		59538C3B2123613D0061147B /* My Meals */ = {
 			isa = PBXGroup;
 			children = (
-				59538C3C2123615C0061147B /* MyMealsViewController.swift */,
 			);
 			path = "My Meals";
 			sourceTree = "<group>";
@@ -726,7 +723,6 @@
 				5902B56D211E01E900707EB0 /* Feeling.swift in Sources */,
 				5981835E212AECD500814C24 /* AboutAppInfoViewController.swift in Sources */,
 				59044BF021251D1000A6BF4D /* FoodIteractor.swift in Sources */,
-				59538C3D2123615C0061147B /* MyMealsViewController.swift in Sources */,
 				59D28818211A80B300CD38B7 /* DailyMealsViewController.swift in Sources */,
 				591EE23C2134D5630087538B /* SettingsIteractor.swift in Sources */,
 				5902B56A211E013300707EB0 /* Meal.swift in Sources */,
