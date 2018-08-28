@@ -9,6 +9,8 @@
 import Foundation
 protocol FoodPresenter: ViewPresenter {
     
-    func updateFoodList()
+    func updateFoodList(foodsList:[Food])
+    
+    func updateSelectedFoodList(foodsList:[Food])
     
 }

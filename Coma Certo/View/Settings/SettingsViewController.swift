@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import UserNotifications
 class  SettingsViewController : UITableViewController {
     private let BREAKFAST_TIME_PICKER_TAG   = 1111
     private let LUNCH_TIME_PICKER_TAG       = 2222
@@ -28,6 +29,27 @@ class  SettingsViewController : UITableViewController {
         dinnerButton.setTitle( Preferences.instance.dinnerHour, for: .normal)
     }
     
+    override func viewDidDisappear(_ animated: Bool) {
+//
+//        let center = UNUserNotificationCenter.current()
+//        let content = UNMutableNotificationContent()
+//        content.title = "Test"
+//        var date = DateComponents()
+//        date.hour = 19  // 8 AM
+//        date.minute = 32
+//        let trigger = UNCalendarNotificationTrigger(dateMatching: date, repeats: true)
+//        
+//        let identifier = "UYLLocalNotification"
+//                    let request = UNNotificationRequest(identifier: identifier,
+//                                                        content: content, trigger: trigger)
+//                    center.add(request, withCompletionHandler: { (error) in
+//                        if let error = error {
+//                            // Something went wrong
+//                            print(error)
+//                        }
+//                    })
+////        }
+    }
     @IBAction func onAddRememberSwitchChange(_ sender: UISwitch) {
         Preferences.instance.remindersEnabled = sender.isOn
         self.tableView.reloadData()

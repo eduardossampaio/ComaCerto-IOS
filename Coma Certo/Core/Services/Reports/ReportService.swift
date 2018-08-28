@@ -46,7 +46,7 @@ class ReportService : ReportIteractor {
         Alamofire.request(request).responseData{ response in
             self.reportPresenter.hideLoading()
             guard response.response?.statusCode == 200 else {
-                self.reportPresenter.showError(message: "Ocorreu um erro ao gerar o relatório alimentar")
+                self.reportPresenter.showError(message: "Ocorreu um erro ao gerar o relatório alimentar, Tente novamente mais tarde")
                 return
             }
             if let pdfData = response.result.value{

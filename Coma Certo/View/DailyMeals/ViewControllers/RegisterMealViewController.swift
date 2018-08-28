@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 import CustomizableActionSheet
-class RegisterMealViewController: UITableViewController {
+class RegisterMealViewController: UITableViewController, UITextViewDelegate {
     
     typealias OnNewMealSaved = ((Meal) -> Void)
     
@@ -20,6 +20,7 @@ class RegisterMealViewController: UITableViewController {
     @IBOutlet weak var whatIAteCell: UITableViewCell!
     @IBOutlet weak var hungerStatusLabel: UILabel!
     @IBOutlet weak var satietyStatusLabel: UILabel!
+    @IBOutlet weak var whatDoingTextField: UITextView!
     
     //embeededViewControllers
     private var listFoodTableViewController: ListFoodTableViewController!
@@ -33,12 +34,11 @@ class RegisterMealViewController: UITableViewController {
     @IBAction func onSaveButtonClicked(_ sender: Any) {
         let hunger = Int(hungerSlider.value)
         let satiety = Int(satietySlider.value)
-
         meal.hunger.level = hunger
         meal.satiety.level = satiety
-       
+        meal.whatDoing = whatDoingTextField.text
         dismiss(animated: true, completion: nil)
-         onNewMealSaved?(meal)
+        onNewMealSaved?(meal)
     }
     
     @IBAction func onDateButtonClicked(_ sender: Any) {
@@ -64,11 +64,13 @@ class RegisterMealViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.bounces = false
+       
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         updateDateTimeLabels()
         updateSliders()
+        whatDoingTextField.text = meal.whatDoing
     }
     
     private func updateSliderStatusText(slider:UISlider,level:Level, targetLabel:UILabel){
@@ -138,6 +140,13 @@ class RegisterMealViewController: UITableViewController {
         }
     }
     
+    func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
+        if text == "\n" {
+            textView.resignFirstResponder()
+            return false
+        }
+        return true
+    }
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if indexPath.section == 2 && meal.foods.count > 0{
             return CGFloat(44 * (meal.foods.count + 1) )

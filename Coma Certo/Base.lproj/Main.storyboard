@@ -307,10 +307,39 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
+                            <tableViewSection headerTitle="O que estava fazendo?" id="oIi-3M-sHi">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="88" id="yS5-uF-kCp">
+                                        <rect key="frame" x="0.0" y="334" width="414" height="88"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="yS5-uF-kCp" id="113-IR-ZUN">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="88"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="fFa-ch-sjC">
+                                                    <rect key="frame" x="20" y="11" width="374" height="66"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                    <connections>
+                                                        <outlet property="delegate" destination="Wxm-gx-iKF" id="94F-8o-qBs"/>
+                                                    </connections>
+                                                </textView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="fFa-ch-sjC" secondAttribute="trailing" id="5iP-PW-G6g"/>
+                                                <constraint firstItem="fFa-ch-sjC" firstAttribute="top" secondItem="113-IR-ZUN" secondAttribute="topMargin" id="6cz-R0-tIp"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="fFa-ch-sjC" secondAttribute="bottom" id="WoR-CB-1Np"/>
+                                                <constraint firstItem="fFa-ch-sjC" firstAttribute="leading" secondItem="113-IR-ZUN" secondAttribute="leadingMargin" id="zWF-8w-knc"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
                             <tableViewSection headerTitle="Nível de fome" id="xnK-vt-Kf9">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="60" id="KBx-AK-AAV">
-                                        <rect key="frame" x="0.0" y="334" width="414" height="60"/>
+                                        <rect key="frame" x="0.0" y="450" width="414" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="KBx-AK-AAV" id="uF9-lJ-Ss3">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
@@ -357,7 +386,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="60" id="mEF-KA-h4q">
-                                        <rect key="frame" x="0.0" y="394" width="414" height="60"/>
+                                        <rect key="frame" x="0.0" y="510" width="414" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="mEF-KA-h4q" id="ynS-Bl-bmu">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
@@ -408,7 +437,7 @@
                             <tableViewSection headerTitle="Como me senti?" id="olL-P3-B0U">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="180" id="AkK-lT-ZU6">
-                                        <rect key="frame" x="0.0" y="482" width="414" height="180"/>
+                                        <rect key="frame" x="0.0" y="598" width="414" height="180"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="AkK-lT-ZU6" id="7Wv-Cn-wAX">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="180"/>
@@ -457,6 +486,7 @@
                         <outlet property="satietySlider" destination="UOD-D5-BbM" id="cgu-dl-0vl"/>
                         <outlet property="satietyStatusLabel" destination="mvs-C3-vzh" id="XSH-WH-ham"/>
                         <outlet property="timeTextButton" destination="Ojk-a4-WWb" id="iPC-DN-61o"/>
+                        <outlet property="whatDoingTextField" destination="fFa-ch-sjC" id="jQ3-1h-lsp"/>
                         <outlet property="whatIAteCell" destination="rhM-at-6V9" id="DRC-zl-rmH"/>
                         <segue destination="CpF-Ru-hsn" kind="show" identifier="selectFoodsSegue" id="nV5-Aj-GXN"/>
                     </connections>
@@ -658,7 +688,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aqn-lf-KqF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1793" y="6"/>
+            <point key="canvasLocation" x="1793" y="174"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="fo9-IV-Abk">
@@ -1009,7 +1039,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iN2-0L-VNV">
-                                                    <rect key="frame" x="8" y="12.333333333333336" width="269.33333333333331" height="18"/>
+                                                    <rect key="frame" x="16" y="12.333333333333336" width="261.33333333333331" height="18"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -1029,7 +1059,7 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="J2Q-zM-rTf" firstAttribute="leading" secondItem="iN2-0L-VNV" secondAttribute="trailing" constant="4" id="Cqs-Jj-2K3"/>
-                                                <constraint firstItem="iN2-0L-VNV" firstAttribute="leading" secondItem="BrX-t4-z7U" secondAttribute="leading" constant="8" id="CtV-mH-C8s"/>
+                                                <constraint firstItem="iN2-0L-VNV" firstAttribute="leading" secondItem="BrX-t4-z7U" secondAttribute="leading" constant="16" id="CtV-mH-C8s"/>
                                                 <constraint firstItem="7d9-ax-jsT" firstAttribute="centerY" secondItem="BrX-t4-z7U" secondAttribute="centerY" id="J0q-Hp-Hxy"/>
                                                 <constraint firstItem="iN2-0L-VNV" firstAttribute="centerY" secondItem="BrX-t4-z7U" secondAttribute="centerY" id="Or6-7i-idA"/>
                                                 <constraint firstItem="J2Q-zM-rTf" firstAttribute="centerY" secondItem="BrX-t4-z7U" secondAttribute="centerY" id="Q53-kf-23u"/>
@@ -1365,7 +1395,7 @@
         <image name="emoji-happy" width="480" height="480"/>
         <image name="list" width="29" height="29"/>
         <image name="meal" width="42" height="42"/>
-        <image name="report" width="29" height="29"/>
+        <image name="report" width="27" height="31"/>
         <image name="settings" width="29" height="29"/>
     </resources>
     <inferredMetricsTieBreakers>

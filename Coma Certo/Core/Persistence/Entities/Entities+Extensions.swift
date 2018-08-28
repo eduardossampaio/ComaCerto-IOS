@@ -19,7 +19,7 @@ extension MealRealmEntity{
         for foodRealmEntity in foods{
             allFoods.append(foodRealmEntity.toFood())
         }
-        let meal = Meal(mealType:MealType.get(rawValue: self.mealType), date: date, foods: allFoods, hunger: hunger, satiety: satiety, feeling: Feeling.getFeeling(byId:feeling))
+        let meal = Meal(mealType:MealType.get(rawValue: self.mealType),whatDoing:whatDoing, date: date, foods: allFoods, hunger: hunger, satiety: satiety, feeling: Feeling.getFeeling(byId:feeling))
         meal.primaryKey = self.primaryKey
         return meal
     }
@@ -27,6 +27,7 @@ extension MealRealmEntity{
     func fromMeal(meal:Meal){
         self.dateAndTime = NSDate(timeIntervalSince1970: (meal.date.timeIntervalSince1970))
         self.feeling = meal.feeling.id
+        self.whatDoing = meal.whatDoing ?? ""
         self.hunger = meal.hunger.level
         self.satiety = meal.satiety.level
         self.mealType = meal.mealType?.rawValue ?? 0;

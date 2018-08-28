@@ -10,6 +10,7 @@ import Foundation
 class Meal : Codable  {
     var primaryKey : String?
     var mealType: MealType!
+    var whatDoing: String?
     var date = Date()
     var foods = [Food]()
     var hunger:Level = Level.hunger()
@@ -19,8 +20,10 @@ class Meal : Codable  {
     init(){
         
     }
-    init(mealType:MealType, date:Date ,foods: [Food] ,hunger: Int ,satiety:Int ,feeling:Feeling) {
+    
+    init(mealType:MealType,whatDoing:String?, date:Date ,foods: [Food] ,hunger: Int ,satiety:Int ,feeling:Feeling) {
         self.mealType = mealType
+        self.whatDoing = whatDoing
         self.date = date
         self.foods = foods
         self.hunger = Level.hunger(level: hunger)
@@ -31,6 +34,7 @@ class Meal : Codable  {
     enum CodingKeys: String, CodingKey{
         case mealType
         case date = "dateAndTime"
+        case whatDoing = "whatWasDoing"
         case foods
         case hunger
         case satiety
@@ -41,6 +45,7 @@ class Meal : Codable  {
     {
         var container = encoder.container(keyedBy: CodingKeys.self)
         try container.encode(mealType.name, forKey: .mealType)
+        try container.encode(whatDoing, forKey: .whatDoing)
         try container.encode(date.formatDate(format: "dd/MM/yyyy HH:mm"), forKey: .date)
         try container.encode(foods, forKey: .foods)
         try container.encode(hunger.selectedLevelName(), forKey: .hunger)

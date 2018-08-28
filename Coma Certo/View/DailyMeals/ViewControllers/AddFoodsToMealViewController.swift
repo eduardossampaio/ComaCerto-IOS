@@ -9,8 +9,8 @@
 import Foundation
 import UIKit
 import SearchTextField
-//https://github.com/apasccon/SearchTextField
-class AddFoodsToMealViewController : UIViewController,UITableViewDelegate,UITableViewDataSource,UITextFieldDelegate{
+class AddFoodsToMealViewController : UIViewController,UITableViewDelegate,UITableViewDataSource,UITextFieldDelegate, FoodPresenter{
+    
     typealias OnFoodListUpdate = ( ([Food])->Void )
     
     @IBOutlet weak var addFoodsTextField: SearchTextField!
@@ -20,8 +20,10 @@ class AddFoodsToMealViewController : UIViewController,UITableViewDelegate,UITabl
     var allFoodsList = [Food]()
     var selectedFoods = [Food]()
     var itemToAdd = ""
+    var foodIteractor:FoodIteractor!
     
     override func viewDidLoad() {
+        self.foodIteractor = FoodService(presenter: self)
         super.viewDidLoad()
         addFoodsTextField.autocorrectionType = .default
         addFoodsTextField.theme.bgColor = UIColor (red: 0.95, green: 0.95, blue: 0.95, alpha: 1)
@@ -29,22 +31,24 @@ class AddFoodsToMealViewController : UIViewController,UITableViewDelegate,UITabl
         addFoodsTextField.theme.font = UIFont.systemFont(ofSize: 17.0)
         addFoodsTextField.returnKeyType = .next
     }
+    func updateFoodList(foodsList: [Food]) {
+        allFoodsList = foodsList
+        setupPreValues()
+    }
+    
+    func updateSelectedFoodList(foodsList: [Food]) {
+        
+    }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-         fetchFoodsList()
+        foodIteractor.onScreenLoad()
     }
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         onFoodListUpdate?(selectedFoods)
     }
-    private func fetchFoodsList(){
-        let foodService = FoodHttpService(presenter: self)
-        foodService.fetchFoodsList(){ foods in
-            self.allFoodsList = FoodHttpService.foodList
-            self.setupPreValues()
-        }
-    }
+   
     private func setupPreValues(){
         var searchItems = [SearchTextFieldItem]()
         for food in allFoodsList{

@@ -7,12 +7,9 @@
 //
 
 import Foundation
-class FoodIteractor {
-    func onScreenLoad()  {
-    }
+protocol FoodIteractor {
+    func onScreenLoad()
     
-    func onNewFoodEntered(food: Food){
-        
-    }
+    func onNewFoodEntered(food: Food)
     
 }

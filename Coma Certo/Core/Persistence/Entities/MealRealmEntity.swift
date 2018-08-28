@@ -11,6 +11,7 @@ import RealmSwift
 class MealRealmEntity : Object {
     @objc dynamic var primaryKey = UUID().uuidString
     @objc dynamic var mealType = 0
+    @objc dynamic var whatDoing = ""
     @objc dynamic var dateAndTime = NSDate()
     var foods = List<FoodRealmEntity>()
     @objc dynamic var hunger = 0
