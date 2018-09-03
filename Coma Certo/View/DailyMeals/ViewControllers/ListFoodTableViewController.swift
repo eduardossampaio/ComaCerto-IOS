@@ -29,7 +29,11 @@ class ListFoodTableViewController : UITableViewController{
             let cell = tableView.dequeueReusableCell(withIdentifier: "foodCell")
             cell?.textLabel?.text = foodList[foodIndex].name
             let portion = foodList[foodIndex].portion ?? 1
-            cell?.detailTextLabel?.text = String(portion)
+            if portion == 1 {
+                cell?.detailTextLabel?.text = "1 porção"
+            }else{
+                cell?.detailTextLabel?.text = "\(portion) porções"
+            }
             return cell!
         }
     }

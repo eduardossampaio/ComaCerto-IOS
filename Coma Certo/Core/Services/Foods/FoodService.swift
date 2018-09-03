@@ -28,7 +28,7 @@ class FoodService : FoodIteractor {
     }
     
     private func fetchFoodsList(){
-        foodPresenter.showLoading()
+//        foodPresenter.showLoading()
         let foodService = FoodHttpService()
         foodService.fetchFromWeb(){ foods, error in
             if error == nil && foods != nil{
@@ -38,7 +38,7 @@ class FoodService : FoodIteractor {
             }else{
                 self.foodPresenter.updateFoodList(foodsList: [Food]())
             }
-            self.foodPresenter.hideLoading()
+//            self.foodPresenter.hideLoading()
         }
     }
     
