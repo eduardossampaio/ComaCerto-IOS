@@ -53,7 +53,8 @@ class DisplayReportViewController : UIViewController{
         let fileManager = FileManager.default
         if fileManager.fileExists(atPath: documentPath){
             let document = NSData(contentsOfFile: documentPath)
-            let activityViewController: UIActivityViewController = UIActivityViewController(activityItems: [document!], applicationActivities: nil)
+             let documentUrl = URL(fileURLWithPath: documentPath)
+            let activityViewController: UIActivityViewController = UIActivityViewController(activityItems: [documentUrl], applicationActivities: nil)
             activityViewController.popoverPresentationController?.sourceView=self.view
             present(activityViewController, animated: true, completion: nil)
         }
