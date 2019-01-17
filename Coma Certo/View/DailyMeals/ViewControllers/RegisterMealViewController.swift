@@ -177,8 +177,8 @@ class RegisterMealViewController: UITableViewController, UITextViewDelegate {
        openDateActionSheet(date: meal.date, mode:.time)
     }
     
-    @objc override func datePickerValueChanged(_ sender: UIDatePicker){
-        self.meal.date =  sender.date
+     override func datePickerValueChanged(tag: Int,date:Date){
+        self.meal.date =  date
         updateDateTimeLabels()
     }
 }

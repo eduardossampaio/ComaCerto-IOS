@@ -11,6 +11,7 @@ target 'Coma Certo' do
   pod 'CustomizableActionSheet'
   pod 'Alamofire', '~> 4.7'
   pod "MarkdownView"
+  pod 'DateTimePicker'
   target 'Coma CertoTests' do
     inherit! :search_paths
     # Pods for testing

@@ -9,7 +9,10 @@
 import Foundation
 import UIKit
 import CustomizableActionSheet
+import DateTimePicker
 extension UIViewController : ViewPresenter {
+  
+    
     static let SPINNER_VIEW_TAG = 1234;
     
     func showAlert(message: String) {
@@ -63,22 +66,31 @@ extension UIViewController : ViewPresenter {
     }
     
     func openDateActionSheet(date:Date, mode: UIDatePickerMode, tag: Int = 0){
-        var items = [CustomizableActionSheetItem]()
-        let sampleViewItem = CustomizableActionSheetItem()
-        let datePicker = UIDatePicker()
-        datePicker.tag = tag
-        datePicker.addTarget(self, action: #selector(datePickerValueChanged(_:)), for: .valueChanged)
-        datePicker.setDate(date, animated: true)
-        datePicker.backgroundColor = UIColor.white
-        sampleViewItem.type = .view
-        sampleViewItem.view = datePicker
-        sampleViewItem.height = 250
-        items.append(sampleViewItem)
-        datePicker.datePickerMode = mode
-        let actionSheet = CustomizableActionSheet()
-        actionSheet.showInView(self.view, items: items)
+
+        let min = Date().addingTimeInterval(-60 * 60 * 24 * 300)
+        let max = Date().addingTimeInterval(60 * 60 * 24 * 300)
+        let picker = DateTimePicker.create(minimumDate: min, maximumDate: max)
+        
+        if mode == UIDatePickerMode.date{
+            picker.isDatePickerOnly = true
+            picker.dateFormat = "dd/MM/yyyy"
+            picker.todayButtonTitle = "Hoje"
+        }else if mode ==  UIDatePickerMode.time{
+            picker.isTimePickerOnly = true
+            picker.dateFormat = "HH:mm"
+            picker.todayButtonTitle = "Agora"
+        }
+        picker.tag = tag
+        picker.selectedDate = date
+        picker.cancelButtonTitle = "Cancelar"
+        picker.doneButtonTitle = "Confirmar"
+        picker.completionHandler = { date in
+            self.datePickerValueChanged(tag: picker.tag,date: date)
+        }
+        picker.show()
     }
+
     
-    @objc func datePickerValueChanged(_ sender: UIDatePicker){
+    @objc func datePickerValueChanged(tag: Int,date:Date){
     }
 }

@@ -43,11 +43,11 @@ class GenerateReportViewController : UIViewController, ReportPresenter{
        openDateActionSheet(date: finalDate, mode: UIDatePickerMode.date,tag: FINAL_DATE_TAG)
     }
     
-    @objc override func datePickerValueChanged(_ sender: UIDatePicker){
-        if (sender.tag == INITIAL_DATE_TAG){
-            initialDate = sender.date
-        }else if(sender.tag == FINAL_DATE_TAG){
-            finalDate = sender.date
+     override func datePickerValueChanged(tag: Int,date:Date){
+        if (tag == INITIAL_DATE_TAG){
+            initialDate = date
+        }else if(tag == FINAL_DATE_TAG){
+            finalDate = date
         }
         updateDateLabels()
     }

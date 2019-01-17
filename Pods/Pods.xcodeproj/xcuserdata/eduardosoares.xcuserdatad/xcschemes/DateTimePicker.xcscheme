@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "C7E2C06436902FC29351D4D860BE5774"
-               BlueprintName = "SearchTextField"
+               BlueprintIdentifier = "5F72C1852584A5C1073B32B80AF17541"
+               BlueprintName = "DateTimePicker"
                ReferencedContainer = "container:Pods.xcodeproj"
-               BuildableName = "SearchTextField.framework">
+               BuildableName = "DateTimePicker.framework">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

@@ -108,21 +108,20 @@ class  SettingsViewController : UITableViewController, SettingsPresenter{
         openDateActionSheet(date: timeToDisplay, mode: .time, tag: tag)
     }
     
-    override func datePickerValueChanged(_ sender: UIDatePicker) {
-        let tag = sender.tag
-        let timeText =  sender.date.formatDate(format: "HH:mm")
+    override func datePickerValueChanged(tag: Int,date:Date){
+        let timeText =  date.formatDate(format: "HH:mm")
         if tag == BREAKFAST_TIME_PICKER_TAG {
             breakfastLabel.text =  timeText
-            settingsIteractor.onNotificationAlarmChanged(mealType: MealType.breakfast, hour: sender.date)
+            settingsIteractor.onNotificationAlarmChanged(mealType: MealType.breakfast, hour: date)
         }else if tag == LUNCH_TIME_PICKER_TAG {
             lunchLabel.text = timeText
-            settingsIteractor.onNotificationAlarmChanged(mealType: MealType.lunch, hour: sender.date)
+            settingsIteractor.onNotificationAlarmChanged(mealType: MealType.lunch, hour: date)
         }else if tag == SNACK_TIME_PICKER_TAG {
             snackLabel.text =  timeText
-            settingsIteractor.onNotificationAlarmChanged(mealType: MealType.snack, hour: sender.date)
+            settingsIteractor.onNotificationAlarmChanged(mealType: MealType.snack, hour: date)
         }else if tag == DINNER_PICKER_TAG {
             dinnerLabel.text =  timeText
-            settingsIteractor.onNotificationAlarmChanged(mealType: MealType.dinner, hour: sender.date)
+            settingsIteractor.onNotificationAlarmChanged(mealType: MealType.dinner, hour: date)
         }
     }
     

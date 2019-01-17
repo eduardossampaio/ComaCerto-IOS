@@ -1,6 +1,7 @@
 PODS:
   - Alamofire (4.7.3)
   - CustomizableActionSheet (1.2.1)
+  - DateTimePicker (2.1.2)
   - MarkdownView (1.3.0)
   - Realm (3.7.5):
     - Realm/Headers (= 3.7.5)
@@ -12,6 +13,7 @@ PODS:
 DEPENDENCIES:
   - Alamofire (~> 4.7)
   - CustomizableActionSheet
+  - DateTimePicker
   - MarkdownView
   - RealmSwift
   - SearchTextField
@@ -20,6 +22,7 @@ SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
     - CustomizableActionSheet
+    - DateTimePicker
     - MarkdownView
     - Realm
     - RealmSwift
@@ -28,11 +31,12 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
   CustomizableActionSheet: 53b259b33e3567f4708cbc080bb4222632b6aa8d
+  DateTimePicker: 111a1ca10b390ac315fdf3e85a5941fd4f72dfb7
   MarkdownView: 6cee6c558eed4a012005405066071ef16a042d17
   Realm: c286caf4dbf346ce24aad49ca76c7ce622d4a082
   RealmSwift: 2a9281e37d6de55f66f76254d49d28aeb1b729e4
   SearchTextField: 261b0febd49194492f29555fff3c5c0019ca84d2
 
-PODFILE CHECKSUM: d7ffd1a60956b5b6ec3fac0e22350076969f744c
+PODFILE CHECKSUM: 1def2788c17ae9dcf189e2da92421068b09798e2
 
 COCOAPODS: 1.5.3
