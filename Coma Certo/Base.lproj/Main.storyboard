@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="2lW-OT-5sk">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="2lW-OT-5sk">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -31,7 +31,7 @@
                                 </items>
                             </navigationBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="1pm-6Q-E4K">
-                                <rect key="frame" x="0.0" y="118" width="414" height="637"/>
+                                <rect key="frame" x="0.0" y="204" width="414" height="551"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="mealCell" rowHeight="72" id="Mdy-iN-dDB" customClass="ListMealCellView" customModule="Coma_Certo" customModuleProvider="target">
@@ -109,26 +109,26 @@
                                 </connections>
                             </tableView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="uh8-SG-Vih">
-                                <rect key="frame" x="0.0" y="76" width="414" height="42"/>
+                                <rect key="frame" x="0.0" y="76" width="414" height="128"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gb3-sp-j5P" userLabel="PreviousButton">
-                                        <rect key="frame" x="0.0" y="0.0" width="99.666666666666671" height="42"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="153" height="128"/>
                                         <state key="normal" image="arrow-prev"/>
                                         <connections>
                                             <action selector="onPreviousButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cDh-99-JOK"/>
                                         </connections>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="LUx-26-G9o">
-                                        <rect key="frame" x="99.666666666666671" y="0.0" width="214.66666666666663" height="36"/>
+                                        <rect key="frame" x="153" y="0.0" width="108" height="36"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="253" verticalHuggingPriority="253" horizontalCompressionResistancePriority="752" verticalCompressionResistancePriority="752" text="30/08/2018" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r6F-DY-85d">
-                                                <rect key="frame" x="0.0" y="0.0" width="214.66666666666666" height="20.333333333333332"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="108" height="20.333333333333332"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quinta-Feira" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pu4-Oa-oll">
-                                                <rect key="frame" x="0.0" y="20.333333333333329" width="214.66666666666666" height="15.666666666666664"/>
+                                                <rect key="frame" x="0.0" y="20.333333333333329" width="108" height="15.666666666666664"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -136,7 +136,7 @@
                                         </subviews>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" verticalHuggingPriority="249" horizontalCompressionResistancePriority="749" verticalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EJy-gd-JgB" userLabel="NextButton">
-                                        <rect key="frame" x="314.33333333333331" y="0.0" width="99.666666666666686" height="42"/>
+                                        <rect key="frame" x="261" y="0.0" width="153" height="128"/>
                                         <state key="normal" image="arrow-next"/>
                                         <connections>
                                             <action selector="onNextButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6Ky-Te-TMj"/>
@@ -958,7 +958,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iN2-0L-VNV">
-                                                    <rect key="frame" x="16" y="12.333333333333336" width="261.33333333333331" height="18"/>
+                                                    <rect key="frame" x="16" y="13" width="261.33333333333331" height="18"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -1098,13 +1098,13 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Adicionar Lembretes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cwr-y9-z2P">
-                                                    <rect key="frame" x="20" y="11" width="329" height="21"/>
+                                                    <rect key="frame" x="20" y="11.333333333333336" width="329" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Qhw-oX-y3u">
-                                                    <rect key="frame" x="349" y="6" width="51" height="31"/>
+                                                    <rect key="frame" x="349" y="6.3333333333333321" width="51" height="30.999999999999996"/>
                                                     <connections>
                                                         <action selector="onAddRememberSwitchChange:" destination="x18-sC-Bo7" eventType="valueChanged" id="fAE-RP-smt"/>
                                                     </connections>
@@ -1127,7 +1127,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="G3g-OY-5pT">
-                                                    <rect key="frame" x="20" y="11" width="374" height="20.333333333333329"/>
+                                                    <rect key="frame" x="20" y="11.666666666666666" width="374" height="20.333333333333336"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="255" verticalHuggingPriority="255" horizontalCompressionResistancePriority="755" verticalCompressionResistancePriority="755" text="Café da Manhã" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cZX-Ho-C98">
                                                             <rect key="frame" x="0.0" y="0.0" width="187" height="20.333333333333332"/>
@@ -1163,7 +1163,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="RFZ-0p-mKD">
-                                                    <rect key="frame" x="20" y="11" width="374" height="20.333333333333329"/>
+                                                    <rect key="frame" x="20" y="11.666666666666666" width="374" height="20.333333333333336"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="255" verticalHuggingPriority="255" horizontalCompressionResistancePriority="755" verticalCompressionResistancePriority="755" text="Almoço" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Sj-bb-9Sk">
                                                             <rect key="frame" x="0.0" y="0.0" width="187" height="20.333333333333332"/>
@@ -1199,7 +1199,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cL9-Y7-Ecf">
-                                                    <rect key="frame" x="20" y="11" width="374" height="20.333333333333329"/>
+                                                    <rect key="frame" x="20" y="11.666666666666666" width="374" height="20.333333333333336"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="255" verticalHuggingPriority="255" horizontalCompressionResistancePriority="755" verticalCompressionResistancePriority="755" text="Lanche" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cw7-RA-2dA">
                                                             <rect key="frame" x="0.0" y="0.0" width="56" height="20.333333333333332"/>
@@ -1235,7 +1235,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jxP-UF-CzJ">
-                                                    <rect key="frame" x="20" y="11" width="374" height="20.333333333333329"/>
+                                                    <rect key="frame" x="20" y="11.666666666666666" width="374" height="20.333333333333336"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="255" verticalHuggingPriority="255" horizontalCompressionResistancePriority="755" verticalCompressionResistancePriority="755" text="Janta" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Te-D7-KDh">
                                                             <rect key="frame" x="0.0" y="0.0" width="42.333333333333336" height="20.333333333333332"/>
@@ -1313,11 +1313,11 @@
     <resources>
         <image name="about" width="29" height="29"/>
         <image name="almoco" width="64" height="64"/>
-        <image name="arrow-next" width="42" height="42"/>
-        <image name="arrow-prev" width="42" height="42"/>
-        <image name="emoji-happy" width="480" height="480"/>
+        <image name="arrow-next" width="128" height="128"/>
+        <image name="arrow-prev" width="128" height="128"/>
+        <image name="emoji-happy" width="128" height="128"/>
         <image name="meal" width="29" height="29"/>
-        <image name="report" width="27" height="31"/>
+        <image name="report" width="27" height="31.333333969116211"/>
         <image name="settings" width="29" height="29"/>
     </resources>
     <inferredMetricsTieBreakers>

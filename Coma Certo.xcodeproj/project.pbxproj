@@ -23,6 +23,7 @@
 		591EE23C2134D5630087538B /* SettingsIteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 591EE23B2134D5630087538B /* SettingsIteractor.swift */; };
 		591EE23E2134D62B0087538B /* SettingsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 591EE23D2134D62B0087538B /* SettingsPresenter.swift */; };
 		591EE2402134E19A0087538B /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 591EE23F2134E19A0087538B /* NotificationService.swift */; };
+		5947110B21F5E311009E8BD9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5947110A21F5E310009E8BD9 /* Assets.xcassets */; };
 		594DAC25212C983900E1729D /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 594DAC24212C983900E1729D /* String+Extensions.swift */; };
 		594DAC27212CB27700E1729D /* about-app.md in Resources */ = {isa = PBXBuildFile; fileRef = 594DAC26212CAF8700E1729D /* about-app.md */; };
 		594DAC2B212CB34F00E1729D /* general-rules.md in Resources */ = {isa = PBXBuildFile; fileRef = 594DAC28212CB30E00E1729D /* general-rules.md */; };
@@ -47,7 +48,6 @@
 		5981835E212AECD500814C24 /* AboutAppInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5981835D212AECD500814C24 /* AboutAppInfoViewController.swift */; };
 		59818362212AF4F500814C24 /* about.plist in Resources */ = {isa = PBXBuildFile; fileRef = 59818361212AF4F500814C24 /* about.plist */; };
 		59818364212B62EF00814C24 /* MealReportRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59818363212B62EF00814C24 /* MealReportRequest.swift */; };
-		59818366212BB5A800814C24 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 59818365212BB5A800814C24 /* Assets.xcassets */; };
 		59928F1B212F9664003B9D7E /* AddFoodListCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59928F1A212F9664003B9D7E /* AddFoodListCellView.swift */; };
 		599948CE212A1B2200700900 /* ReportService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 599948CD212A1B2200700900 /* ReportService.swift */; };
 		599948D0212A1B5E00700900 /* ReportInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 599948CF212A1B5E00700900 /* ReportInteractor.swift */; };
@@ -106,6 +106,7 @@
 		591EE23B2134D5630087538B /* SettingsIteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsIteractor.swift; sourceTree = "<group>"; };
 		591EE23D2134D62B0087538B /* SettingsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsPresenter.swift; sourceTree = "<group>"; };
 		591EE23F2134E19A0087538B /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
+		5947110A21F5E310009E8BD9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		594DAC24212C983900E1729D /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		594DAC26212CAF8700E1729D /* about-app.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "about-app.md"; sourceTree = "<group>"; };
 		594DAC28212CB30E00E1729D /* general-rules.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "general-rules.md"; sourceTree = "<group>"; };
@@ -130,7 +131,6 @@
 		5981835D212AECD500814C24 /* AboutAppInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutAppInfoViewController.swift; sourceTree = "<group>"; };
 		59818361212AF4F500814C24 /* about.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = about.plist; sourceTree = "<group>"; };
 		59818363212B62EF00814C24 /* MealReportRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealReportRequest.swift; sourceTree = "<group>"; };
-		59818365212BB5A800814C24 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		59928F1A212F9664003B9D7E /* AddFoodListCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFoodListCellView.swift; sourceTree = "<group>"; };
 		599948CD212A1B2200700900 /* ReportService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportService.swift; sourceTree = "<group>"; };
 		599948CF212A1B5E00700900 /* ReportInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportInteractor.swift; sourceTree = "<group>"; };
@@ -419,9 +419,9 @@
 				59D28815211A80B300CD38B7 /* AppDelegate.swift */,
 				59D28819211A80B300CD38B7 /* Main.storyboard */,
 				59D2881E211A80B400CD38B7 /* LaunchScreen.storyboard */,
+				5947110A21F5E310009E8BD9 /* Assets.xcassets */,
 				59D28821211A80B400CD38B7 /* Info.plist */,
 				59818361212AF4F500814C24 /* about.plist */,
-				59818365212BB5A800814C24 /* Assets.xcassets */,
 				594DAC26212CAF8700E1729D /* about-app.md */,
 				594DAC28212CB30E00E1729D /* general-rules.md */,
 				594DAC29212CB33200E1729D /* how-to-input.md */,
@@ -589,7 +589,7 @@
 				594DAC27212CB27700E1729D /* about-app.md in Resources */,
 				59818362212AF4F500814C24 /* about.plist in Resources */,
 				59D28820211A80B400CD38B7 /* LaunchScreen.storyboard in Resources */,
-				59818366212BB5A800814C24 /* Assets.xcassets in Resources */,
+				5947110B21F5E311009E8BD9 /* Assets.xcassets in Resources */,
 				59D2881B211A80B300CD38B7 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
